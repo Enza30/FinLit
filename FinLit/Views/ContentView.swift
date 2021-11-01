@@ -21,6 +21,16 @@ struct ContentView: View {
                     Image(systemName: "tv.fill")
                     Text("Statistic")
                 }
+            YellowView()
+                .tabItem{
+                    Image(systemName: "paperplane.fill")
+                    Text("Evaluation")
+                }
+            GreenView()
+                .tabItem{
+                    Image(systemName: "book.fill")
+                    Text("Education")
+                }
             
         }
     }
@@ -32,6 +42,16 @@ struct ContentView: View {
     struct BlueView: View{
         var body: some View {
             Color.blue
+        }
+    }
+    struct YellowView: View{
+        var body: some View{
+            Color.yellow
+        }
+    }
+    struct GreenView: View{
+        var body: some View{
+            Color.green
         }
     }
 }
