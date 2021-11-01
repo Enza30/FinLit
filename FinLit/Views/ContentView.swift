@@ -36,7 +36,7 @@ struct ContentView: View {
     }
     struct RedView: View {
         var body: some View{
-            Color.red
+            Color("warna")
         }
     }
     struct BlueView: View{
