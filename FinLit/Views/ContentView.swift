@@ -10,48 +10,27 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            RedView()
+            Dashboard()
                 .tabItem{
-                    Image(systemName: "phone.fill")
-                    Text("Home")
+                    Image(systemName: "house.fill")
+                    Text("Dashboard")
                 }
             
-            BlueView()
+            Evaluation()
                 .tabItem{
-                    Image(systemName: "tv.fill")
-                    Text("Statistic")
-                }
-            YellowView()
-                .tabItem{
-                    Image(systemName: "paperplane.fill")
+                    Image(systemName: "chart.bar.fill")
                     Text("Evaluation")
                 }
-            GreenView()
+            Budget()
                 .tabItem{
-                    Image(systemName: "book.fill")
+                    Image(systemName: "banknote.fill")
+                    Text("Budget")
+                }
+            Education()
+                .tabItem{
+                    Image(systemName: "book.closed.fill")
                     Text("Education")
                 }
-            
-        }
-    }
-    struct RedView: View {
-        var body: some View{
-            Color("warna")
-        }
-    }
-    struct BlueView: View{
-        var body: some View {
-            Color.blue
-        }
-    }
-    struct YellowView: View{
-        var body: some View{
-            Color.yellow
-        }
-    }
-    struct GreenView: View{
-        var body: some View{
-            Color.green
         }
     }
 }
