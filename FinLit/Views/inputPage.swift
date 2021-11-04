@@ -37,7 +37,7 @@ struct inputPage: View {
                         }
                         
                     
-                    lazygrid()
+                    kategori_baru()
                 }
                 
             }
