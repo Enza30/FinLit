@@ -19,6 +19,7 @@
 		51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96D2733959C009AF25F /* Dashboard.swift */; };
 		E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7BC2733AB9D003A9689 /* lazygrid.swift */; };
 		E264E7C527344328003A9689 /* kategori baru.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C427344328003A9689 /* kategori baru.swift */; };
+		E264E7C72734519B003A9689 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C62734519B003A9689 /* GlobalData.swift */; };
 		E2C3BB68272F9C54005B6811 /* inputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3BB67272F9C54005B6811 /* inputPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		51BAE96D2733959C009AF25F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		E264E7BC2733AB9D003A9689 /* lazygrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazygrid.swift; sourceTree = "<group>"; };
 		E264E7C427344328003A9689 /* kategori baru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "kategori baru.swift"; sourceTree = "<group>"; };
+		E264E7C62734519B003A9689 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		E2C3BB65272F9C45005B6811 /* inputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = inputPage.swift; path = ../../../../../inputPage.swift; sourceTree = "<group>"; };
 		E2C3BB67272F9C54005B6811 /* inputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 				E2C3BB67272F9C54005B6811 /* inputPage.swift */,
 				E264E7C427344328003A9689 /* kategori baru.swift */,
 				513746B8272F8C9100A56FB0 /* ContentView.swift */,
+				E264E7C62734519B003A9689 /* GlobalData.swift */,
 				51BAE96F273395D7009AF25F /* Dashboard */,
 				51BAE970273395E7009AF25F /* Evaluation */,
 				51BAE971273395FD009AF25F /* Budget */,
@@ -220,6 +223,7 @@
 				E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */,
 				51BAE96827339475009AF25F /* Evaluation.swift in Sources */,
 				51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */,
+				E264E7C72734519B003A9689 /* GlobalData.swift in Sources */,
 				51BAE96427338540009AF25F /* Input.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
 				51BAE96C273394AD009AF25F /* Education.swift in Sources */,

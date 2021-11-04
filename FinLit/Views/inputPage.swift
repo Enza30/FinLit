@@ -11,9 +11,35 @@ struct inputPage: View {
     @State private var isTapped = false
     @State var income : String = ""
     var body: some View {
-        NavigationView{
+        ZStack{
+            Color.white
+                .edgesIgnoringSafeArea(.all)
             VStack{
-            List{
+            VStack{
+                HStack{
+                    
+                    VStack(alignment: .leading){
+                    Text("Hi!").font(.largeTitle).bold()
+                            
+                        Text("Selamat datang di Indomaret!").font(.callout)
+                            
+                    
+                }.foregroundColor(.black)
+                    Spacer()
+                    Image(systemName: "eyes")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                    
+                    
+                }
+                .frame( height: 100)
+                .padding(.all, 25)
+                .background(Color("warna5"))
+                .edgesIgnoringSafeArea(.top)
+                
+            
+            }
+                VStack(alignment: .leading){
             VStack(alignment: .leading){
                 Text("Income").font(.largeTitle).bold()
                     .padding(.bottom, 5)
@@ -27,9 +53,7 @@ struct inputPage: View {
                     .padding(.trailing,50)
                 Spacer(minLength: 30)
             
-            }
-                
-                VStack(alignment: .leading){
+            
                     Text("Pilih Kategori").font(.title).bold()
                         .onTapGesture {
                             self.isTapped = true
@@ -38,23 +62,26 @@ struct inputPage: View {
                         
                     
                     kategori_baru()
+                
                 }
                 
-            }
+            
                 Spacer()
                 Button(action: {print("AYoo")}){
                     HStack{
                     Spacer()
                         Text ("Selanjutnya").font(.headline)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         Spacer()
                     }
                     .padding()
-                    .background(Color.yellow)
+                    .background(Color("warna5"))
                     .cornerRadius(13)
                 }
+                }.background(Color.white)
+                    .padding(.horizontal, 30)
+
             }
-                .navigationBarTitle("Set Budget")
             
         }
     }

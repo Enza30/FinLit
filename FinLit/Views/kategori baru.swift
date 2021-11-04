@@ -12,6 +12,7 @@ struct kategori_baru: View {
                              kategori(id: 2, nama: "Ayam", warna: "dasar", warna2: "warna3"),
                                           kategori(id: 3, nama: "Kepala", warna: "dasar", warna2: "warna2")
     ]
+
     var body: some View {
         VStack{
         HStack{
@@ -33,6 +34,7 @@ struct kategori_baru_Previews: PreviewProvider {
 }
 struct option : View{
     @State private var isTapped = false
+   // @ObservedObject var kata : GlobalObject
     
     let data : kategori
     var body: some View{
@@ -46,7 +48,9 @@ struct option : View{
             .padding(.all, 7)
             .background(Color(self.data.warna))
             .cornerRadius(7)
+            .shadow(radius: 3)
             .onTapGesture {
+                
                 if(!self.isTapped){
                 self.isTapped = true
                 print(isTapped)
@@ -58,10 +62,11 @@ struct option : View{
         }else {
             Text(self.data.nama)
                 .font(.headline)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .padding(.all, 7)
                 .background(Color(self.data.warna2))
                 .cornerRadius(7)
+                .shadow(radius: 3)
                 .onTapGesture {
                     if(!self.isTapped){
                     self.isTapped = true
