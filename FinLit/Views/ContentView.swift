@@ -16,16 +16,18 @@ struct ContentView: View {
                     Text("Dashboard")
                 }
             
-            Evaluation()
-                .tabItem{
-                    Image(systemName: "chart.bar.fill")
-                    Text("Evaluation")
-                }
             Budget()
                 .tabItem{
                     Image(systemName: "banknote.fill")
                     Text("Budget")
                 }
+            
+            Evaluation()
+                .tabItem{
+                    Image(systemName: "chart.bar.fill")
+                    Text("Evaluation")
+                }
+            
             Education()
                 .tabItem{
                     Image(systemName: "book.closed.fill")
