@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct inputPage: View {
+    @State private var isTapped = false
     @State var income : String = ""
     var body: some View {
         NavigationView{
@@ -30,10 +31,15 @@ struct inputPage: View {
                 
                 VStack(alignment: .leading){
                     Text("Pilih Kategori").font(.title).bold()
+                        .onTapGesture {
+                            self.isTapped = true
+                            print(self.isTapped)
+                        }
                         
                     
                     lazygrid()
                 }
+                
             }
                 Spacer()
                 Button(action: {print("AYoo")}){
