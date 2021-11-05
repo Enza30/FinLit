@@ -38,7 +38,7 @@ struct option : View{
     
     let data : kategori
     var body: some View{
-        
+      
         if(!self.isTapped){
             
         

@@ -15,6 +15,11 @@ struct Input: View {
        
         NavigationView {
             NavigationLink("Go to next", destination:  Display(budget: "\(budget)"))
+                .foregroundColor(.white)
+                .padding(.horizontal, 80)
+                .padding(.vertical, 20)
+                .background(Color("warna3"))
+                .cornerRadius(13)
             
         }
     }

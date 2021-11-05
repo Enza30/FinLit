@@ -12,8 +12,10 @@ struct inputPage: View {
     @State var income : String = ""
     var body: some View {
         ZStack{
-            Color.white
-                .edgesIgnoringSafeArea(.all)
+            
+//            Color.white
+//                .edgesIgnoringSafeArea(.all)
+            NavigationView {
             VStack{
             VStack{
                 HStack{
@@ -67,21 +69,19 @@ struct inputPage: View {
                 
             
                 Spacer()
-                Button(action: {print("AYoo")}){
-                    HStack{
-                    Spacer()
-                        Text ("Selanjutnya").font(.headline)
-                            .foregroundColor(.black)
-                        Spacer()
+                   
+                        NavigationLink("Go to next", destination:  kategori_baru())
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 80)
+                            .padding(.vertical, 20)
+                            .background(Color("warna3"))
+                            .cornerRadius(13)
+                        
                     }
-                    .padding()
-                    .background(Color("warna5"))
-                    .cornerRadius(13)
                 }
-                }.background(Color.white)
-                    .padding(.horizontal, 30)
 
-            }
+            }.background(Color.white)
+                .padding(.horizontal, 30)
             
         }
     }

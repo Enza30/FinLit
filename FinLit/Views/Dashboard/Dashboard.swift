@@ -9,7 +9,17 @@ import SwiftUI
 
 struct Dashboard: View {
     var body: some View {
-        Color("warna")
+        ZStack{
+            Color.white
+            VStack{
+            Image(systemName: "heart")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                Spacer()
+            kategori_baru()
+                
+            }
+        }
     }
 }
 
