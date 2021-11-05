@@ -10,6 +10,9 @@
 		4D8F48C22734D2AE00DDFF73 /* DataOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C12734D2AE00DDFF73 /* DataOnboarding.swift */; };
 		4D8F48C42734D7E100DDFF73 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C32734D7E100DDFF73 /* OnboardingView.swift */; };
 		4D8F48C62734DDD400DDFF73 /* TabDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C52734DDD400DDFF73 /* TabDetailView.swift */; };
+		4D8F48CA2734E6FE00DDFF73 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C92734E6FE00DDFF73 /* ButtonView.swift */; };
+		4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48CB2734E79600DDFF73 /* PageTabView.swift */; };
+		4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAB8732734EB620085EC91 /* SkipButtonView.swift */; };
 		513746B7272F8C9100A56FB0 /* FinLitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B6272F8C9100A56FB0 /* FinLitApp.swift */; };
 		513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B8272F8C9100A56FB0 /* ContentView.swift */; };
 		513746BB272F8C9200A56FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BA272F8C9200A56FB0 /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		4D8F48C12734D2AE00DDFF73 /* DataOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOnboarding.swift; sourceTree = "<group>"; };
 		4D8F48C32734D7E100DDFF73 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4D8F48C52734DDD400DDFF73 /* TabDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailView.swift; sourceTree = "<group>"; };
+		4D8F48C92734E6FE00DDFF73 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		4D8F48CB2734E79600DDFF73 /* PageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTabView.swift; sourceTree = "<group>"; };
+		4DCAB8732734EB620085EC91 /* SkipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButtonView.swift; sourceTree = "<group>"; };
 		513746B3272F8C9100A56FB0 /* FinLit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinLit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		513746B6272F8C9100A56FB0 /* FinLitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinLitApp.swift; sourceTree = "<group>"; };
 		513746B8272F8C9100A56FB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 				4D8F48C12734D2AE00DDFF73 /* DataOnboarding.swift */,
 				4D8F48C32734D7E100DDFF73 /* OnboardingView.swift */,
 				4D8F48C52734DDD400DDFF73 /* TabDetailView.swift */,
+				4D8F48CB2734E79600DDFF73 /* PageTabView.swift */,
+				4D8F48C92734E6FE00DDFF73 /* ButtonView.swift */,
+				4DCAB8732734EB620085EC91 /* SkipButtonView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -235,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */,
+				4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */,
 				51BAE9662733874C009AF25F /* Display.swift in Sources */,
 				513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */,
 				E2464ADE2734DC8D007957CE /* bar.swift in Sources */,
@@ -243,6 +254,7 @@
 				E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */,
 				51BAE96827339475009AF25F /* Evaluation.swift in Sources */,
 				51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */,
+				4D8F48CA2734E6FE00DDFF73 /* ButtonView.swift in Sources */,
 				4D8F48C62734DDD400DDFF73 /* TabDetailView.swift in Sources */,
 				E264E7C72734519B003A9689 /* GlobalData.swift in Sources */,
 				51BAE96427338540009AF25F /* Input.swift in Sources */,

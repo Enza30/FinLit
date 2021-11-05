@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @State private var selection = 0
+    @Binding var isOnboardingViewShowing : Bool
     
     
     var body: some View {
@@ -17,10 +18,9 @@ struct OnboardingView: View {
                 .ignoresSafeArea(.all, edges: .all)
             
             VStack{
-                //Skip
-                //Page
-                //Button
-                
+                SkipButtonView(isOnboardingShowing: $isOnboardingViewShowing)
+                PageTabView(selection: $selection)
+                ButtonView(selection: $selection)
                 
             }
         }
@@ -30,6 +30,6 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(isOnboardingViewShowing: Binding.constant(true))
     }
 }

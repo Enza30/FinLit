@@ -20,12 +20,21 @@ struct TabDetailView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 320)
+            
+            Text(tabs[index].text)
+                .padding()
+            Spacer()
         }
+        .foregroundColor(.black)
     }
 }
 
 struct TabDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TabDetailView()
+        ZStack {
+            Color("dasar")
+                .ignoresSafeArea()
+            TabDetailView(index: 0)
+        }
     }
 }
