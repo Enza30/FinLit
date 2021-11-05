@@ -18,7 +18,7 @@ struct inputPage: View {
             NavigationView {
             VStack{
     
-                HStack{
+                HStack(alignment: .top){
                     
                     VStack(alignment: .leading){
                     Text("Hi!").font(.largeTitle).bold()
@@ -28,16 +28,20 @@ struct inputPage: View {
                     
                 }.foregroundColor(.black)
                     Spacer()
-                    Image(systemName: "eyes")
+                    Image("shopee")
+                    
                         .resizable()
                         .frame(width: 50, height: 50)
+                        .cornerRadius(5)
+                        
                     
                     
                 }
-                .frame( height: 30)
-                .padding()
+                .frame( height: 10)
+                .padding(.bottom,35)
+                .padding(.horizontal, 20)
                 .background(Color("warna5"))
-                //.edgesIgnoringSafeArea(.top)
+                
                 
             
           
@@ -47,6 +51,7 @@ struct inputPage: View {
                     .padding(.bottom, 5)
                 Text("Silakan masukkan pendapatan kamu per bulan pada kolom di bawah ini")
                     .padding(.all,5)
+                    .background(Color("warna6"))
 //
                 TextField("Income..", text: $income)
                     .foregroundColor(.black)
@@ -57,27 +62,26 @@ struct inputPage: View {
             
             
                     Text("Pilih Kategori").font(.title).bold()
-                        .onTapGesture {
-                            self.isTapped = true
-                            print(self.isTapped)
-                        }
+                    Text("Silahkan pilih kategori untuk budget dan pengeluaran per bulan")
+                    .padding(.all, 5)
+                    .background(Color("warna6"))
                         
                     
                     kategori_baru()
                 
                 }
-            .padding()
+            .padding(.horizontal)
                 
             
                 Spacer()
                     HStack{
                         Spacer()
-                        NavigationLink("Go to next", destination:  kategori_baru())
+                        NavigationLink("Selanjutnya", destination:  kategori_baru())
                             .foregroundColor(.white)
                             .padding(.horizontal, 80)
-                            .padding(.vertical, 20)
+                            .padding(.vertical, 15)
                             .background(Color("warna3"))
-                            .cornerRadius(13)
+                            .cornerRadius(17)
                         Spacer()
                     }
                 }

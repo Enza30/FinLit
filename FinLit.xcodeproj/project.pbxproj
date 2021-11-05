@@ -20,6 +20,7 @@
 		51BAE96A2733949F009AF25F /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE9692733949F009AF25F /* Budget.swift */; };
 		51BAE96C273394AD009AF25F /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96B273394AD009AF25F /* Education.swift */; };
 		51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96D2733959C009AF25F /* Dashboard.swift */; };
+		E2464ADE2734DC8D007957CE /* bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2464ADD2734DC8D007957CE /* bar.swift */; };
 		E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7BC2733AB9D003A9689 /* lazygrid.swift */; };
 		E264E7C527344328003A9689 /* kategori baru.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C427344328003A9689 /* kategori baru.swift */; };
 		E264E7C72734519B003A9689 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C62734519B003A9689 /* GlobalData.swift */; };
@@ -41,10 +42,10 @@
 		51BAE9692733949F009AF25F /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		51BAE96B273394AD009AF25F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		51BAE96D2733959C009AF25F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		E2464ADD2734DC8D007957CE /* bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bar.swift; sourceTree = "<group>"; };
 		E264E7BC2733AB9D003A9689 /* lazygrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazygrid.swift; sourceTree = "<group>"; };
 		E264E7C427344328003A9689 /* kategori baru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "kategori baru.swift"; sourceTree = "<group>"; };
 		E264E7C62734519B003A9689 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
-		E2C3BB65272F9C45005B6811 /* inputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = inputPage.swift; path = ../../../../../inputPage.swift; sourceTree = "<group>"; };
 		E2C3BB67272F9C54005B6811 /* inputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +101,6 @@
 		513746BC272F8C9200A56FB0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E2C3BB65272F9C45005B6811 /* inputPage.swift */,
 				513746BD272F8C9200A56FB0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -121,6 +121,7 @@
 				51BAE9722733960C009AF25F /* Education */,
 				51BAE96327338540009AF25F /* Input.swift */,
 				51BAE9652733874C009AF25F /* Display.swift */,
+				E2464ADD2734DC8D007957CE /* bar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +237,7 @@
 			files = (
 				51BAE9662733874C009AF25F /* Display.swift in Sources */,
 				513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */,
+				E2464ADE2734DC8D007957CE /* bar.swift in Sources */,
 				E2C3BB68272F9C54005B6811 /* inputPage.swift in Sources */,
 				4D8F48C22734D2AE00DDFF73 /* DataOnboarding.swift in Sources */,
 				E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */,
