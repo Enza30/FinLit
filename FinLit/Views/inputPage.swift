@@ -17,7 +17,7 @@ struct inputPage: View {
 //                .edgesIgnoringSafeArea(.all)
             NavigationView {
             VStack{
-            VStack{
+    
                 HStack{
                     
                     VStack(alignment: .leading){
@@ -34,13 +34,13 @@ struct inputPage: View {
                     
                     
                 }
-                .frame( height: 100)
-                .padding(.all, 25)
+                .frame( height: 30)
+                .padding()
                 .background(Color("warna5"))
-                .edgesIgnoringSafeArea(.top)
+                //.edgesIgnoringSafeArea(.top)
                 
             
-            }
+          
                 VStack(alignment: .leading){
             VStack(alignment: .leading){
                 Text("Income").font(.largeTitle).bold()
@@ -66,22 +66,27 @@ struct inputPage: View {
                     kategori_baru()
                 
                 }
+            .padding()
                 
             
                 Spacer()
-                   
+                    HStack{
+                        Spacer()
                         NavigationLink("Go to next", destination:  kategori_baru())
                             .foregroundColor(.white)
                             .padding(.horizontal, 80)
                             .padding(.vertical, 20)
                             .background(Color("warna3"))
                             .cornerRadius(13)
-                        
+                        Spacer()
                     }
+                }
                 }
 
             }.background(Color.white)
-                .padding(.horizontal, 30)
+                .edgesIgnoringSafeArea(.all)
+                .navigationViewStyle(StackNavigationViewStyle())
+                .frame(alignment: .topTrailing)
             
         }
     }
