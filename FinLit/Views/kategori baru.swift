@@ -15,13 +15,13 @@ struct kategori_baru: View {
 
     var body: some View {
         VStack{
-        HStack{
+            HStack(spacing : 20){
             ForEach(data) {
            item in
                 option(data: item)
             }
         
-        }
+        }.padding()
             Spacer()
         }
     }
