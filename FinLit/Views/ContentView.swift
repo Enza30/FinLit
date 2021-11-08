@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var shouldShowModel = false
     
     let tabBarImages = ["house.fill","banknote.fill","plus.app.fill","chart.bar.fill","book.closed.fill"]
+    let tabBarNames = ["Dashboard","Budget","   ","Evaluation","Education"]
     
     var body: some View {
         VStack(spacing: 0){
@@ -40,28 +41,42 @@ struct ContentView: View {
                 .padding(.bottom, 8)
             HStack{
                 ForEach(0..<5) { num in
-                    Button(action:{
-                        if num == 2 {
-                            shouldShowModel.toggle()
-                            return
-                        }
-                        selectedIndex = num
-                    }, label: {
-                        Spacer()
-                        
-                        if num == 2 {
-                            Image(systemName: tabBarImages[num])
-                                .font(.system(size: 44, weight: .bold))
-                                .foregroundColor(.red)
-                        } else {
-                            Image(systemName: tabBarImages[num])
-                                .font(.system(size: 24, weight: .bold))
-                                .foregroundColor(selectedIndex == num ? Color(.black) : .init(white: 0.8))
-                        }
-                        
-                        Spacer()
-                    })
-                    
+                        Button(action:{
+                            if num == 2 {
+                                shouldShowModel.toggle()
+                                return
+                            }
+                            selectedIndex = num
+                        }, label: {
+                            Spacer()
+                            
+                            if num == 2 {
+                                Image(systemName: tabBarImages[num])
+                                    .font(.system(size: 44, weight: .bold))
+                                    .foregroundColor(.red)
+                            } else if num == 0  {
+                                VStack{
+                                    Image(systemName: tabBarImages[num])
+                                        .font(.system(size: 20, weight: .bold))
+                                        .foregroundColor(selectedIndex == num ? Color(.black) : .init(white: 0.8))
+                                    Text(tabBarNames[num])
+                                            .font(.system(size: 11, weight: .bold))
+                                            .foregroundColor(selectedIndex == num ? Color(.black) : .init(white: 0.8))
+                                }
+                                
+                            } else {
+                                VStack{
+                                    Image(systemName: tabBarImages[num])
+                                        .font(.system(size: 24, weight: .bold))
+                                        .foregroundColor(selectedIndex == num ? Color(.black) : .init(white: 0.8))
+                                    Text(tabBarNames[num])
+                                            .font(.system(size: 11, weight: .bold))
+                                            .foregroundColor(selectedIndex == num ? Color(.black) : .init(white: 0.8))
+                                }
+                            }
+                            
+                            Spacer()
+                        })
                 }
             }
         }
