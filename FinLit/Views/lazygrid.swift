@@ -23,7 +23,7 @@ struct lazygrid: View {
                     ForEach(data, id: \.self) {
                         item in
                         
-                        
+    
                         if (!self.isTapped){
                         Text(item)
                                 .font(.headline)

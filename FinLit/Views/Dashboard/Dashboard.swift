@@ -10,15 +10,20 @@ import SwiftUI
 struct Dashboard: View {
     var body: some View {
         ZStack{
-            Color.white
+            LinearGradient(colors: [Color("Color"), Color.white], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all)
             VStack{
-            Image(systemName: "heart")
+            Image(systemName: "play.circle.fill")
                     .resizable()
                     .frame(width: 200, height: 200)
-                Spacer()
-            kategori_baru()
+                    .foregroundColor(.cyan)
                 
-            }
+                
+                Spacer(minLength: 100)
+                kategori_baru()
+        
+                
+            }.padding(.all, 30)
         }
     }
 }

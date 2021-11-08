@@ -71,9 +71,11 @@ struct inputPage: View {
                         .padding(.all, 5)
                         .background(Color("warna6"))
                             
-                        
+                    
                         kategori_baru()
                     
+                        
+                   
                     }
                 .padding(.horizontal)
                     
