@@ -35,7 +35,7 @@ struct Dashboard: View {
                     .edgesIgnoringSafeArea(.all)
                     .background(Color("MainColor"))
                     .cornerRadius(15)
-                Spacer(minLength: 20)
+                Spacer(minLength: 10)
                 HStack(alignment: .top){
                     VStack(alignment: .leading){
                         Text("Total Balance").font(.callout)
@@ -61,8 +61,19 @@ struct Dashboard: View {
                         .cornerRadius(7)
                         .shadow( radius: 4, x: 1, y: 1)
                 }
-                Spacer(minLength: 50)
-                Text("Daily Expense").font(.title)
+                Spacer(minLength: 15)
+                ZStack{
+                barLine()
+                    HStack(alignment: .top){
+                    Rectangle()
+                        .frame(width: 7, height: 30)
+                        Text("15 Aug").font(.caption)
+                            .foregroundColor(.white)
+                            .background(.black)
+                    }
+                }
+                Spacer()
+                Text("Daily Expense").font(.headline)
                 Spacer()
                 kategori_baru()
         

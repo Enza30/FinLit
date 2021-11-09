@@ -46,6 +46,21 @@ func startLoading() {
 
 struct bar_Previews: PreviewProvider {
     static var previews: some View {
-        bar()
+        barLine()
     }
 }
+struct barLine: View{
+    @State var currentProgress: CGFloat = 155.0
+    var body: some View {
+        ZStack(alignment: .leading){
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(.secondary)
+                .frame(width: 335, height: 20)
+            
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(Color("ActionColor"))
+                .frame(width: currentProgress, height: 20)
+        }
+    }
+}
+
