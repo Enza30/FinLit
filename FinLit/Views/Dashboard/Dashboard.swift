@@ -9,21 +9,70 @@ import SwiftUI
 
 struct Dashboard: View {
     var body: some View {
+        //NavigationView{
         ZStack{
-            LinearGradient(colors: [Color("Color"), Color.white], startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-            Image(systemName: "play.circle.fill")
-                    .resizable()
-                    .frame(width: 200, height: 200)
-                    .foregroundColor(.cyan)
-                
-                
-                Spacer(minLength: 100)
+            Color("BgColor")
+                .edgesIgnoringSafeArea(.all
+                )
+        
+            VStack(alignment: .leading){
+                HStack(alignment: .bottom){
+                    VStack(alignment: .leading){
+                        Text("Dashboard").font(.title).bold()
+                            .foregroundColor(Color.white)
+                        Text("Hi, Alif").font(.headline)
+                            .foregroundColor(Color.white)
+                        Text("Today's Balance").font(.headline)
+                            .foregroundColor(Color.white)
+                        
+                    }
+                    Spacer()
+                    Text("Rp. 90,000").font(.headline).bold()
+                        .foregroundColor(Color.white)
+                    
+                } .frame( height: 100)
+                    .padding()
+                    .edgesIgnoringSafeArea(.all)
+                    .background(Color("MainColor"))
+                    .cornerRadius(15)
+                Spacer(minLength: 20)
+                HStack(alignment: .top){
+                    VStack(alignment: .leading){
+                        Text("Total Balance").font(.callout)
+                            .padding(.bottom, 5)
+                       
+                        Text("Rp. 2,000,000").font(.callout).bold()
+                        
+                    }.padding(.horizontal, 33)
+                        .padding(.vertical, 15)
+                        .background(Color.white)
+                        .cornerRadius(7)
+                        .shadow( radius: 4, x: 1, y: 1)
+                   
+                    VStack{
+                        Text("Total Expense").font(.callout)
+                            .padding(.bottom, 5)
+                        
+                        
+                        Text("Rp. 1,000,000").font(.callout).bold()
+                    }.padding(.horizontal, 33)
+                        .padding(.vertical, 15)
+                        .background(Color.white)
+                        .cornerRadius(7)
+                        .shadow( radius: 4, x: 1, y: 1)
+                }
+                Spacer(minLength: 50)
+                Text("Daily Expense").font(.title)
+                Spacer()
                 kategori_baru()
         
                 
-            }.padding(.all, 30)
+           
+            }.padding()
+//        }.background(Color("BgColor"))
+//            .edgesIgnoringSafeArea(.all)
+//            .navigationViewStyle(StackNavigationViewStyle())
+//            .frame(alignment: .topTrailing)
         }
     }
 }

@@ -27,6 +27,7 @@
 		E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7BC2733AB9D003A9689 /* lazygrid.swift */; };
 		E264E7C527344328003A9689 /* kategori baru.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C427344328003A9689 /* kategori baru.swift */; };
 		E264E7C72734519B003A9689 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C62734519B003A9689 /* GlobalData.swift */; };
+		E294BCB4273AAEF8002D4010 /* dataModelKategori.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294BCB3273AAEF8002D4010 /* dataModelKategori.swift */; };
 		E2C3BB68272F9C54005B6811 /* inputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3BB67272F9C54005B6811 /* inputPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		E264E7BC2733AB9D003A9689 /* lazygrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazygrid.swift; sourceTree = "<group>"; };
 		E264E7C427344328003A9689 /* kategori baru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "kategori baru.swift"; sourceTree = "<group>"; };
 		E264E7C62734519B003A9689 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		E294BCB3273AAEF8002D4010 /* dataModelKategori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = dataModelKategori.swift; path = FinLit/Models/dataModelKategori.swift; sourceTree = SOURCE_ROOT; };
 		E2C3BB67272F9C54005B6811 /* inputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		513746C5272F951100A56FB0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E294BCB3273AAEF8002D4010 /* dataModelKategori.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */,
 				4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */,
 				51BAE9662733874C009AF25F /* Display.swift in Sources */,
+				E294BCB4273AAEF8002D4010 /* dataModelKategori.swift in Sources */,
 				513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */,
 				E2464ADE2734DC8D007957CE /* bar.swift in Sources */,
 				E2C3BB68272F9C54005B6811 /* inputPage.swift in Sources */,

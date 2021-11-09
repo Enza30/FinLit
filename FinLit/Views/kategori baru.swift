@@ -53,58 +53,54 @@ struct option : View{
     let data : kategori
     var body: some View{
         
-        if(!self.isTapped){
+       // if(!self.isTapped){
             
+        VStack{
+            Image(systemName: "house.fill")
+                .resizable()
+                .frame(width: 38, height: 38, alignment: .center)
+                .foregroundColor(Color("ActionColor"))
+            Text(self.data.nama)
             
-            Text(self.data.nama)
                 .font(.headline)
-                .foregroundColor(.black)
-                .padding(.all, 7)
-                .background(Color(self.data.warna))
-                .cornerRadius(7)
-                .shadow(radius: 3)
-                .frame(height: 40)
-                .onTapGesture {
-                    
-                    if(!self.isTapped){
-                        self.isTapped = true
-                        print(isTapped)
-                    }else {
-                        self.isTapped = false
-                        print(isTapped)
-                    }
-                }
-        }else {
-            Text(self.data.nama)
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding(.all, 7)
-                .background(Color(self.data.warna2))
-                .cornerRadius(7)
-                .shadow(radius: 3)
-                .onTapGesture {
-                    if(!self.isTapped){
-                        self.isTapped = true
-                        print(isTapped)
-                    }else {
-                        self.isTapped = false
-                        print(isTapped)
-                    }
-                }
-        }
+                .foregroundColor(Color("ActionColor"))
+            Text("Rp. 30,000").font(.callout).bold()
+                .padding(.vertical, 3)
+                
+        }.frame(width: 110, height: 125)
+        //                .padding(.all, 7)
+            .background(Color.white)
+                        .cornerRadius(7)
+                        .shadow(radius: 3, x: 1, y: 1)
+//                .onTapGesture {
+//
+//                    if(!self.isTapped){
+//                        self.isTapped = true
+//                        print(isTapped)
+//                    }else {
+//                        self.isTapped = false
+//                        print(isTapped)
+//                    }
+//                }
+//        }else {
+//            Text(self.data.nama)
+//                .font(.headline)
+//                .foregroundColor(.white)
+//                .padding(.all, 7)
+//                .background(Color(self.data.warna2))
+//                .cornerRadius(7)
+//                .shadow(radius: 3)
+//                .onTapGesture {
+//                    if(!self.isTapped){
+//                        self.isTapped = true
+//                        print(isTapped)
+//                    }else {
+//                        self.isTapped = false
+//                        print(isTapped)
+//                    }
+//                }
+//        }
+        
     }
     
-}
-struct kategori : Identifiable{
-    let id : Int
-    let nama : String
-    let warna : String
-    let warna2 : String
-    
-    init (id: Int, nama : String, warna : String, warna2 : String){
-        self.id = id
-        self.nama = nama
-        self.warna = warna
-        self.warna2 = warna2
-    }
 }
