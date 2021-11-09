@@ -46,7 +46,7 @@ func startLoading() {
 
 struct bar_Previews: PreviewProvider {
     static var previews: some View {
-        barLine()
+        bar()
     }
 }
 struct barLine: View{
