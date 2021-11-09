@@ -72,9 +72,15 @@ struct Dashboard: View {
                             .background(.black)
                     }
                 }
+                Text("Your current lah lah lah spending rate shows that you might end up living below budget by the end of the month.").font(.callout)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color("ColorSecond"))
+                    .cornerRadius(5)
                 Spacer()
                 Text("Daily Expense").font(.headline)
                 Spacer()
+                
                 kategori_baru()
         
                 
