@@ -23,6 +23,8 @@
 		51BAE96A2733949F009AF25F /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE9692733949F009AF25F /* Budget.swift */; };
 		51BAE96C273394AD009AF25F /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96B273394AD009AF25F /* Education.swift */; };
 		51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96D2733959C009AF25F /* Dashboard.swift */; };
+		51DD60AC273B776A00054E9B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 51DD60AB273B776A00054E9B /* SwiftUICharts */; };
+		51DD60AE273B778000054E9B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD60AD273B778000054E9B /* Chart.swift */; };
 		E2464ADE2734DC8D007957CE /* bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2464ADD2734DC8D007957CE /* bar.swift */; };
 		E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7BC2733AB9D003A9689 /* lazygrid.swift */; };
 		E264E7C527344328003A9689 /* kategori baru.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C427344328003A9689 /* kategori baru.swift */; };
@@ -49,6 +51,7 @@
 		51BAE9692733949F009AF25F /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		51BAE96B273394AD009AF25F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		51BAE96D2733959C009AF25F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		51DD60AD273B778000054E9B /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		E2464ADD2734DC8D007957CE /* bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bar.swift; sourceTree = "<group>"; };
 		E264E7BC2733AB9D003A9689 /* lazygrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazygrid.swift; sourceTree = "<group>"; };
 		E264E7C427344328003A9689 /* kategori baru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "kategori baru.swift"; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DD60AC273B776A00054E9B /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +137,7 @@
 				51BAE96327338540009AF25F /* Input.swift */,
 				51BAE9652733874C009AF25F /* Display.swift */,
 				E2464ADD2734DC8D007957CE /* bar.swift */,
+				51DD60AD273B778000054E9B /* Chart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +198,9 @@
 			dependencies = (
 			);
 			name = FinLit;
+			packageProductDependencies = (
+				51DD60AB273B776A00054E9B /* SwiftUICharts */,
+			);
 			productName = FinLit;
 			productReference = 513746B3272F8C9100A56FB0 /* FinLit.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 513746AA272F8C9100A56FB0;
+			packageReferences = (
+				51DD60AA273B776A00054E9B /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+			);
 			productRefGroup = 513746B4272F8C9100A56FB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,6 +266,7 @@
 				E2464ADE2734DC8D007957CE /* bar.swift in Sources */,
 				E2C3BB68272F9C54005B6811 /* inputPage.swift in Sources */,
 				4D8F48C22734D2AE00DDFF73 /* DataOnboarding.swift in Sources */,
+				51DD60AE273B778000054E9B /* Chart.swift in Sources */,
 				E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */,
 				51BAE96827339475009AF25F /* Evaluation.swift in Sources */,
 				51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */,
@@ -469,6 +481,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		51DD60AA273B776A00054E9B /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AfrazCodes/SwiftUICharts";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51DD60AB273B776A00054E9B /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51DD60AA273B776A00054E9B /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 513746AB272F8C9100A56FB0 /* Project object */;
 }
