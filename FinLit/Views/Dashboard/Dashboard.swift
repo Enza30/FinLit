@@ -11,57 +11,63 @@ struct Dashboard: View {
     var body: some View {
         //NavigationView{
         ZStack{
-            Color("BgColor")
+            Color.white
                 .edgesIgnoringSafeArea(.all
                 )
-        
+            
             VStack(alignment: .leading){
                 HStack(alignment: .bottom){
                     VStack(alignment: .leading){
                         Text("Dashboard").font(.title).bold()
-                            .foregroundColor(Color.white)
-                        Text("Hi, Alif").font(.headline)
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color("MainColor"))
                         Text("Today's Balance").font(.headline)
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color("MainColor"))
                         
                     }
                     Spacer()
-                    Text("Rp. 90,000").font(.headline).bold()
-                        .foregroundColor(Color.white)
+                    Text("Rp. 90,000").font(.title).bold()
+                        .foregroundColor(Color("MainColor"))
                     
-                } .frame( height: 100)
+                } .frame( height: 65)
                     .padding()
-                    .edgesIgnoringSafeArea(.all)
-                    .background(Color("MainColor"))
+                   
+                    .background(Color.white)
                     .cornerRadius(15)
+                    .shadow(color: Color("shadow"), radius: 7, x: 6, y: 7)
+                
+                
                 Spacer(minLength: 10)
                 HStack(alignment: .top){
+                    Spacer()
                     VStack(alignment: .leading){
-                        Text("Total Balance").font(.callout)
+                        Text("Total Income").font(.callout)
                             .padding(.bottom, 5)
                        
                         Text("Rp. 2,000,000").font(.callout).bold()
                         
-                    }.padding(.horizontal, 33)
-                        .padding(.vertical, 15)
-                        .background(Color.white)
-                        .cornerRadius(7)
-                        .shadow( radius: 4, x: 1, y: 1)
-                   
+                    }
+                    Spacer()
+                    Rectangle()
+                        .frame(width: 3, height: 50)
+                        .foregroundColor(Color("dasar"))
+                   Spacer()
                     VStack{
                         Text("Total Expense").font(.callout)
                             .padding(.bottom, 5)
                         
                         
                         Text("Rp. 1,000,000").font(.callout).bold()
-                    }.padding(.horizontal, 33)
-                        .padding(.vertical, 15)
-                        .background(Color.white)
-                        .cornerRadius(7)
-                        .shadow( radius: 4, x: 1, y: 1)
-                }
+                    }
+                    
+                    Spacer()
+                }.padding(.all, 5)
+                    .padding(.horizontal, 15)
+                    .background(Color.white)
+                    .cornerRadius(7)
+                    .shadow(color: Color("shadow"), radius:7, x: 6, y: 7)
                 Spacer(minLength: 15)
+                VStack {
+                HStack{ Spacer()
                 ZStack{
                 barLine()
                     HStack(alignment: .top){
@@ -72,24 +78,46 @@ struct Dashboard: View {
                             .background(.black)
                     }
                 }
+                Spacer()
+                }
+                HStack{
+                    Spacer()
                 Text("Your current lah lah lah spending rate shows that you might end up living below budget by the end of the month.").font(.callout)
                     .foregroundColor(.white)
-                    .padding()
+                   // .frame(width: 300)
+                    .padding(.all, 10)
                     .background(Color("ColorSecond"))
-                    .cornerRadius(5)
-                Spacer()
+                    .cornerRadius(15)
+                    Spacer()
+                }
+                
+                
+                }.padding(.vertical, 10)
+
+                    .background(Color.white)
+                    .cornerRadius(15)
+                    .shadow(color: Color("shadow"), radius: 7, x: 6, y: 7)
+                Spacer(minLength: 30)
                 Text("Daily Expense").font(.headline)
-                Spacer()
                 
-                kategori_baru()
+                Spacer(minLength: 10)
+//                ZStack{
+//                    Color.white
+//                        .cornerRadius(15)
+              
+//                        .shadow( radius: 5, x: 6, y: 7)
+                    kategori_baru()
+//                    .padding(.all, 15)
+    
         
-                
+           
            
             }.padding()
 //        }.background(Color("BgColor"))
 //            .edgesIgnoringSafeArea(.all)
 //            .navigationViewStyle(StackNavigationViewStyle())
 //            .frame(alignment: .topTrailing)
+            
         }
     }
 }

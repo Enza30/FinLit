@@ -20,13 +20,13 @@ struct kategori_baru: View {
     
     var body: some View {
         ScrollView(.vertical){
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], alignment: .leading, spacing: 10){
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], alignment: .center, spacing: 30){
                 
                 ForEach(data) {
                     item in
                     option(data: item)
                 }
-            }
+            }.padding()
         }
         //        VStack{
         //            HStack(spacing : 20){
@@ -58,20 +58,22 @@ struct option : View{
         VStack{
             Image(systemName: "house.fill")
                 .resizable()
-                .frame(width: 38, height: 38, alignment: .center)
+                .frame(width: 33, height: 33, alignment: .center)
                 .foregroundColor(Color("ActionColor"))
             Text(self.data.nama)
+                .font(.caption).bold()
             
                 .font(.headline)
                 .foregroundColor(Color("ActionColor"))
             Text("Rp. 30,000").font(.callout).bold()
                 .padding(.vertical, 3)
                 
-        }.frame(width: 110, height: 125)
+            }
+        .frame(width: 90, height: 105)
         //                .padding(.all, 7)
             .background(Color.white)
                         .cornerRadius(7)
-                        .shadow(radius: 3, x: 1, y: 1)
+                        .shadow(radius: 4, x: 0, y: 1)
 //                .onTapGesture {
 //
 //                    if(!self.isTapped){

@@ -56,6 +56,7 @@ struct barLine: View{
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(.secondary)
                 .frame(width: 335, height: 20)
+                
             
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color("ActionColor"))
