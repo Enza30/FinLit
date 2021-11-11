@@ -46,7 +46,7 @@ func startLoading() {
 
 struct bar_Previews: PreviewProvider {
     static var previews: some View {
-        bar()
+        barLine()
     }
 }
 struct barLine: View{
@@ -54,7 +54,8 @@ struct barLine: View{
     var body: some View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(.secondary)
+                .foregroundColor(Color("ActionColor"))
+                .opacity(0.5)
                 .frame(width: 335, height: 20)
                 
             

@@ -27,6 +27,9 @@ struct kategori_baru: View {
                     option(data: item)
                 }
             }.padding()
+                .background(Color("MainColor"))
+                .cornerRadius(15)
+                .shadow( radius: 5, x: 6, y: 7)
         }
         //        VStack{
         //            HStack(spacing : 20){
