@@ -30,7 +30,7 @@ struct ContentView: View {
                     Image(systemName: "chart.bar.fill")
                     Text("Evaluation")
                 }
-        }
+        }.accentColor(Color("ActionColor"))
     }
 }
 

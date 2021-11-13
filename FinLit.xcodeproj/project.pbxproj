@@ -17,6 +17,8 @@
 		513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B8272F8C9100A56FB0 /* ContentView.swift */; };
 		513746BB272F8C9200A56FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BA272F8C9200A56FB0 /* Assets.xcassets */; };
 		513746BE272F8C9200A56FB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BD272F8C9200A56FB0 /* Preview Assets.xcassets */; };
+		51B144D9273F33CF007078D3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B144D8273F33CF007078D3 /* Category.swift */; };
+		51B144DC273F3DD5007078D3 /* FinLit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B144DA273F3DD5007078D3 /* FinLit.xcdatamodeld */; };
 		51BAE96427338540009AF25F /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96327338540009AF25F /* Input.swift */; };
 		51BAE9662733874C009AF25F /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE9652733874C009AF25F /* Display.swift */; };
 		51BAE96827339475009AF25F /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96727339475009AF25F /* Evaluation.swift */; };
@@ -87,6 +89,8 @@
 		513746B8272F8C9100A56FB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		513746BA272F8C9200A56FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		513746BD272F8C9200A56FB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51B144D8273F33CF007078D3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		51B144DB273F3DD5007078D3 /* Finance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Finance.xcdatamodel; sourceTree = "<group>"; };
 		51BAE96327338540009AF25F /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		51BAE9652733874C009AF25F /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		51BAE96727339475009AF25F /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				513746B6272F8C9100A56FB0 /* FinLitApp.swift */,
 				513746BA272F8C9200A56FB0 /* Assets.xcassets */,
 				513746BC272F8C9200A56FB0 /* Preview Content */,
+				51B144DA273F3DD5007078D3 /* FinLit.xcdatamodeld */,
 			);
 			path = FinLit;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				E294BCB3273AAEF8002D4010 /* dataModelKategori.swift */,
+				51B144D8273F33CF007078D3 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B144DC273F3DD5007078D3 /* FinLit.xcdatamodeld in Sources */,
 				4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */,
 				4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */,
 				51BAE9662733874C009AF25F /* Display.swift in Sources */,
@@ -424,6 +431,7 @@
 				51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */,
 				4D8F48CA2734E6FE00DDFF73 /* ButtonView.swift in Sources */,
 				4D8F48C62734DDD400DDFF73 /* TabDetailView.swift in Sources */,
+				51B144D9273F33CF007078D3 /* Category.swift in Sources */,
 				E264E7C72734519B003A9689 /* GlobalData.swift in Sources */,
 				51BAE96427338540009AF25F /* Input.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
@@ -810,6 +818,19 @@
 			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		51B144DA273F3DD5007078D3 /* FinLit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				51B144DB273F3DD5007078D3 /* Finance.xcdatamodel */,
+			);
+			currentVersion = 51B144DB273F3DD5007078D3 /* Finance.xcdatamodel */;
+			path = FinLit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 513746AB272F8C9100A56FB0 /* Project object */;
 }
