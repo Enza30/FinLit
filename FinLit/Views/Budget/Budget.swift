@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Budget: View {
     var body: some View {
-        Color.yellow
+        Text("Hello")
     }
 }
 
