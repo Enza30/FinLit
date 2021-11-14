@@ -17,6 +17,7 @@
 		513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B8272F8C9100A56FB0 /* ContentView.swift */; };
 		513746BB272F8C9200A56FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BA272F8C9200A56FB0 /* Assets.xcassets */; };
 		513746BE272F8C9200A56FB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BD272F8C9200A56FB0 /* Preview Assets.xcassets */; };
+		517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517BF1D52740BAE900EF0B08 /* Persistence.swift */; };
 		51B144D9273F33CF007078D3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B144D8273F33CF007078D3 /* Category.swift */; };
 		51B144DC273F3DD5007078D3 /* FinLit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B144DA273F3DD5007078D3 /* FinLit.xcdatamodeld */; };
 		51BAE96427338540009AF25F /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96327338540009AF25F /* Input.swift */; };
@@ -61,6 +62,7 @@
 		513746B8272F8C9100A56FB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		513746BA272F8C9200A56FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		513746BD272F8C9200A56FB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		517BF1D52740BAE900EF0B08 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		51B144D8273F33CF007078D3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		51B144DB273F3DD5007078D3 /* Finance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Finance.xcdatamodel; sourceTree = "<group>"; };
 		51BAE96327338540009AF25F /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				513746BA272F8C9200A56FB0 /* Assets.xcassets */,
 				513746BC272F8C9200A56FB0 /* Preview Content */,
 				51B144DA273F3DD5007078D3 /* FinLit.xcdatamodeld */,
+				517BF1D52740BAE900EF0B08 /* Persistence.swift */,
 			);
 			path = FinLit;
 			sourceTree = "<group>";
@@ -155,7 +158,6 @@
 				E2C3BB67272F9C54005B6811 /* inputPage.swift */,
 				E264E7C427344328003A9689 /* kategori baru.swift */,
 				513746B8272F8C9100A56FB0 /* ContentView.swift */,
-				E264E7C62734519B003A9689 /* GlobalData.swift */,
 				51BAE96F273395D7009AF25F /* Dashboard */,
 				51BAE970273395E7009AF25F /* Evaluation */,
 				4D8F48C02734D24300DDFF73 /* Onboarding */,
@@ -174,6 +176,7 @@
 			children = (
 				E294BCB3273AAEF8002D4010 /* dataModelKategori.swift */,
 				51B144D8273F33CF007078D3 /* Category.swift */,
+				E264E7C62734519B003A9689 /* GlobalData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				E264E7C72734519B003A9689 /* GlobalData.swift in Sources */,
 				51BAE96427338540009AF25F /* Input.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
+				517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */,
 				51BAE96C273394AD009AF25F /* Education.swift in Sources */,
 				E264E7C527344328003A9689 /* kategori baru.swift in Sources */,
 				513746B7272F8C9100A56FB0 /* FinLitApp.swift in Sources */,
