@@ -13,6 +13,7 @@
 		4D8F48CA2734E6FE00DDFF73 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C92734E6FE00DDFF73 /* ButtonView.swift */; };
 		4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48CB2734E79600DDFF73 /* PageTabView.swift */; };
 		4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAB8732734EB620085EC91 /* SkipButtonView.swift */; };
+		4DEC26DD2740D19B00C10EEA /* topCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC26DC2740D19B00C10EEA /* topCardView.swift */; };
 		513746B7272F8C9100A56FB0 /* FinLitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B6272F8C9100A56FB0 /* FinLitApp.swift */; };
 		513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B8272F8C9100A56FB0 /* ContentView.swift */; };
 		513746BB272F8C9200A56FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BA272F8C9200A56FB0 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		4D8F48C92734E6FE00DDFF73 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		4D8F48CB2734E79600DDFF73 /* PageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTabView.swift; sourceTree = "<group>"; };
 		4DCAB8732734EB620085EC91 /* SkipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButtonView.swift; sourceTree = "<group>"; };
+		4DEC26DC2740D19B00C10EEA /* topCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topCardView.swift; sourceTree = "<group>"; };
 		513746B3272F8C9100A56FB0 /* FinLit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinLit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		513746B6272F8C9100A56FB0 /* FinLitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinLitApp.swift; sourceTree = "<group>"; };
 		513746B8272F8C9100A56FB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				51BAE9692733949F009AF25F /* Budget.swift */,
+				4DEC26DC2740D19B00C10EEA /* topCardView.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				E2C3BB68272F9C54005B6811 /* inputPage.swift in Sources */,
 				4D8F48C22734D2AE00DDFF73 /* DataOnboarding.swift in Sources */,
 				51DD60AE273B778000054E9B /* Chart.swift in Sources */,
+				4DEC26DD2740D19B00C10EEA /* topCardView.swift in Sources */,
 				E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */,
 				51BAE96827339475009AF25F /* Evaluation.swift in Sources */,
 				51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */,

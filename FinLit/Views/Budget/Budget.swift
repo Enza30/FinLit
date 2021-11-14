@@ -9,7 +9,12 @@ import SwiftUI
 
 struct Budget: View {
     var body: some View {
-        Text("Hello")
+        NavigationView {
+            ScrollView {
+                topCardView()
+            }
+            .navigationTitle("Budget")
+        }
     }
 }
 
