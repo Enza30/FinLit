@@ -14,20 +14,24 @@ struct bar: View {
         ZStack{
             Circle()
                 .trim(from: 0.0, to: lingkaranProgres)
-                .stroke(Color.gray, lineWidth: 15)
-                .frame(width: 200, height: 200)
+                .stroke(Color("ActionColor"), lineWidth: 15)
+                .opacity(0.5)
+                .frame(width: 136, height: 136)
                 
             Circle()
                 .trim(from: 0.0, to: lingkaranProgres)
-                .stroke(Color("warna5"), lineWidth: 15)
-                .frame(width: 200, height: 200)
+                .stroke(Color("ActionColor"), lineWidth: 15)
+                .frame(width: 136, height: 136)
                 .rotationEffect(Angle(degrees: -90))
-            Text("\(Int(self.lingkaranProgres*100))%")
-                .font(.custom("SF Pro", size: 20.0))
+            VStack {
+                Text("\(Int(self.lingkaranProgres*100))%")
+                    .font(.custom("SF Pro", size: 24.0)).bold()
+                Button(action: {self.startLoading()}){
+                    Text("Start!")
+                }
+            }
         }
-        Button(action: {self.startLoading()}){
-            Text("Start!")
-        }
+        
         }
     }
 
