@@ -13,10 +13,12 @@ struct inputExpense: View {
         VStack{
             Spacer()
             TextField("", text: $expense)
-                .font(.custom("SF Pro", size: 20))
+                .font(.custom("SF Pro", size: 75))
                 .padding()
+                .frame(height: 400)
+                .keyboardType(.decimalPad)
                 .foregroundColor(.black)
-                .textFieldStyle(.automatic)
+                .textFieldStyle(.plain)
                 
             Button(action: {print("Save button tapped")}){
                 HStack{
@@ -27,12 +29,13 @@ struct inputExpense: View {
                         .padding(.vertical, 15)
                         .background(Color("MainColor"))
                         .foregroundColor(.white)
+                        .cornerRadius(8)
+                        .shadow( radius: 10, x: 6, y: 7)
                         
                     Spacer()
                 }
             }
-            Spacer()
-            
+         
         }
     }
 }
