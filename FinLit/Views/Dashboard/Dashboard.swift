@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Dashboard: View {
     var body: some View {
-        //NavigationView{
+        ScrollView{
         ZStack{
             Color("BgColor")
                 .edgesIgnoringSafeArea(.all
@@ -90,6 +90,7 @@ struct Dashboard: View {
 //            .edgesIgnoringSafeArea(.all)
 //            .navigationViewStyle(StackNavigationViewStyle())
 //            .frame(alignment: .topTrailing)
+        }
         }
     }
 }
