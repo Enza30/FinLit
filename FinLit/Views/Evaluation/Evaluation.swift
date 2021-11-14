@@ -9,7 +9,9 @@ import SwiftUI
 
 struct Evaluation: View {
     var body: some View {
-        Color.blue
+        VStack{
+            Chart()
+        }
     }
 }
 

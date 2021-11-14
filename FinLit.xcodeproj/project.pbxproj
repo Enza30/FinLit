@@ -27,16 +27,7 @@
 		51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96D2733959C009AF25F /* Dashboard.swift */; };
 		51DD60AC273B776A00054E9B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 51DD60AB273B776A00054E9B /* SwiftUICharts */; };
 		51DD60AE273B778000054E9B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD60AD273B778000054E9B /* Chart.swift */; };
-		9BAA6939273CBD2B004174B3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAA6938273CBD2B004174B3 /* WidgetKit.framework */; };
-		9BAA693B273CBD2B004174B3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAA693A273CBD2B004174B3 /* SwiftUI.framework */; };
-		9BAA6947273CBD2C004174B3 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9BAA6936273CBD2B004174B3 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9BAA6951273CC074004174B3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAA6938273CBD2B004174B3 /* WidgetKit.framework */; };
-		9BAA6952273CC074004174B3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAA693A273CBD2B004174B3 /* SwiftUI.framework */; };
-		9BAA6955273CC074004174B3 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA6954273CC074004174B3 /* Widget.swift */; };
-		9BAA6958273CC076004174B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAA6957273CC076004174B3 /* Assets.xcassets */; };
-		9BAA695A273CC076004174B3 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA6956273CC074004174B3 /* Widget.intentdefinition */; };
 		9BAA695B273CC076004174B3 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA6956273CC074004174B3 /* Widget.intentdefinition */; };
-		9BAA695E273CC076004174B3 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9BAA6950273CC074004174B3 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2464ADE2734DC8D007957CE /* bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2464ADD2734DC8D007957CE /* bar.swift */; };
 		E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7BC2733AB9D003A9689 /* lazygrid.swift */; };
 		E264E7C527344328003A9689 /* kategori baru.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C427344328003A9689 /* kategori baru.swift */; };
@@ -45,23 +36,6 @@
 		E2C3BB68272F9C54005B6811 /* inputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3BB67272F9C54005B6811 /* inputPage.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9BAA6945273CBD2C004174B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 513746AB272F8C9100A56FB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9BAA6935273CBD2B004174B3;
-			remoteInfo = WidgetExtension;
-		};
-		9BAA695C273CC076004174B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 513746AB272F8C9100A56FB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9BAA694F273CC074004174B3;
-			remoteInfo = WidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		9BAA6948273CBD2C004174B3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -69,8 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9BAA695E273CC076004174B3 /* WidgetExtension.appex in Embed App Extensions */,
-				9BAA6947273CBD2C004174B3 /* WidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,10 +70,8 @@
 		51BAE96B273394AD009AF25F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		51BAE96D2733959C009AF25F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		51DD60AD273B778000054E9B /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
-		9BAA6936273CBD2B004174B3 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAA6938273CBD2B004174B3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9BAA693A273CBD2B004174B3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		9BAA6950273CC074004174B3 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAA6954273CC074004174B3 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		9BAA6956273CC074004174B3 /* Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widget.intentdefinition; sourceTree = "<group>"; };
 		9BAA6957273CC076004174B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,24 +90,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DD60AC273B776A00054E9B /* SwiftUICharts in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BAA6933273CBD2B004174B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BAA693B273CBD2B004174B3 /* SwiftUI.framework in Frameworks */,
-				9BAA6939273CBD2B004174B3 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BAA694D273CC074004174B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BAA6952273CC074004174B3 /* SwiftUI.framework in Frameworks */,
-				9BAA6951273CC074004174B3 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				513746B3272F8C9100A56FB0 /* FinLit.app */,
-				9BAA6936273CBD2B004174B3 /* WidgetExtension.appex */,
-				9BAA6950273CC074004174B3 /* WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,8 +245,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9BAA6946273CBD2C004174B3 /* PBXTargetDependency */,
-				9BAA695D273CC076004174B3 /* PBXTargetDependency */,
 			);
 			name = FinLit;
 			packageProductDependencies = (
@@ -305,40 +253,6 @@
 			productName = FinLit;
 			productReference = 513746B3272F8C9100A56FB0 /* FinLit.app */;
 			productType = "com.apple.product-type.application";
-		};
-		9BAA6935273CBD2B004174B3 /* WidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9BAA694B273CBD2C004174B3 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
-			buildPhases = (
-				9BAA6932273CBD2B004174B3 /* Sources */,
-				9BAA6933273CBD2B004174B3 /* Frameworks */,
-				9BAA6934273CBD2B004174B3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WidgetExtension;
-			productName = WidgetExtension;
-			productReference = 9BAA6936273CBD2B004174B3 /* WidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		9BAA694F273CC074004174B3 /* WidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9BAA695F273CC076004174B3 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
-			buildPhases = (
-				9BAA694C273CC074004174B3 /* Sources */,
-				9BAA694D273CC074004174B3 /* Frameworks */,
-				9BAA694E273CC074004174B3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WidgetExtension;
-			productName = WidgetExtension;
-			productReference = 9BAA6950273CC074004174B3 /* WidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -351,12 +265,6 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					513746B2272F8C9100A56FB0 = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					9BAA6935273CBD2B004174B3 = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					9BAA694F273CC074004174B3 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -378,8 +286,6 @@
 			projectRoot = "";
 			targets = (
 				513746B2272F8C9100A56FB0 /* FinLit */,
-				9BAA6935273CBD2B004174B3 /* WidgetExtension */,
-				9BAA694F273CC074004174B3 /* WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -391,21 +297,6 @@
 			files = (
 				513746BE272F8C9200A56FB0 /* Preview Assets.xcassets in Resources */,
 				513746BB272F8C9200A56FB0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BAA6934273CBD2B004174B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BAA694E273CC074004174B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BAA6958273CC076004174B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,36 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BAA6932273CBD2B004174B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BAA694C273CC074004174B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BAA695A273CC076004174B3 /* Widget.intentdefinition in Sources */,
-				9BAA6955273CC074004174B3 /* Widget.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9BAA6946273CBD2C004174B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9BAA6935273CBD2B004174B3 /* WidgetExtension */;
-			targetProxy = 9BAA6945273CBD2C004174B3 /* PBXContainerItemProxy */;
-		};
-		9BAA695D273CC076004174B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9BAA694F273CC074004174B3 /* WidgetExtension */;
-			targetProxy = 9BAA695C273CC076004174B3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		513746BF272F8C9200A56FB0 /* Debug */ = {
@@ -594,7 +456,6 @@
 		513746C2272F8C9200A56FB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -624,7 +485,6 @@
 		513746C3272F8C9200A56FB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -651,114 +511,6 @@
 			};
 			name = Release;
 		};
-		9BAA6949273CBD2C004174B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z38TVJ88W4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farendza.academy.FinLit.Widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9BAA694A273CBD2C004174B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z38TVJ88W4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farendza.academy.FinLit.Widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		9BAA6960273CC076004174B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z38TVJ88W4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farendza.academy.FinLit.Widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9BAA6961273CC076004174B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z38TVJ88W4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farendza.academy.FinLit.Widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -776,24 +528,6 @@
 			buildConfigurations = (
 				513746C2272F8C9200A56FB0 /* Debug */,
 				513746C3272F8C9200A56FB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9BAA694B273CBD2C004174B3 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9BAA6949273CBD2C004174B3 /* Debug */,
-				9BAA694A273CBD2C004174B3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9BAA695F273CC076004174B3 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9BAA6960273CC076004174B3 /* Debug */,
-				9BAA6961273CC076004174B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
