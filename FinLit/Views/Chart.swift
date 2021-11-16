@@ -13,7 +13,7 @@ struct Chart: View {
             ScrollView{
                 VStack(alignment: .leading){
                     // Legend
-                    let expense = Legend(color: .orange, label: "Expense")
+                    let expense = Legend(color: Color("ActionColor"), label: "Expense")
 //                    let iphone8 = Legend(color: .blue, label: "iPhone 8")
 //                    let iphone7 = Legend(color: .blue, label: "iPhone 7")
 //                    let iphone12 = Legend(color: .blue, label: "iPhone 12")
