@@ -31,6 +31,8 @@
 		51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96D2733959C009AF25F /* Dashboard.swift */; };
 		51DD60AC273B776A00054E9B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 51DD60AB273B776A00054E9B /* SwiftUICharts */; };
 		51DD60AE273B778000054E9B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD60AD273B778000054E9B /* Chart.swift */; };
+		9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1027425C5400F593E5 /* EditBudgetView.swift */; };
+		9B99CC1327425CA100F593E5 /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1227425CA100F593E5 /* EditBudget.swift */; };
 		9BAA695B273CC076004174B3 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA6956273CC074004174B3 /* Widget.intentdefinition */; };
 		E2464ADE2734DC8D007957CE /* bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2464ADD2734DC8D007957CE /* bar.swift */; };
 		E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7BC2733AB9D003A9689 /* lazygrid.swift */; };
@@ -78,6 +80,8 @@
 		51BAE96B273394AD009AF25F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		51BAE96D2733959C009AF25F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		51DD60AD273B778000054E9B /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		9B99CC1027425C5400F593E5 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
+		9B99CC1227425CA100F593E5 /* EditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudget.swift; sourceTree = "<group>"; };
 		9BAA6938273CBD2B004174B3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9BAA693A273CBD2B004174B3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9BAA6954273CC074004174B3 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				4DEC26DC2740D19B00C10EEA /* topCardView.swift */,
 				4D107B572742A11F002E3A7E /* categoryBudgetRow.swift */,
 				4D107B592742B4B4002E3A7E /* categoryBudgetList.swift */,
+				9B99CC1027425C5400F593E5 /* EditBudgetView.swift */,
+				9B99CC1227425CA100F593E5 /* EditBudget.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -341,8 +347,10 @@
 				4D107B582742A11F002E3A7E /* categoryBudgetRow.swift in Sources */,
 				51BAE96427338540009AF25F /* Input.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
+				9B99CC1327425CA100F593E5 /* EditBudget.swift in Sources */,
 				517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */,
 				51BAE96C273394AD009AF25F /* Education.swift in Sources */,
+				9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */,
 				E264E7C527344328003A9689 /* kategori baru.swift in Sources */,
 				513746B7272F8C9100A56FB0 /* FinLitApp.swift in Sources */,
 				9BAA695B273CC076004174B3 /* Widget.intentdefinition in Sources */,
