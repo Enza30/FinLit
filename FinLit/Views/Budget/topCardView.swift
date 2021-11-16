@@ -15,7 +15,9 @@ struct topCardView: View {
             
 //            VStack(alignment: .leading) {
                 HStack(alignment:.center){
-                Spacer()
+                    Spacer()
+                    Spacer()
+                    
                     bar()
                         .frame(width: 128, height: 128, alignment: .center)
 
@@ -39,7 +41,7 @@ struct topCardView: View {
                             .frame(width: 175, height: 18, alignment: .topTrailing)
                             .foregroundColor(Color.black)
                 
-                        Text("RP.1.500.000 of 1.750.000")
+                        Text("Rp. 1.500.000 of 1.750.000")
                             .font(.system(size: 14))
                             .foregroundColor(Color.black)
                             .frame(width: 175, height: 20, alignment: .topTrailing)
@@ -65,10 +67,11 @@ struct topCardView: View {
                                         Text("Edit budget")
                                             .font(.system(size: 14))
                                             .frame(width: 150, height: 29)
+                                            .padding(.horizontal, 10)
                                             .background(Color("ActionColor"))
                                             .cornerRadius(8)
                                             .foregroundColor(.white)
-                                            
+                                            Spacer()
                                 })
                             }
                             
