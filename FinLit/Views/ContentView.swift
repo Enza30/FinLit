@@ -17,6 +17,7 @@ struct ContentView: View {
             Dashboard()
                 .tabItem{
                     Image(systemName: "house.fill")
+                        
                     Text("Dashboard")
                 }
 

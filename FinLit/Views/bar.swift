@@ -54,13 +54,13 @@ struct barLine: View{
     var body: some View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Color("ActionColor"))
-                .opacity(0.5)
+                .foregroundColor(Color("NewActionColor"))
+                .opacity(0.2)
                 .frame(width: 335, height: 20)
                 
             
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Color("ActionColor"))
+                .foregroundColor(Color("NewActionColor"))
                 .frame(width: currentProgress, height: 20)
         }
     }

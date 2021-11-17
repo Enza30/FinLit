@@ -11,7 +11,7 @@ import SwiftUI
 struct FinLitApp: App {
     var body: some Scene {
         WindowGroup {
-            inputExpense()
+            ContentView()
         }
     }
 }

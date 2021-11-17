@@ -27,7 +27,7 @@ struct inputExpense: View {
                         .font(.custom("SF Pro", size: 24))
                         .padding(.horizontal, 150)
                         .padding(.vertical, 15)
-                        .background(Color("MainColor"))
+                        .background(Color("NewActionColor"))
                         .foregroundColor(.white)
                         .cornerRadius(8)
                         .shadow( radius: 10, x: 6, y: 7)

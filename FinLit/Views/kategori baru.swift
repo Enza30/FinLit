@@ -27,9 +27,9 @@ struct kategori_baru: View {
                     option(data: item)
                 }
             }.padding()
-                .background(Color("MainColor"))
-                .cornerRadius(15)
-                .shadow( radius: 5, x: 6, y: 7)
+//                .background(Color("MainColor"))
+//                .cornerRadius(15)
+//                .shadow( radius: 5, x: 6, y: 7)
         }
         //        VStack{
         //            HStack(spacing : 20){
@@ -61,15 +61,16 @@ struct option : View{
         VStack{
             Image(systemName: "house.fill")
                 .resizable()
-                .frame(width: 33, height: 33, alignment: .center)
-                .foregroundColor(Color("ActionColor"))
+                .frame(width: 35, height: 35, alignment: .center)
+                .foregroundColor(Color("NewActionColor"))
             Text(self.data.nama)
                 .font(.caption).bold()
             
                 .font(.headline)
-                .foregroundColor(Color("ActionColor"))
-            Text("Rp. 30,000").font(.callout).bold()
-                .padding(.vertical, 3)
+                .foregroundColor(Color("NewSecondColor"))
+            Text("Rp. 30,000").font(.caption).bold()
+                .padding(.vertical, 1)
+              
                 
             }
         .frame(width: 90, height: 105)
