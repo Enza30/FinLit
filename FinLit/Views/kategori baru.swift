@@ -63,7 +63,7 @@ struct option : View{
             Text(self.data.nama)
             
                 .font(.headline)
-                .foregroundColor(Color("ActionColor"))
+                .foregroundColor(Color("ColorSecond"))
             Text("Rp. 30,000").font(.callout).bold()
                 .padding(.vertical, 3)
                 
