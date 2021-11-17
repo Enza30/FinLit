@@ -50,6 +50,7 @@ struct Dashboard: View {
                     }.padding(10)
                         .background(Color("ActionColor"))
                     .ignoresSafeArea()
+                    .cornerRadius(8)
                     
                     
                     Text("Expense Rate").font(.title3).bold()
@@ -84,7 +85,7 @@ struct Dashboard: View {
             
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
-                                .foregroundColor(Color("MainColor"))
+                                .foregroundColor(Color("ActionColor"))
                                 .frame(width: 30, height: 30)
                                 .padding(.horizontal, 7)
                         }
@@ -123,7 +124,10 @@ struct Dashboard: View {
                  Text("Rp. 0")
                     Spacer(minLength: 10)
                 }
-            
+            Rectangle()
+                    .frame(height: 1)
+                    .foregroundColor(.secondary)
+                    .blur(radius: 1)
                 Spacer(minLength: 20)
                 HStack{
                 Text("Categories").font(.headline)
@@ -134,6 +138,7 @@ struct Dashboard: View {
                         .frame(width: 35, height: 35)
                         .foregroundColor(Color("MainColor"))
                         .padding(.horizontal)
+                        .shadow(radius: 0, x: 1, y: 2)
                     
                 }
 //
