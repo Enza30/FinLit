@@ -18,7 +18,7 @@ struct categoryBudgetRow: View {
                     .frame(width: 32, height: 32)
                 .foregroundColor(Color("ActionColor"))
             }
-            .frame(width: 64, height: 64, alignment: .center)
+            .frame(width: 56, height: 56, alignment: .center)
             Spacer()
                 
             VStack {
