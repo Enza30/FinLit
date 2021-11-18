@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Finance" representedClassName="Finance" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="income" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+    <entity name="Budget" representedClassName="Budget" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <relationship name="budget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Income" inverseName="budget" inverseEntity="Income"/>
+        <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="expense" inverseEntity="Expense"/>
     </entity>
-    <entity name="Kategori" representedClassName="Kategori" syncable="YES" codeGenerationType="class">
-        <attribute name="namakategori" optional="YES" attributeType="String"/>
-        <relationship name="budgeting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Money" inverseName="budgeting" inverseEntity="Money"/>
-        <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Money" inverseName="expense" inverseEntity="Money"/>
-    </entity>
-    <entity name="Money" representedClassName="Money" syncable="YES" codeGenerationType="class">
+    <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="kategoribudget" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="kategoriexpense" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <relationship name="budgeting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kategori" inverseName="budgeting" inverseEntity="Kategori"/>
-        <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kategori" inverseName="expense" inverseEntity="Kategori"/>
+        <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Budget" inverseName="expense" inverseEntity="Budget"/>
+    </entity>
+    <entity name="Income" representedClassName="Income" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="budget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Budget" inverseName="budget" inverseEntity="Budget"/>
     </entity>
     <elements>
-        <element name="Finance" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Kategori" positionX="-54" positionY="36" width="128" height="74"/>
-        <element name="Money" positionX="-36" positionY="45" width="128" height="104"/>
+        <element name="Income" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="Budget" positionX="0" positionY="63" width="128" height="89"/>
+        <element name="Expense" positionX="27" positionY="99" width="128" height="89"/>
     </elements>
 </model>
