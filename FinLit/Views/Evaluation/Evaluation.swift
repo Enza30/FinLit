@@ -10,7 +10,7 @@ import SwiftUI
 struct Evaluation: View {
     var body: some View {
         VStack{
-            Chart()
+            //Chart()
         }
     }
 }
