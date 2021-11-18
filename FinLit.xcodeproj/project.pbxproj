@@ -25,8 +25,6 @@
 		517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517BF1D52740BAE900EF0B08 /* Persistence.swift */; };
 		51B144D9273F33CF007078D3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B144D8273F33CF007078D3 /* Category.swift */; };
 		51B144DC273F3DD5007078D3 /* FinLit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B144DA273F3DD5007078D3 /* FinLit.xcdatamodeld */; };
-		51BAE96427338540009AF25F /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96327338540009AF25F /* Input.swift */; };
-		51BAE9662733874C009AF25F /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE9652733874C009AF25F /* Display.swift */; };
 		51BAE96827339475009AF25F /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96727339475009AF25F /* Evaluation.swift */; };
 		51BAE96A2733949F009AF25F /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE9692733949F009AF25F /* Budget.swift */; };
 		51BAE96C273394AD009AF25F /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96B273394AD009AF25F /* Education.swift */; };
@@ -76,8 +74,6 @@
 		517BF1D52740BAE900EF0B08 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		51B144D8273F33CF007078D3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		51B144DB273F3DD5007078D3 /* Finance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Finance.xcdatamodel; sourceTree = "<group>"; };
-		51BAE96327338540009AF25F /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
-		51BAE9652733874C009AF25F /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		51BAE96727339475009AF25F /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		51BAE9692733949F009AF25F /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		51BAE96B273394AD009AF25F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
@@ -168,19 +164,13 @@
 		513746C4272F950400A56FB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E264E7BC2733AB9D003A9689 /* lazygrid.swift */,
-				E2C3BB67272F9C54005B6811 /* inputPage.swift */,
-				E264E7C427344328003A9689 /* kategori baru.swift */,
+				513C26CB274610F1008A38BE /* Utils */,
 				513746B8272F8C9100A56FB0 /* ContentView.swift */,
 				51BAE96F273395D7009AF25F /* Dashboard */,
 				51BAE970273395E7009AF25F /* Evaluation */,
 				4D8F48C02734D24300DDFF73 /* Onboarding */,
 				51BAE971273395FD009AF25F /* Budget */,
 				51BAE9722733960C009AF25F /* Education */,
-				51BAE96327338540009AF25F /* Input.swift */,
-				51BAE9652733874C009AF25F /* Display.swift */,
-				E2464ADD2734DC8D007957CE /* bar.swift */,
-				51DD60AD273B778000054E9B /* Chart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,10 +185,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		513C26CB274610F1008A38BE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E2464ADD2734DC8D007957CE /* bar.swift */,
+				E264E7BC2733AB9D003A9689 /* lazygrid.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		51BAE96F273395D7009AF25F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
 				51BAE96D2733959C009AF25F /* Dashboard.swift */,
+				E2C3BB67272F9C54005B6811 /* inputPage.swift */,
 				4DC5A04127455B3100F46D29 /* test.swift */,
 			);
 			path = Dashboard;
@@ -208,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				51BAE96727339475009AF25F /* Evaluation.swift */,
+				51DD60AD273B778000054E9B /* Chart.swift */,
 			);
 			path = Evaluation;
 			sourceTree = "<group>";
@@ -217,6 +218,7 @@
 			children = (
 				51BAE9692733949F009AF25F /* Budget.swift */,
 				9B22677D2745EE6B00F56804 /* Keypad.swift */,
+				E264E7C427344328003A9689 /* kategori baru.swift */,
 				4DEC26DC2740D19B00C10EEA /* topCardView.swift */,
 				4D107B572742A11F002E3A7E /* categoryBudgetRow.swift */,
 				4D107B592742B4B4002E3A7E /* categoryBudgetList.swift */,
@@ -336,7 +338,6 @@
 				4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */,
 				4DC5A04227455B3100F46D29 /* test.swift in Sources */,
 				4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */,
-				51BAE9662733874C009AF25F /* Display.swift in Sources */,
 				E294BCB4273AAEF8002D4010 /* dataModelKategori.swift in Sources */,
 				513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */,
 				E2464ADE2734DC8D007957CE /* bar.swift in Sources */,
@@ -353,7 +354,6 @@
 				51B144D9273F33CF007078D3 /* Category.swift in Sources */,
 				E264E7C72734519B003A9689 /* GlobalData.swift in Sources */,
 				4D107B582742A11F002E3A7E /* categoryBudgetRow.swift in Sources */,
-				51BAE96427338540009AF25F /* Input.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
 				9B99CC1327425CA100F593E5 /* EditBudget.swift in Sources */,
 				517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */,

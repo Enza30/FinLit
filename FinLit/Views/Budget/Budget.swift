@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Budget: View {
+struct BudgetView: View {
     var body: some View {
         NavigationView {
             ScrollView {
@@ -37,8 +37,8 @@ struct Budget: View {
     }
 }
 
-struct Budget_Previews: PreviewProvider {
+struct BudgetView_Previews: PreviewProvider {
     static var previews: some View {
-        Budget()
+        BudgetView()
     }
 }
