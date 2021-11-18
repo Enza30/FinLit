@@ -79,6 +79,7 @@ struct topCardView: View {
                         
                     }
                     .frame(height: 163)
+//                    .border(.secondary, width: 1)
 
                 }
                 .frame(height:164)
