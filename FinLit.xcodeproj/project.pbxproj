@@ -20,6 +20,7 @@
 		513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B8272F8C9100A56FB0 /* ContentView.swift */; };
 		513746BB272F8C9200A56FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BA272F8C9200A56FB0 /* Assets.xcassets */; };
 		513746BE272F8C9200A56FB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BD272F8C9200A56FB0 /* Preview Assets.xcassets */; };
+		513C26C82745E1BC008A38BE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 513C26C72745E1BC008A38BE /* SwiftUICharts */; };
 		517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517BF1D52740BAE900EF0B08 /* Persistence.swift */; };
 		51B144D9273F33CF007078D3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B144D8273F33CF007078D3 /* Category.swift */; };
 		51B144DC273F3DD5007078D3 /* FinLit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B144DA273F3DD5007078D3 /* FinLit.xcdatamodeld */; };
@@ -29,7 +30,6 @@
 		51BAE96A2733949F009AF25F /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE9692733949F009AF25F /* Budget.swift */; };
 		51BAE96C273394AD009AF25F /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96B273394AD009AF25F /* Education.swift */; };
 		51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96D2733959C009AF25F /* Dashboard.swift */; };
-		51DD60AC273B776A00054E9B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 51DD60AB273B776A00054E9B /* SwiftUICharts */; };
 		51DD60AE273B778000054E9B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD60AD273B778000054E9B /* Chart.swift */; };
 		9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1027425C5400F593E5 /* EditBudgetView.swift */; };
 		9B99CC1327425CA100F593E5 /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1227425CA100F593E5 /* EditBudget.swift */; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DD60AC273B776A00054E9B /* SwiftUICharts in Frameworks */,
+				513C26C82745E1BC008A38BE /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +266,7 @@
 			);
 			name = FinLit;
 			packageProductDependencies = (
-				51DD60AB273B776A00054E9B /* SwiftUICharts */,
+				513C26C72745E1BC008A38BE /* SwiftUICharts */,
 			);
 			productName = FinLit;
 			productReference = 513746B3272F8C9100A56FB0 /* FinLit.app */;
@@ -297,7 +297,7 @@
 			);
 			mainGroup = 513746AA272F8C9100A56FB0;
 			packageReferences = (
-				51DD60AA273B776A00054E9B /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+				513C26C62745E1BC008A38BE /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 513746B4272F8C9100A56FB0 /* Products */;
 			projectDirPath = "";
@@ -559,20 +559,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		51DD60AA273B776A00054E9B /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+		513C26C62745E1BC008A38BE /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AfrazCodes/SwiftUICharts";
+			repositoryURL = "https://github.com/AppPear/ChartView";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		51DD60AB273B776A00054E9B /* SwiftUICharts */ = {
+		513C26C72745E1BC008A38BE /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51DD60AA273B776A00054E9B /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			package = 513C26C62745E1BC008A38BE /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
