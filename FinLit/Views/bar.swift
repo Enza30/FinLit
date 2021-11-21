@@ -57,11 +57,11 @@ struct barLine: View{
     @State var currentProgress: CGFloat = 155.0
     var body: some View {
         ZStack(alignment: .leading){
-            RoundedRectangle(cornerRadius: 15)
+            RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(.secondary)
-                .frame(width: 335, height: 20)
+                .frame(width: 314, height: 20)
             
-            RoundedRectangle(cornerRadius: 15)
+            RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(Color("ActionColor"))
                 .frame(width: currentProgress, height: 20)
         }

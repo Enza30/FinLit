@@ -57,7 +57,7 @@ struct Dashboard: View {
                                                     .font(.system(size: 14)).bold()
                                                     
                                                 Spacer(minLength: 110)
-                                                Text("Inc.v.Exp|Date")
+                                                Text("Inc.v.Exp. | Date")
                                                     .font(.system(size: 14))
                                                     .foregroundColor(.secondary)
                                                 
@@ -146,9 +146,11 @@ struct Dashboard: View {
                         Spacer(minLength: 30)
                         HStack{
                         Text("Today's Expense").font(.headline)
-                            Spacer(minLength: 110)
+                            Spacer(minLength: 70)
                             
                          Text("Rp.1.000.000")
+                                .font(.system(size: 24))
+                                .foregroundColor(Color("ColorSecond")).bold()
                             Spacer(minLength: 10)
                         }
                     
