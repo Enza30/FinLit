@@ -7,20 +7,27 @@
 
 import SwiftUI
 struct NumberField: View {
-   @State var textData = "NumberModel()"
+   @State var textData = ""
     var body: some View {
         VStack{
             VStack{
+                Text("Edit Budget")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .padding()
+                    //.multilineTextAlignment(.center)
 
-        HStack{
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Enter Your Number").font(.caption)
+            HStack{
+                VStack(alignment: .leading, spacing: 6) {
+                    TextField("Enter Your Number", text: $textData).font(.caption)
                     .foregroundColor(.gray)
 
 //                    Text(textData.phNo)
 //                        .font(.title2)
 //                        .fontWeight(.bold)
 //                        .foregroundColor(.black)
+                    
                 
             }
 
@@ -35,10 +42,10 @@ struct NumberField: View {
                 }
             }
             .padding()
-            .background(Color.white)
+            .background(Color.orange)
             .cornerRadius(15)
         }
-        .frame(width: UIScreen.main.bounds.height / 1.8)
+        .frame(width: UIScreen.main.bounds.height / 2.2)
         .background(Color.white)
         Spacer()
     
@@ -50,17 +57,17 @@ struct NumberField: View {
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 3), spacing: 15) {
                 ForEach(rows,id: \.self){value in
                     
-                    Button(action: {}){
+                    Button(action: {buttonAction(value: value)}){
                         ZStack{
                             
                             if value == "delete.left"{
                                 Image(systemName: value)
-                                      .font(.title2)
+                                      .font(.title)
                                       .foregroundColor(.black)
                             }
                             else {
                                 Text(value)
-                                    .font(.title2)
+                                    .font(.title)
                                     .fontWeight(.bold)
                                     .foregroundColor(.black)
                             }
@@ -70,6 +77,9 @@ struct NumberField: View {
                         .background(Color.white)
                         .cornerRadius(8)
                     }
+                    
+                    //disabling button for empty action...
+                    .disabled(value == "" ? true : false)
                     
                 }
             }
@@ -94,6 +104,15 @@ struct NumberField: View {
         return actualHeight  / 4
     }
     
+    func buttonAction(value: String){
+        if value == "delete.left" && textData != "" {
+            textData.removeLast()
+        }
+        else {
+            textData.append(value)
+        }
+    }
+    
 }
 
 // Number Data.......
@@ -105,4 +124,5 @@ struct NumberField_Previews: PreviewProvider {
         NumberField()
     }
 }
+
 
