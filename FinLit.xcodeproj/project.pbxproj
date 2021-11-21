@@ -16,6 +16,7 @@
 		4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48CB2734E79600DDFF73 /* PageTabView.swift */; };
 		4DC5A04227455B3100F46D29 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5A04127455B3100F46D29 /* test.swift */; };
 		4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAB8732734EB620085EC91 /* SkipButtonView.swift */; };
+		4DD5657C274A30F4000F4374 /* segmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD5657B274A30F4000F4374 /* segmentedControlView.swift */; };
 		4DEC26DD2740D19B00C10EEA /* topCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC26DC2740D19B00C10EEA /* topCardView.swift */; };
 		513746B7272F8C9100A56FB0 /* FinLitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B6272F8C9100A56FB0 /* FinLitApp.swift */; };
 		513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B8272F8C9100A56FB0 /* ContentView.swift */; };
@@ -65,6 +66,7 @@
 		4D8F48CB2734E79600DDFF73 /* PageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTabView.swift; sourceTree = "<group>"; };
 		4DC5A04127455B3100F46D29 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		4DCAB8732734EB620085EC91 /* SkipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButtonView.swift; sourceTree = "<group>"; };
+		4DD5657B274A30F4000F4374 /* segmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentedControlView.swift; sourceTree = "<group>"; };
 		4DEC26DC2740D19B00C10EEA /* topCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topCardView.swift; sourceTree = "<group>"; };
 		513746B3272F8C9100A56FB0 /* FinLit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinLit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		513746B6272F8C9100A56FB0 /* FinLitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinLitApp.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				51BAE96727339475009AF25F /* Evaluation.swift */,
 				51DD60AD273B778000054E9B /* Chart.swift */,
+				4DD5657B274A30F4000F4374 /* segmentedControlView.swift */,
 			);
 			path = Evaluation;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */,
 				51BAE96C273394AD009AF25F /* Education.swift in Sources */,
 				9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */,
+				4DD5657C274A30F4000F4374 /* segmentedControlView.swift in Sources */,
 				E264E7C527344328003A9689 /* kategori baru.swift in Sources */,
 				513746B7272F8C9100A56FB0 /* FinLitApp.swift in Sources */,
 				9BAA695B273CC076004174B3 /* Widget.intentdefinition in Sources */,
