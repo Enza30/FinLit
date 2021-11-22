@@ -9,35 +9,35 @@ import SwiftUI
 
 struct Dashboard: View {
     var body: some View {
-      
+        
         NavigationView{
             ScrollView{
-        
+                
                 ZStack{
-//            LinearGradient(colors: [Color("MainColor"), Color.white], startPoint: .topLeading, endPoint: .bottomTrailing)
-            Color.white
-                .edgesIgnoringSafeArea(.all
-                )
-            
+                    //            LinearGradient(colors: [Color("MainColor"), Color.white], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    Color.white
+                        .edgesIgnoringSafeArea(.all
+                        )
+                    
                     VStack(alignment: .leading){
                         HStack{
                             Spacer()
-                        VStack{
-                       
-                          
-                            Text("August 2022").font(.system(size: 14)).bold()
-                                .foregroundColor(Color.secondary)
-
-
-                            Text("Rp. 1.000.000").font(.largeTitle).bold()
-                                .foregroundColor(Color("ColorSecond"))
-                            
-                    
-                        
-                        }.padding(.all, 5)
+                            VStack{
+                                
+                                
+                                Text("August 2022").font(.system(size: 14)).bold()
+                                    .foregroundColor(Color.secondary)
+                                
+                                
+                                Text("Rp. 1.000.000").font(.largeTitle).bold()
+                                    .foregroundColor(Color("ColorSecond"))
+                                
+                                
+                                
+                            }.padding(.all, 5)
                             Spacer()
                         }
-                            
+                        
                         Spacer(minLength: 15)
                         HStack{
                             Spacer()
@@ -55,7 +55,7 @@ struct Dashboard: View {
                                                 Spacer()
                                                 Text("Expense Rate")
                                                     .font(.system(size: 14)).bold()
-                                                    
+                                                
                                                 Spacer(minLength: 110)
                                                 Text("Inc.v.Exp. | Date")
                                                     .font(.system(size: 14))
@@ -66,7 +66,7 @@ struct Dashboard: View {
                                             ZStack {
                                                 barLine()
                                                 HStack(alignment: .top){
-                                                Rectangle()
+                                                    Rectangle()
                                                         .frame(width: 7, height: 26)
                                                     Text("15 Aug").font(.caption)
                                                         .foregroundColor(.white)
@@ -83,7 +83,7 @@ struct Dashboard: View {
                                         ZStack {
                                             Rectangle()
                                                 .foregroundColor(.white)
-                                            .border(Color("garis"), width: 1)
+                                                .border(Color("garis"), width: 1)
                                             
                                             HStack {
                                                 Spacer()
@@ -102,7 +102,7 @@ struct Dashboard: View {
                                                         .resizable()
                                                         .foregroundColor(Color("MainColor"))
                                                         .frame(width: 24, height: 24)
-                                                        
+                                                    
                                                 })
                                                 Spacer()
                                             }
@@ -112,7 +112,7 @@ struct Dashboard: View {
                                         ZStack {
                                             Rectangle()
                                                 .foregroundColor(.white)
-                                            .border(Color("garis"), width: 1)
+                                                .border(Color("garis"), width: 1)
                                             
                                             VStack{
                                                 Text("Total Expenses")
@@ -124,7 +124,7 @@ struct Dashboard: View {
                                                     .frame(width:130, alignment: .topTrailing)
                                             }
                                         }
-                                            
+                                        
                                     }
                                 }
                                 .border(Color("garis"), width: 1)
@@ -136,28 +136,28 @@ struct Dashboard: View {
                             .shadow(radius: 5, x: 2, y: 3)
                             .shadow(color: Color.white, radius: 5, x: -2, y: -3)
                             
-            
+                            
                             Spacer()
                         }
-
-        //                    .background(Color("MainColor"))
-        //                    .cornerRadius(15)
-        //                    .shadow( radius: 10, x: 6, y: 7)
+                        
+                        //                    .background(Color("MainColor"))
+                        //                    .cornerRadius(15)
+                        //                    .shadow( radius: 10, x: 6, y: 7)
                         Spacer(minLength: 30)
                         HStack{
-                        Text("Today's Expense").font(.headline)
+                            Text("Today's Expense").font(.headline)
                             Spacer(minLength: 70)
                             
-                         Text("Rp.1.000.000")
+                            Text("Rp.1.000.000")
                                 .font(.system(size: 24))
                                 .foregroundColor(Color("ColorSecond")).bold()
                             Spacer(minLength: 10)
                         }
-                    
+                        
                         Spacer(minLength: 20)
                         HStack{
-                        Text("Categories").font(.headline)
-                        
+                            Text("Categories").font(.headline)
+                            
                             Spacer()
                             Button(action:{}, label:{
                                 Image(systemName: "plus.circle.fill")
@@ -165,31 +165,31 @@ struct Dashboard: View {
                                     .foregroundColor(Color("MainColor"))
                                     .frame(width: 32, height: 32)
                                     .padding(.horizontal)
-                                    
+                                
                             })
-//                            Image(systemName: "plus.circle.fill")
-//                                .resizable()
-//                                .frame(width: 35, height: 35)
-//                                .foregroundColor(Color("MainColor"))
-//                                .padding(.horizontal)
+                            //                            Image(systemName: "plus.circle.fill")
+                            //                                .resizable()
+                            //                                .frame(width: 35, height: 35)
+                            //                                .foregroundColor(Color("MainColor"))
+                            //                                .padding(.horizontal)
+                            
+                        }
+                        //
+                        kategori_baru()
+                        //
+                        
+                        
+                        
+                        
+                    }.padding()
+                    //        }.background(Color("BgColor"))
+                    //            .edgesIgnoringSafeArea(.all)
+                    //            .navigationViewStyle(StackNavigationViewStyle())
+                    //            .frame(alignment: .topTrailing)
                     
                 }
-//
-                    kategori_baru()
-//
-    
-        
-           
-           
-            }.padding()
-//        }.background(Color("BgColor"))
-//            .edgesIgnoringSafeArea(.all)
-//            .navigationViewStyle(StackNavigationViewStyle())
-//            .frame(alignment: .topTrailing)
-            
-        }
             }.navigationTitle("Your Money")
-    }
+        }
     }
 }
 

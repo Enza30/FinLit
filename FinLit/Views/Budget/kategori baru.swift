@@ -18,6 +18,8 @@ struct kategori_baru: View {
                              kategori(id: 8, nama: "Skincare", warna: "dasar", warna2: "warna2")
     ]
     
+    
+    
     var body: some View {
         ScrollView(.vertical){
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], alignment: .leading, spacing: 10){
