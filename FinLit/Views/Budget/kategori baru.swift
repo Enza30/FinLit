@@ -47,14 +47,15 @@ struct kategori_baru_Previews: PreviewProvider {
     }
 }
 struct option : View{
-    @State private var isTapped = false
+    @State private var inputExpense = false
     // @ObservedObject var kata : GlobalObject
     
     let data : kategori
     var body: some View{
         
-       // if(!self.isTapped){
-            
+        ZStack(alignment: .center){
+     
+          
         VStack{
             Image(systemName: "house.fill")
                 .resizable()
@@ -72,6 +73,15 @@ struct option : View{
             .background(Color.white)
                         .cornerRadius(7)
                         .shadow(radius: 3, x: 1, y: 1)
+         
+            Button("                                                                                                                                         "){
+                inputExpense.toggle()
+                ()   }
+            .sheet(isPresented: $inputExpense){
+                modalTry()
+            }
+            .padding(.all, 50)
+        }
 //                .onTapGesture {
 //
 //                    if(!self.isTapped){
@@ -99,7 +109,7 @@ struct option : View{
 //                        print(isTapped)
 //                    }
 //                }
-//        }
+
         
     }
     

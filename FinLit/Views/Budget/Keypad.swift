@@ -8,6 +8,8 @@
 import SwiftUI
 struct NumberField: View {
    @State var textData = ""
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack{
             VStack{
@@ -32,7 +34,8 @@ struct NumberField: View {
             }
 
                 Spacer(minLength: 0)
-                Button(action: {}){
+                Button(action: {dismiss()
+                }){
                     Text("Save")
                         .foregroundColor(.black)
                         .padding(.vertical,18)
