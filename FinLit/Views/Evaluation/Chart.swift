@@ -16,7 +16,7 @@ struct Chart: View {
 
     var body: some View {
         VStack {
-            BarChartView(data: ChartData(values: data2), title: "Expense August", legend: "", style: Styles.barChartStyleOrangeLight, form: CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height/2.5), cornerImage: Image(systemName: ""))
+            BarChartView(data: ChartData(values: data2), title: "Expense August", legend: "Quaterly", style: Styles.barChartStyleOrangeLight, form: CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height/2.5), cornerImage: Image(systemName: ""))
     }
 }
 

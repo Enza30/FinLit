@@ -22,3 +22,4 @@ func getDateFormatter(date: Date?, format: String = "yyyy-MM-dd") -> String {
     dateFormatter.dateFormat = format
     return dateFormatter.string(from: date)
 }
+

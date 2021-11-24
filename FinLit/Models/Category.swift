@@ -26,6 +26,25 @@ enum Category: String, CaseIterable {
     case clothes
     case others
     
+    var nameList: String {
+        switch self {
+        case .travel: return "Travel"
+        case .groceries: return "Groceries"
+        case .snack: return "Snack"
+        case .stationary: return "Stationary"
+        case .phone: return "Phone"
+        case .social: return "Social"
+        case .rent: return "Rent"
+        case .food: return "Food"
+        case .beauty: return "Beauty"
+        case .health: return "Health"
+        case .drinks: return "Drink"
+        case .transport: return "Transport"
+        case .clothes: return "Clothes"
+        case .others: return "Others"
+        }
+    }
+    
     var systemNameIcon: String {
         switch self {
         case .travel: return "airplane"
@@ -41,7 +60,7 @@ enum Category: String, CaseIterable {
         case .drinks: return "cup.and.saucer.fill"
         case .transport: return "car.fill"
         case .clothes: return "tshirt.fill"
-        case .others: return "list.bullet.circle.fill"
+        case .others: return "tag.fill"
         }
     }
     
@@ -69,3 +88,65 @@ enum Category: String, CaseIterable {
 extension Category: Identifiable{
     var id: String { rawValue }
 }
+
+
+
+
+
+
+
+let CATEGORY_LIST_TRAVEL = "travel"
+let CATEGORY_LIST_GROCERIES = "groceries"
+let CATEGORY_LIST_SNACK = "snack"
+let CATEGORY_LIST_STATIONARY = "stationary"
+let CATEGORY_LIST_PHONE = "phone"
+let CATEGORY_LIST_SOCIAL = "social"
+let CATEGORY_LIST_RENT = "rent"
+let CATEGORY_LIST_FOOD = "food"
+let CATEGORY_LIST_BEAUTY = "beauty"
+let CATEGORY_LIST_HEALTH = "health"
+let CATEGORY_LIST_DRINKS = "drinks"
+let CATEGORY_LIST_TRANSPORT = "transport"
+let CATEGORY_LIST_CLOTHES = "clothes"
+let CATEGORY_LIST_OTHERS = "others"
+
+func getCatListIcon(catList: String) -> String {
+    switch catList{
+    case CATEGORY_LIST_TRAVEL: return "category_list_travel"
+    case CATEGORY_LIST_GROCERIES: return "category_list_groceries"
+    case CATEGORY_LIST_SNACK: return "category_list_snack"
+    case CATEGORY_LIST_STATIONARY: return "category_list_stationary"
+    case CATEGORY_LIST_PHONE: return "category_list_phone"
+    case CATEGORY_LIST_SOCIAL: return "category_list_social"
+    case CATEGORY_LIST_RENT: return "category_list_rent"
+    case CATEGORY_LIST_FOOD: return "category_list_food"
+    case CATEGORY_LIST_BEAUTY: return "category_list_beauty"
+    case CATEGORY_LIST_HEALTH: return "category_list_health"
+    case CATEGORY_LIST_DRINKS: return "category_list_drinks"
+    case CATEGORY_LIST_TRANSPORT: return "category_list_transport"
+    case CATEGORY_LIST_CLOTHES: return "category_list_clothes"
+    default: return "category_list_others"
+    }
+}
+
+func getCatListName(catList: String) -> String {
+    switch catList{
+    case CATEGORY_LIST_TRAVEL: return "Travel"
+    case CATEGORY_LIST_GROCERIES: return "Groceries"
+    case CATEGORY_LIST_SNACK: return "Snack"
+    case CATEGORY_LIST_STATIONARY: return "Stationary"
+    case CATEGORY_LIST_PHONE: return "Phone"
+    case CATEGORY_LIST_SOCIAL: return "Social"
+    case CATEGORY_LIST_RENT: return "Rent"
+    case CATEGORY_LIST_FOOD: return "Food"
+    case CATEGORY_LIST_BEAUTY: return "Beauty"
+    case CATEGORY_LIST_HEALTH: return "Health"
+    case CATEGORY_LIST_DRINKS: return "Drinks"
+    case CATEGORY_LIST_TRANSPORT: return "Transport"
+    case CATEGORY_LIST_CLOTHES: return "Clothes"
+    case CATEGORY_LIST_OTHERS: return "Others"
+    default: return "Unknown"
+    }
+}
+
+
