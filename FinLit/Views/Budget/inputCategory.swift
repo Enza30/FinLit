@@ -13,14 +13,25 @@ struct inputCategory: View {
     @State var category : [CategoryItem] = []
     @State var catChecked = false
     
+    func shownCategory() -> ()  {
+        Category.allCases.forEach{ catList in
+            category.append(CategoryItem(
+                image:catList.systemNameIcon,
+                color:catList.color,
+                title: catList.nameList,
+                checked: false))
+
+        }
+    }
+
     var body: some View {
-            Category.allCases.forEach{ catList in
-                category.append(CategoryItem(
-                    image:catList.systemNameIcon,
-                    color:catList.color,
-                    title: catList.nameList,
-                    checked: false))
-            }
+//            Category.allCases.forEach{ catList in
+//                category.append(CategoryItem(
+//                    image:catList.systemNameIcon,
+//                    color:catList.color,
+//                    title: catList.nameList,
+//                    checked: false))
+//            }
         NavigationView{
             ScrollView{
                 List{

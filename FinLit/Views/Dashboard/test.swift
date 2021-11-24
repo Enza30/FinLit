@@ -49,7 +49,7 @@ struct test: View {
                             .frame(height: 52)
                             
                             HStack{
-                                VStack {
+                                VStack(spacing:0) {
                                     HStack {
                                         Spacer()
                                         Text("Expense Rate")
@@ -62,15 +62,22 @@ struct test: View {
                                         
                                         Spacer()
                                     }
-                                    ZStack {
-                                        barLine()
-                                        HStack(alignment: .top){
-                                        Rectangle()
-                                                .frame(width: 7, height: 26)
-                                            Text("15 Aug").font(.caption)
-                                                .foregroundColor(.white)
-                                                .background(.black)
+                                    VStack(spacing:0) {
+                                        ZStack {
+                                            barLine()
+                                            VStack {
+                                                HStack(spacing: 2) {
+                                                        Rectangle()
+                                                            .frame(width: 7, height: 26)
+                                                            .foregroundColor(Color("ColorSecond"))
+                                                }
+                                            }
+                                                
+                                            
                                         }
+                                        Text("14 Aug")
+                                            .font(.system(size: 14))
+                                            .foregroundColor(Color("ColorSecond"))
                                     }
                                     
                                 }

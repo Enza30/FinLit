@@ -59,17 +59,20 @@ struct option : View{
      
           
         VStack{
+            Spacer()
             Image(systemName: "house.fill")
                 .resizable()
                 .frame(width: 38, height: 38, alignment: .center)
                 .foregroundColor(Color("ActionColor"))
+                
             Text(self.data.nama)
             
-                .font(.headline)
-                .foregroundColor(Color("ColorSecond"))
-            Text("Rp. 30,000").font(.callout).bold()
+                .font(.system(size: 12))
+                .foregroundColor(.secondary)
+                .padding(.vertical, 2)
+            Text("Rp. 30.000").font(.system(size: 14)).bold()
                 .padding(.vertical, 3)
-                
+                Spacer()
         }.frame(width: 110, height: 125)
         //                .padding(.all, 7)
             .background(Color.white)

@@ -30,7 +30,7 @@ struct Dashboard: View {
                                 
                                 
                                 Text("Rp. 1.000.000").font(.largeTitle).bold()
-                                    .foregroundColor(Color("ColorSecond"))
+                                    .foregroundColor(Color("MainColor"))
                                 
                                 
                                 
@@ -50,14 +50,14 @@ struct Dashboard: View {
                                     .frame(height: 52)
                                     
                                     HStack{
-                                        VStack {
+                                        VStack (spacing: 0) {
                                             HStack {
                                                 Spacer()
                                                 Text("Expense Rate")
                                                     .font(.system(size: 14)).bold()
                                                 
-                                                Spacer(minLength: 110)
-                                                Text("Inc.v.Exp. | Date")
+                                                Spacer(minLength: 70)
+                                                Text("Your Expense to Date")
                                                     .font(.system(size: 14))
                                                     .foregroundColor(.secondary)
                                                 
@@ -65,12 +65,13 @@ struct Dashboard: View {
                                             }
                                             ZStack {
                                                 barLine()
-                                                HStack(alignment: .top){
+                                                HStack(alignment: .bottom){
                                                     Rectangle()
-                                                        .frame(width: 7, height: 26)
+                                                        .frame(width: 5, height: 26)
                                                     Text("15 Aug").font(.caption)
                                                         .foregroundColor(.white)
                                                         .background(.black)
+                                                        .cornerRadius(4)
                                                 }
                                             }
                                             
@@ -100,7 +101,7 @@ struct Dashboard: View {
                                                 Button(action:{}, label:{
                                                     Image(systemName: "plus.circle.fill")
                                                         .resizable()
-                                                        .foregroundColor(Color("MainColor"))
+                                                        .foregroundColor(Color("ActionColor"))
                                                         .frame(width: 24, height: 24)
                                                     
                                                 })
@@ -146,11 +147,15 @@ struct Dashboard: View {
                         Spacer(minLength: 30)
                         HStack{
                             Text("Today's Expense").font(.headline)
-                            Spacer(minLength: 70)
+                            Spacer(minLength: 65)
                             
-                            Text("Rp.1.000.000")
-                                .font(.system(size: 24))
-                                .foregroundColor(Color("ColorSecond")).bold()
+                            HStack {
+                                Text("Rp.50.000")
+                                    .font(.system(size: 24)).bold()
+                                    
+                                .foregroundColor(Color("MainColor"))
+                            }
+                            .frame(width: 150,alignment: .topTrailing)
                             Spacer(minLength: 10)
                         }
                         
@@ -162,7 +167,7 @@ struct Dashboard: View {
                             Button(action:{}, label:{
                                 Image(systemName: "plus.circle.fill")
                                     .resizable()
-                                    .foregroundColor(Color("MainColor"))
+                                    .foregroundColor(Color("ActionColor"))
                                     .frame(width: 32, height: 32)
                                     .padding(.horizontal)
                                 

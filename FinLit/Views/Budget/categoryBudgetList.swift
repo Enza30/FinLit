@@ -11,8 +11,9 @@ struct categoryBudgetList: View {
     var body: some View {
         List {
             categoryBudgetRow()
+            
                     
-        }.frame(width: 500, height: 844)
+        }.frame(width: 500, height: 500, alignment: .top)
         
         }
     }

@@ -11,18 +11,12 @@ struct BudgetView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(alignment: .center , spacing: 0) {
+        VStack(alignment:.center , spacing: 0) {
                     
-                   
                     HStack {
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
+                        Spacer(minLength: 50)
                         topCardView()
                     }
-                    
                     HStack {
                         categoryBudgetList()
                         Spacer()

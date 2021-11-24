@@ -85,11 +85,11 @@ struct choosenHistoryView: View {
     var body: some View {
         switch selectedHistory {
         case .weekly:
-            Chart()
+            ChartWeekly()
         case .monthly:
-            Text("Chart Monthly View") // Code Chart Monthly
+            ChartMonthly() // Code Chart Monthly
         case .yearly:
-            Text("Chart Yearly View") // Code Chart Yearly
+            Chart() // Code Chart Yearly
         }
         
     }
