@@ -32,6 +32,7 @@
 		51BAE96A2733949F009AF25F /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE9692733949F009AF25F /* Budget.swift */; };
 		51BAE96C273394AD009AF25F /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96B273394AD009AF25F /* Education.swift */; };
 		51BAE96E2733959C009AF25F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAE96D2733959C009AF25F /* Dashboard.swift */; };
+		51DB251A274C874300BC77CF /* inputCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB2519274C874300BC77CF /* inputCategory.swift */; };
 		51DD60AE273B778000054E9B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD60AD273B778000054E9B /* Chart.swift */; };
 		9B22677E2745EE6B00F56804 /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22677D2745EE6B00F56804 /* Keypad.swift */; };
 		9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1027425C5400F593E5 /* EditBudgetView.swift */; };
@@ -85,6 +86,7 @@
 		51BAE9692733949F009AF25F /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		51BAE96B273394AD009AF25F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		51BAE96D2733959C009AF25F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		51DB2519274C874300BC77CF /* inputCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputCategory.swift; sourceTree = "<group>"; };
 		51DD60AD273B778000054E9B /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		9B22677D2745EE6B00F56804 /* Keypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
 		9B99CC1027425C5400F593E5 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				4D107B592742B4B4002E3A7E /* categoryBudgetList.swift */,
 				9B99CC1027425C5400F593E5 /* EditBudgetView.swift */,
 				9B99CC1227425CA100F593E5 /* EditBudget.swift */,
+				51DB2519274C874300BC77CF /* inputCategory.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				4D107B582742A11F002E3A7E /* categoryBudgetRow.swift in Sources */,
 				E25FC7C3274B129D006DD256 /* modalTry.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
+				51DB251A274C874300BC77CF /* inputCategory.swift in Sources */,
 				9B99CC1327425CA100F593E5 /* EditBudget.swift in Sources */,
 				517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */,
 				51BAE96C273394AD009AF25F /* Education.swift in Sources */,

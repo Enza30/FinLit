@@ -6,30 +6,35 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct modalTry: View {
-  @State var input = ""
+    //var context = NSManagedObjectContext()
+    
+    @State var input = ""
     @Environment(\.dismiss) var dismiss
+    
+    
     var body: some View {
         VStack{
             Spacer()
-        TextField("", text: $input)
+            TextField("", text: $input)
                 .padding()
-            .keyboardType(.decimalPad)
-            .font(.largeTitle)
-            .textFieldStyle(.roundedBorder)
-        Spacer()
-        Button("Save"){
-            dismiss()
-        }
-        .padding(.horizontal, 100)
-        .padding(.vertical)
-        .foregroundColor(.white)
-        .background(Color("MainColor"))
-        .cornerRadius(11)
+                .keyboardType(.decimalPad)
+                .font(.largeTitle)
+                .textFieldStyle(.roundedBorder)
+            Spacer()
+            Button("Save"){
+                dismiss()
+            }
+            .padding(.horizontal, 100)
+            .padding(.vertical)
+            .foregroundColor(.white)
+            .background(Color("MainColor"))
+            .cornerRadius(11)
             
-           
-    }
+            
+        }
     }
 }
 

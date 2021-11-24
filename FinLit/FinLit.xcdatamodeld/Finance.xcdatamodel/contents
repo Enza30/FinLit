@@ -18,8 +18,8 @@
         <relationship name="budget" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Budget" inverseName="budget" inverseEntity="Budget"/>
     </entity>
     <elements>
-        <element name="Income" positionX="-36" positionY="9" width="128" height="74"/>
         <element name="Budget" positionX="0" positionY="63" width="128" height="89"/>
         <element name="Expense" positionX="27" positionY="99" width="128" height="89"/>
+        <element name="Income" positionX="-36" positionY="9" width="128" height="74"/>
     </elements>
 </model>
