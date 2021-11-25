@@ -201,7 +201,7 @@ struct Dashboard: View {
                     
                 }
             }.navigationTitle("Your Money")
-                .sheet(isPresented: $isAddIncomePresented) {
+                .fullScreenCover(isPresented: $isAddIncomePresented) {
                     addIncome(context: self.context)
                 }
         }

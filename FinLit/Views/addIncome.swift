@@ -47,7 +47,7 @@ struct addIncome: View {
     private func onSaveTapped() {
         let logIncome = Income (context: viewContext)
         logIncome.date = self.incomeDate
-        logIncome.amount = self.inputIncome
+        logIncome.amount = Float(NSDecimalNumber(value: self.inputIncome))
         
         do{
             try viewContext.save()
