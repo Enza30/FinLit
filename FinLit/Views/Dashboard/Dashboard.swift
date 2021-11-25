@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct Dashboard: View {
+    
+    @Environment(\.managedObjectContext)
+    var context: NSManagedObjectContext
+    
+    @State var isAddIncomePresented : Bool = false
+    
     var body: some View {
         
         NavigationView{
@@ -98,7 +105,7 @@ struct Dashboard: View {
                                                         .frame(width:100, alignment: .topLeading)
                                                 }
                                                 Spacer()
-                                                Button(action:{}, label:{
+                                                Button(action: addIncomeTapped, label:{
                                                     Image(systemName: "plus.circle.fill")
                                                         .resizable()
                                                         .foregroundColor(Color("ActionColor"))
@@ -194,8 +201,16 @@ struct Dashboard: View {
                     
                 }
             }.navigationTitle("Your Money")
+                .sheet(isPresented: $isAddIncomePresented) {
+                    addIncome(context: self.context)
+                }
         }
     }
+    
+    func addIncomeTapped(){
+        isAddIncomePresented = true
+    }
+    
 }
 
 struct Dashboard_Previews: PreviewProvider {
