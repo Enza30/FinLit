@@ -67,10 +67,9 @@ struct Dashboard: View {
                                                 barLine()
                                                 HStack(alignment: .bottom){
                                                     Rectangle()
-                                                        .frame(width: 5, height: 26)
+                                                        .frame(width: 5, height: 42)
                                                     Text("15 Aug").font(.caption)
-                                                        .foregroundColor(.white)
-                                                        .background(.black)
+                                                        .foregroundColor(.black)
                                                         .cornerRadius(4)
                                                 }
                                             }
@@ -168,7 +167,7 @@ struct Dashboard: View {
                                 Image(systemName: "plus.circle.fill")
                                     .resizable()
                                     .foregroundColor(Color("ActionColor"))
-                                    .frame(width: 32, height: 32)
+                                    .frame(width: 24, height: 24)
                                     .padding(.horizontal)
                                 
                             })

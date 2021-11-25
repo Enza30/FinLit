@@ -77,6 +77,8 @@ struct inputCategory: View {
                     }
                 }
             }
+        }.onAppear {
+            shownCategory()
         }
 
         
