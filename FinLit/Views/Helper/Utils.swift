@@ -23,3 +23,8 @@ func getDateFormatter(date: Date?, format: String = "yyyy-MM-dd") -> String {
     return dateFormatter.string(from: date)
 }
 
+extension Float {
+    var formattedCurrencyText: String {
+        return Utils.numberFormatter.string(from: NSNumber(value: self)) ?? "0"
+    }
+}
