@@ -176,15 +176,14 @@
 		513746C4272F950400A56FB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				513C26CB274610F1008A38BE /* Helper */,
 				513746B8272F8C9100A56FB0 /* ContentView.swift */,
+				513C26CB274610F1008A38BE /* Helper */,
 				51BAE96F273395D7009AF25F /* Dashboard */,
 				51BAE970273395E7009AF25F /* Evaluation */,
 				4D8F48C02734D24300DDFF73 /* Onboarding */,
 				51BAE971273395FD009AF25F /* Budget */,
 				51BAE9722733960C009AF25F /* Education */,
 				E25FC7C2274B129D006DD256 /* modalTry.swift */,
-				51C597DF274F308E0074DD22 /* addIncome.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +205,7 @@
 				E264E7BC2733AB9D003A9689 /* lazygrid.swift */,
 				5165D233274B298400D80EC6 /* CategoryImageView.swift */,
 				5165D235274B5CCB00D80EC6 /* Utils.swift */,
+				9B22677D2745EE6B00F56804 /* Keypad.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -216,6 +216,9 @@
 				51BAE96D2733959C009AF25F /* Dashboard.swift */,
 				E2C3BB67272F9C54005B6811 /* inputPage.swift */,
 				4DC5A04127455B3100F46D29 /* test.swift */,
+				E264E7C427344328003A9689 /* kategori baru.swift */,
+				51DB2519274C874300BC77CF /* inputCategory.swift */,
+				51C597DF274F308E0074DD22 /* addIncome.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -234,14 +237,11 @@
 			isa = PBXGroup;
 			children = (
 				51BAE9692733949F009AF25F /* Budget.swift */,
-				9B22677D2745EE6B00F56804 /* Keypad.swift */,
-				E264E7C427344328003A9689 /* kategori baru.swift */,
 				4DEC26DC2740D19B00C10EEA /* topCardView.swift */,
 				4D107B572742A11F002E3A7E /* categoryBudgetRow.swift */,
 				4D107B592742B4B4002E3A7E /* categoryBudgetList.swift */,
 				9B99CC1027425C5400F593E5 /* EditBudgetView.swift */,
 				9B99CC1227425CA100F593E5 /* EditBudget.swift */,
-				51DB2519274C874300BC77CF /* inputCategory.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";

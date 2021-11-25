@@ -21,27 +21,37 @@ struct addIncome: View {
     var presentationMode
     
     var body: some View {
-        VStack{
-            DatePicker("PickerView", selection: $incomeDate, displayedComponents: [.date,.hourAndMinute]).labelsHidden()
-            Spacer()
-            TextField("Income", value: $inputIncome, formatter: Utils.numberFormatter)
-                .padding()
-                .keyboardType(.decimalPad)
-                .font(.largeTitle)
-                .textFieldStyle(.roundedBorder)
-                .labelsHidden()
-            Spacer()
-            Button(action: self.onSaveTapped, label: {
-                Text("Save")
-            })
-            .padding(.horizontal, 100)
-            .padding(.vertical)
-            .foregroundColor(.white)
-            .background(Color("MainColor"))
-            .cornerRadius(11)
-            
-            
+        NavigationView {
+            VStack{
+                DatePicker("PickerView", selection: $incomeDate, displayedComponents: [.date,.hourAndMinute]).labelsHidden()
+                Spacer()
+                TextField("Income", value: $inputIncome, formatter: Utils.numberFormatter)
+                    .padding()
+                    .keyboardType(.decimalPad)
+                    .font(.largeTitle)
+                    .textFieldStyle(.roundedBorder)
+                    .labelsHidden()
+                Spacer()
+                Button(action: self.onSaveTapped, label: {
+                    Text("Save")
+                })
+                .padding(.horizontal, 100)
+                .padding(.vertical)
+                .foregroundColor(.white)
+                .background(Color("MainColor"))
+                .cornerRadius(11)
+                
+                
+            }.navigationBarItems(
+                leading: Button(action: self.onCancelTapped, label: {
+                    Text("Cancel")
+                }))
+                .navigationTitle("Income")
         }
+    }
+    
+    private func onCancelTapped(){
+        self.presentationMode.wrappedValue.dismiss()
     }
     
     private func onSaveTapped() {
