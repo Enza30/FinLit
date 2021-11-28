@@ -72,7 +72,7 @@ struct option : View{
                 .font(.system(size: 12))
                 .foregroundColor(.secondary)
                 .padding(.vertical, 2)
-            Text("Rp. 30.000").font(.system(size: 14)).bold()
+            Text("Rp. 0").font(.system(size: 14)).bold()
                 .padding(.vertical, 3)
                 Spacer()
         }.frame(width: 110, height: 125)
