@@ -8,33 +8,16 @@
 import SwiftUI
 
 struct kategori_baru: View {
-    let data : [kategori] = [
-        kategori(id: 1, nama: "Beauty", gambar: "beauty", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 2, nama: "Clothes", gambar: "clothes", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 3, nama: "Drink", gambar: "drink", warna: "dasar", warna2: "warna4"),
-                                    
-        kategori(id: 4, nama: "Food", gambar: "food", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 5, nama: "Groceries", gambar: "groceries", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 6, nama: "Health", gambar: "health", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 7, nama: "Phone", gambar: "phone", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 8, nama: "Rent", gambar: "rent", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 9, nama: "Snacks", gambar: "snacks", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 10, nama: "Social", gambar: "social", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 11, nama: "Stationary", gambar: "stationery", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 12, nama: "Transport", gambar: "transport", warna: "dasar", warna2: "warna4"),
-        
-        kategori(id: 13, nama: "Travel", gambar: "travel", warna: "dasar", warna2: "warna4"),
-                                    
+    let data : [kategori] = [kategori(id: 1, nama: Category.food.nameList, warna: "dasar", warna2: "warna4", image: Category.food.systemNameIcon),
+                             kategori(id: 2, nama: Category.drinks.nameList, warna: "dasar", warna2: "warna3", image: Category.drinks.systemNameIcon),
+                             kategori(id: 3, nama: Category.groceries.nameList, warna: "dasar", warna2: "warna2", image: Category.groceries.systemNameIcon),
+                             kategori(id: 4, nama: Category.transport.nameList, warna: "dasar", warna2: "warna2",image: Category.transport.systemNameIcon),
+                             kategori(id: 5, nama: Category.health.nameList, warna: "dasar", warna2: "warna2", image: Category.health.systemNameIcon),
+                             kategori(id: 6, nama: Category.rent.nameList, warna: "dasar", warna2: "warna2", image: Category.rent.systemNameIcon),
+                             kategori(id: 7, nama: Category.clothes.nameList, warna: "dasar", warna2: "warna2", image: Category.clothes.systemNameIcon),
+                             kategori(id: 8, nama: Category.travel.nameList, warna: "dasar", warna2: "warna2", image: Category.travel.systemNameIcon),
+                             kategori(id: 9, nama: Category.beauty.nameList, warna: "dasar", warna2: "warna2", image: Category.beauty.systemNameIcon),
+                             kategori(id: 10, nama: Category.others.nameList, warna: "dasar", warna2: "warna2", image: Category.others.systemNameIcon)
     ]
 //    let data : [kategori] = [kategori(id: 1, nama: "Rumah", warna: "dasar", warna2: "warna4"),
 //                             kategori(id: 2, nama: "Sekolah", warna: "dasar", warna2: "warna3"),
@@ -89,10 +72,9 @@ struct option : View{
           
         VStack{
             Spacer()
-            Image(self.data.gambar)
+            Image(systemName: self.data.image)
                 .resizable()
-                .scaledToFit()
-                .frame(width: 32, height: 36, alignment: .center)
+                .frame(width: 45, height: 45, alignment: .center)
                 .foregroundColor(Color("ActionColor"))
                 
             Text(self.data.nama)
@@ -100,15 +82,15 @@ struct option : View{
                 .font(.system(size: 12))
                 .foregroundColor(.secondary)
                 .padding(.vertical, 2)
-            Text("Rp. 30.000").font(.system(size: 14)).bold()
+            Text("Rp. 0").font(.system(size: 14)).bold()
                 .padding(.vertical, 3)
                 Spacer()
         }.frame(width: 110, height: 125)
         //                .padding(.all, 7)
             .background(Color.white)
-                        .cornerRadius(7)
-                        .shadow(radius: 3, x: 1, y: 1)
-         
+            .cornerRadius(7)
+            .shadow(radius: 3, x: 1, y: 1)
+            
             Button("                                                                                                                                         "){
                 inputExpense.toggle()
                 ()   }
@@ -117,34 +99,34 @@ struct option : View{
             }
             .padding(.all, 50)
         }
-//                .onTapGesture {
-//
-//                    if(!self.isTapped){
-//                        self.isTapped = true
-//                        print(isTapped)
-//                    }else {
-//                        self.isTapped = false
-//                        print(isTapped)
-//                    }
-//                }
-//        }else {
-//            Text(self.data.nama)
-//                .font(.headline)
-//                .foregroundColor(.white)
-//                .padding(.all, 7)
-//                .background(Color(self.data.warna2))
-//                .cornerRadius(7)
-//                .shadow(radius: 3)
-//                .onTapGesture {
-//                    if(!self.isTapped){
-//                        self.isTapped = true
-//                        print(isTapped)
-//                    }else {
-//                        self.isTapped = false
-//                        print(isTapped)
-//                    }
-//                }
-
+        //                .onTapGesture {
+        //
+        //                    if(!self.isTapped){
+        //                        self.isTapped = true
+        //                        print(isTapped)
+        //                    }else {
+        //                        self.isTapped = false
+        //                        print(isTapped)
+        //                    }
+        //                }
+        //        }else {
+        //            Text(self.data.nama)
+        //                .font(.headline)
+        //                .foregroundColor(.white)
+        //                .padding(.all, 7)
+        //                .background(Color(self.data.warna2))
+        //                .cornerRadius(7)
+        //                .shadow(radius: 3)
+        //                .onTapGesture {
+        //                    if(!self.isTapped){
+        //                        self.isTapped = true
+        //                        print(isTapped)
+        //                    }else {
+        //                        self.isTapped = false
+        //                        print(isTapped)
+        //                    }
+        //                }
+        
         
     }
     

@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct inputCategory: View {
+    
+    var context : NSManagedObjectContext
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     //let category: Category
     @State var category : [CategoryItem] = []
@@ -23,6 +27,16 @@ struct inputCategory: View {
 //
 //        }
 //    }
+    var backButton : some View{
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack{
+                Image(systemName: "chevron.backward")
+                Text("Back")
+            }
+        }
+    }
 
     var body: some View {
 //            Category.allCases.forEach{ catList in
@@ -32,7 +46,6 @@ struct inputCategory: View {
 //                    title: catList.nameList,
 //                    checked: false))
 //            }
-        NavigationView{
             ScrollView{
                 List{
                     ForEach(category) { category in
@@ -77,17 +90,31 @@ struct inputCategory: View {
                     }
                 }
             }
-        }.onAppear {
-//            shownCategory()
-        }
+//            .navigationBarItems(
+//                leading: Button(action: self.onCancelTapped, label: {
+//                    HStack {
+//                        Image(systemName: "chevron.backward")
+//                        Text("Back")
+//                    }
+//                }))
+            .navigationTitle(" Add Categories")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: backButton)
+        
 
         
+    }
+private func onCancelTapped(){
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 
 struct inputCategory_Previews: PreviewProvider {
     static var previews: some View {
-        inputCategory()
+        let stack = PersistenceController()
+        return inputCategory(context: stack.container.viewContext)
+        
     }
 }
 

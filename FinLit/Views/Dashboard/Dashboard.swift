@@ -10,62 +10,100 @@ import CoreData
 
 struct Dashboard: View {
     
-    @Environment(\.managedObjectContext)
-    var context: NSManagedObjectContext
+@Environment(\.managedObjectContext) var context: NSManagedObjectContext
     
-    @State var isAddIncomePresented : Bool = false
-    @State var isAddCategoriesPresented : Bool = false
+@State var isAddIncomePresented : Bool = false
+//@State var isAddCategory : Bool = false
     
-    var body: some View {
+var body: some View {
         
-        NavigationView{
-            ScrollView{
+    NavigationView{
+        ScrollView{
                 
-                ZStack{
+            ZStack{
                     //            LinearGradient(colors: [Color("MainColor"), Color.white], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    Color.white
-                        .edgesIgnoringSafeArea(.all
-                        )
+            Color.white
+                .edgesIgnoringSafeArea(.all)
                     
-                    VStack(alignment: .leading){
-                        HStack{
-                            Spacer()
-                            VStack{
+                VStack(alignment: .leading){
+                    HStack{
+                        Spacer()
+                        VStack{
+                                
+                            Text("August 2022")
+                                .font(.system(size: 14)).bold()
+                                .foregroundColor(Color.secondary)
                                 
                                 
-                                Text("August 2022").font(.system(size: 14)).bold()
-                                    .foregroundColor(Color.secondary)
-                                
-                                
-                                Text("Rp. 1.000.000").font(.largeTitle).bold()
-                                    .foregroundColor(Color("MainColor"))
+                            Text("Rp. 1.000.000")
+                                .font(.largeTitle).bold()
+                                .foregroundColor(Color("MainColor"))
                                 
                                 
                                 
-                            }.padding(.all, 5)
-                            Spacer()
                         }
+                        .padding(.all, 5)
+                        Spacer()
+                    }
                         
-                        Spacer(minLength: 15)
-                        HStack{
-                            Spacer()
-                            ZStack{
-                                VStack(spacing: 0) {
-                                    HStack {
-                                        Text("You young dumb and broke")
-                                            .foregroundColor(.white)
-                                    }
-                                    .frame(height: 52)
+                    Spacer(minLength: 15)
+                    HStack{
+                        Spacer()
+                        ZStack{
+                            VStack(spacing: 0) {
+                                HStack {
+                                    Text("You young dumb and broke")
+                                        .foregroundColor(.white)
+                                }
+                                .frame(height: 52)
                                     
-                                    HStack{
-                                        VStack (spacing: 0) {
-                                            HStack {
-                                                Spacer()
-                                                Text("Expense Rate")
-                                                    .font(.system(size: 14)).bold()
+                                HStack{
+                                    VStack (spacing: 0) {
+                                        HStack {
+                                            Spacer()
+                                            Text("Expense Rate")
+                                                .font(.system(size: 14))
+                                                .bold()
                                                 
-                                                Spacer(minLength: 70)
-                                                Text("Your Expense to Date")
+                                            Spacer(minLength: 70)
+                                            Text("Your Expense to Date")
+                                                .font(.system(size: 14))
+                                                .foregroundColor(.secondary)
+                                                
+                                            Spacer()
+                                        }
+                                        ZStack {
+                                            barLine()
+                                            HStack(alignment: .bottom){
+                                                Rectangle()
+                                                    .frame(width: 5, height: 26)
+                                                Text("15 Aug")
+                                                    .font(.caption)
+                                                    .foregroundColor(.white)
+                                                    .background(.black)
+                                                    .cornerRadius(4)
+                                            }
+                                        }
+                                            
+                                    }
+                                }
+                                .frame(width: 347, height: 77)
+                                .background(.white)
+                                    
+                            HStack(spacing: 0) {
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.white)
+                                        .border(Color("garis"), width: 1)
+                                            
+                                        HStack {
+                                            Spacer()
+                                            VStack{
+                                                Text("Total Income")
+                                                    .font(.system(size: 12))
+                                                    .frame(width:100, alignment: .topLeading)
+                                                    .foregroundColor(.secondary)
+                                                Text("Rp.2.000.000")
                                                     .font(.system(size: 14))
                                                     .foregroundColor(.secondary)
                                                 
@@ -102,6 +140,7 @@ struct Dashboard: View {
                                                         .foregroundColor(.secondary)
                                                     Text("Rp.2.000.000")
                                                         .font(.system(size: 14)).bold()
+                                                    .bold()
                                                         .frame(width:100, alignment: .topLeading)
                                                 }
                                                 Spacer()
@@ -171,12 +210,16 @@ struct Dashboard: View {
                             Text("Categories").font(.headline)
                             
                             Spacer()
-                            Button(action:{}, label:{
-                                Image(systemName: "plus.circle.fill")
-                                    .resizable()
-                                    .foregroundColor(Color("ActionColor"))
-                                    .frame(width: 24, height: 24)
-                                    .padding(.horizontal)
+                            
+                            Button(action: {}, label:{
+                                NavigationLink(destination: inputCategory(context: self.context)) {
+                                    Image(systemName: "plus.circle.fill")
+                                        .resizable()
+                                        .foregroundColor(Color("ActionColor"))
+                                        .frame(width: 32, height: 32)
+                                        .padding(.horizontal)
+                                }
+                                
                                 
                             })
                             //                            Image(systemName: "plus.circle.fill")
@@ -200,10 +243,15 @@ struct Dashboard: View {
                     //            .frame(alignment: .topTrailing)
                     
                 }
-            }.navigationTitle("Your Money")
-                .fullScreenCover(isPresented: $isAddIncomePresented) {
+            }
+            .navigationTitle("Your Money")
+            .fullScreenCover(isPresented: $isAddIncomePresented) {
                     addIncome(context: self.context)
                 }
+            
+//            .fullScreenCover(isPresented: $isAddCategory) {
+//                inputCategory(context: self.context)
+//            }
         }
     }
     
@@ -214,6 +262,10 @@ struct Dashboard: View {
             isAddCategoriesPresented = true
         }
     }
+    
+//    func addCategoryTapped(){
+//        isAddCategory = true
+//    }
     
 }
 

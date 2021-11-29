@@ -55,7 +55,7 @@ enum Category: String, CaseIterable {
         case .social: return "person.3.fill"
         case .rent: return "house.fill"
         case .food: return "fork.knife"
-        case .beauty: return "mouth.fill"
+        case .beauty: return "eyebrow"
         case .health: return "cross.case.fill"
         case .drinks: return "cup.and.saucer.fill"
         case .transport: return "car.fill"

@@ -14,6 +14,12 @@ struct Utils {
         formatter.numberStyle = .currency
         return formatter
     }()
+    
+    static let dateFormatter: RelativeDateTimeFormatter = {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter
+    }()
 }
 
 func getDateFormatter(date: Date?, format: String = "yyyy-MM-dd") -> String {

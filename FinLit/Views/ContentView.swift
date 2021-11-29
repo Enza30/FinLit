@@ -12,13 +12,14 @@ struct ContentView: View {
 //    init(){
 //        UITabBar.appearance().backgroundColor = UIColor("")
 //    }
+    let sortDescriptor = IncomeLogSort(sortType: .date, sortOrder: .descending).sortDescriptor
     
     var body: some View {
         TabView {
             Dashboard()
                 .tabItem{
                     Image(systemName: "house.fill")
-                    Text("Dashboard")
+                    Text("Your Money")
                 }
 
             BudgetView()
@@ -30,17 +31,18 @@ struct ContentView: View {
             Evaluation()
                 .tabItem{
                     Image(systemName: "chart.bar.fill")
-                    Text("Evaluation")
+                    Text("History")
                 }
-        }.accentColor(Color("ActionColor"))
+        }
+        .accentColor(Color("ActionColor"))
     }
 }
 
 
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
