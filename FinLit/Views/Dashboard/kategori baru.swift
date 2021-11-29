@@ -17,7 +17,10 @@ struct kategori_baru: View {
                              kategori(id: 7, nama: Category.clothes.nameList, warna: "dasar", warna2: "warna2", image: Category.clothes.systemNameIcon),
                              kategori(id: 8, nama: Category.travel.nameList, warna: "dasar", warna2: "warna2", image: Category.travel.systemNameIcon),
                              kategori(id: 9, nama: Category.beauty.nameList, warna: "dasar", warna2: "warna2", image: Category.beauty.systemNameIcon),
-                             kategori(id: 10, nama: Category.others.nameList, warna: "dasar", warna2: "warna2", image: Category.others.systemNameIcon)
+                             kategori(id: 10, nama: Category.phone.nameList, warna: "dasar", warna2: "warna2", image: Category.phone.systemNameIcon),
+                             kategori(id: 11, nama: Category.stationary.nameList, warna: "dasar", warna2: "warna2", image: Category.stationary.systemNameIcon),
+                             kategori(id: 12, nama: Category.snack.nameList, warna: "dasar", warna2: "warna2", image: Category.snack.systemNameIcon),
+                             kategori(id: 13, nama: Category.social.nameList, warna: "dasar", warna2: "warna2", image: Category.social.systemNameIcon)
     ]
 //    let data : [kategori] = [kategori(id: 1, nama: "Rumah", warna: "dasar", warna2: "warna4"),
 //                             kategori(id: 2, nama: "Sekolah", warna: "dasar", warna2: "warna3"),
