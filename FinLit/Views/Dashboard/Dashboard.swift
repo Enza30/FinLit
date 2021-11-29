@@ -14,6 +14,7 @@ struct Dashboard: View {
     var context: NSManagedObjectContext
     
     @State var isAddIncomePresented : Bool = false
+    @State var isAddCategoriesPresented : Bool = false
     
     var body: some View {
         
@@ -208,6 +209,10 @@ struct Dashboard: View {
     
     func addIncomeTapped(){
         isAddIncomePresented = true
+        
+        func addCategoriesTapped(){
+            isAddCategoriesPresented = true
+        }
     }
     
 }

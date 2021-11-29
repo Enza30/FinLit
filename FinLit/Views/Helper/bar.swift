@@ -14,13 +14,13 @@ struct bar: View {
         ZStack{
             Circle()
                 .trim(from: 0.0, to: lingkaranProgres)
-                .stroke(Color("ActionColor"), lineWidth: 15)
+                .stroke(Color("MainColor"), lineWidth: 15)
                 .opacity(0.5)
                 .frame(width: 136, height: 136)
                 
             Circle()
                 .trim(from: 0.0, to: lingkaranProgres)
-                .stroke(Color("ActionColor"), lineWidth: 15)
+                .stroke(Color("MainColor"), lineWidth: 15)
                 .frame(width: 136, height: 136)
                 .rotationEffect(Angle(degrees: -90))
             VStack {
@@ -58,7 +58,7 @@ struct barLine: View{
     var body: some View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 4)
-                .foregroundColor(.secondary)
+                .foregroundColor(Color("passiveBar"))
                 .frame(width: 314, height: 15)
             
             RoundedRectangle(cornerRadius: 4)
