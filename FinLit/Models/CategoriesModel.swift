@@ -8,10 +8,10 @@
 import Foundation
 
 struct Categories: Identifiable {
-    let id = UUID()
-    let imageName: String
-    let title: String
-    var isChecked: Bool = false
+    var id = UUID()
+    var imageName: String
+    var title: String
+    var isChecked: String
     
     
 }
@@ -19,34 +19,34 @@ struct Categories: Identifiable {
 struct KindOfCategory {
     
     static let fourTeen = [
-        Categories(imageName: "beauty", title: "Beauty"),
+        Categories(imageName: "beauty", title: "Beauty", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "clothes", title: "Clothes"),
+        Categories(imageName: "clothes", title: "Clothes", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "drink", title: "Drink"),
+        Categories(imageName: "drink", title: "Drink", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "food", title: "Food"),
+        Categories(imageName: "food", title: "Food", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "groceries", title: "Groceries"),
+        Categories(imageName: "groceries", title: "Groceries", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "health", title: "Health"),
+        Categories(imageName: "health", title: "Health", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "phone", title: "Phone"),
+        Categories(imageName: "phone", title: "Phone", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "rent", title: "Rent"),
+        Categories(imageName: "rent", title: "Rent", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "snacks", title: "Snacks"),
+        Categories(imageName: "snacks", title: "Snacks", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "social", title: "Social"),
+        Categories(imageName: "social", title: "Social", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "stationery", title: "Stationary"),
+        Categories(imageName: "stationery", title: "Stationary", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "transport", title: "Transport"),
+        Categories(imageName: "transport", title: "Transport", isChecked: "checkmark.square.fill"),
         
-        Categories(imageName: "travel", title: "Travel"),
+        Categories(imageName: "travel", title: "Travel", isChecked: "checkmark.square.fill"),
     ]
     
-    let data : [Categories] = [Categories(imageName: "beauty", title: "Beauty")]
+    let data : [Categories] = [Categories(imageName: "beauty", title: "Beauty", isChecked: "checkmark.square.fill")]
 }
 
 

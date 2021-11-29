@@ -18,7 +18,7 @@ struct AddCategories: View {
     var presentationMode
     
     var body: some View {
-            List(categories, id: \.id) { category in
+        List { ForEach(categories, id: \.id) { category in
                 HStack(spacing:10) {
                     
                     Image(category.imageName)
@@ -39,21 +39,22 @@ struct AddCategories: View {
                     Button(action: {withAnimation{catChecked.toggle()}}, label: {
                         ZStack{
                             Rectangle()
-                                .stroke(category.isChecked ? Color.green: Color.gray, lineWidth: 1)
+                                .stroke(catChecked ? Color.green: Color.gray, lineWidth: 1)
                                 .frame(width: 25, height: 25)
                             
-                            if category.isChecked{
-                                Image(systemName: "checkmark.square.fill")
+                           
+                            Image(systemName : catChecked ? "checkmark.square.fill" : "")
                                     .font(.system(size: 25))
                                     .foregroundColor(Color.green)
-                            }
-                            
+                           
+                           
                         }
                     })
                 }.frame(height: 64)
             }
             .listStyle(PlainListStyle())
         
+    }
     }
 }
 
