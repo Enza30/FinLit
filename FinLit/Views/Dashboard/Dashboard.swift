@@ -11,6 +11,13 @@ import CoreData
 struct Dashboard: View {
     
 @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+@FetchRequest(
+    entity: Income.entity(),
+    sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: true),
+                      NSSortDescriptor(keyPath: \Income.amount, ascending: true)
+                     ]
+)  var incomes: FetchedResults<Income>
+
     
 @State var isAddIncomePresented : Bool = false
 //@State var isAddCategory : Bool = false
@@ -103,10 +110,13 @@ var body: some View {
                                                     .font(.system(size: 12))
                                                     .frame(width:100, alignment: .topLeading)
                                                     .foregroundColor(.secondary)
-                                                Text("Rp.2.000.000")
-                                                    .font(.system(size: 14))
-                                                    .bold()
-                                                        .frame(width:100, alignment: .topLeading)
+                                                ForEach(incomes) {income in
+                                                    Text("\(income.amountText)")
+                                                        .font(.system(size: 14))
+                                                        .bold()
+                                                            .frame(width:100, alignment: .topLeading)
+                                                }
+                                                
                                                 }
                                                 Spacer()
                                                 Button(action: addIncomeTapped, label:{

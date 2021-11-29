@@ -12,7 +12,7 @@ struct addIncome: View {
     //var context = NSManagedObjectContext()
     var context: NSManagedObjectContext
     
-    @State var inputIncome: Float = 0
+    @State var inputIncome: Double = 0
     @State var incomeDate: Date = Date()
     
     @Environment(\.dismiss) var dismiss
@@ -59,7 +59,7 @@ struct addIncome: View {
     private func onSaveTapped() {
         let logIncome = Income (context: viewContext)
         logIncome.date = self.incomeDate
-        logIncome.amount = Float(NSDecimalNumber(value: self.inputIncome))
+        logIncome.amount = NSDecimalNumber(value: self.inputIncome)
         
         do{
             try viewContext.save()
