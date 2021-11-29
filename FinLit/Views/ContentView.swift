@@ -34,7 +34,7 @@ struct ContentView: View {
                     Text("History")
                 }
         }
-        .accentColor(Color("ActionColor"))
+        .accentColor(Color("MainColor"))
     }
 }
 

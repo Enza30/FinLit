@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddCategories: View {
     
-    var categories: [Categories] = KindOfCategory.fourTeen
+    var context : NSManagedObjectContext
+    @State var categories: [Categories] = KindOfCategory.fourTeen
     @State var catChecked = false
     
     @Environment(\.dismiss) var dismiss
@@ -18,7 +20,9 @@ struct AddCategories: View {
     var presentationMode
     
     var body: some View {
-        List { ForEach(categories, id: \.id) { category in
+        ScrollView {
+            ForEach(categories, id: \.id) { category in
+                
                 HStack(spacing:10) {
                     
                     Image(category.imageName)
@@ -42,25 +46,41 @@ struct AddCategories: View {
                                 .stroke(catChecked ? Color.green: Color.gray, lineWidth: 1)
                                 .frame(width: 25, height: 25)
                             
-                           
+                            
                             Image(systemName : catChecked ? "checkmark.square.fill" : "")
-                                    .font(.system(size: 25))
-                                    .foregroundColor(Color.green)
-                           
-                           
+                                .font(.system(size: 25))
+                                .foregroundColor(Color.green)
+                            
+                            
                         }
                     })
                 }.frame(height: 64)
+                    .contentShape(Rectangle())
+                    .padding(.horizontal)
+//                    .onTapGesture (perform: {
+//                        $categories.isChecked.toggle
+//                    })
             }
             .listStyle(PlainListStyle())
+            
+        }.navigationBarTitle("Add Category")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+                    Button(action: {self.presentationMode.wrappedValue.dismiss()}, label: {
+                    HStack{
+                            Image(systemName: "chevron.backward")
+                            Text("Back")
+            }
+        }))
         
-    }
     }
 }
 
 struct AddCategories_Previews: PreviewProvider {
     static var previews: some View {
-            AddCategories()
+        let stack = PersistenceController()
+        return AddCategories(context: stack.container.viewContext)
         
     }
 }
