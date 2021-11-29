@@ -13,4 +13,8 @@ extension Income{
         Utils.dateFormatter.localizedString(for: date ?? Date(), relativeTo: Date())
     }
     
+    var amountText: String {
+        Utils.numberFormatter.string(from: NSNumber(value: amount?.doubleValue ?? 0)) ?? ""
+    }
+    
 }
