@@ -22,15 +22,21 @@ struct addIncome: View {
     
     var body: some View {
         NavigationView {
-            VStack{
-                DatePicker("PickerView", selection: $incomeDate, displayedComponents: [.date,.hourAndMinute]).labelsHidden()
+            VStack(alignment: .center){
                 Spacer()
-                TextField("Income", value: $inputIncome, formatter: Utils.numberFormatter)
+                Image(systemName: "banknote.fill")
+                    .resizable()
+                    .foregroundColor(Color("MainColor"))
+                    .frame(width: 80, height: 80)
+                    .padding(10)
+                DatePicker("PickerView", selection: $incomeDate, displayedComponents: [.date,.hourAndMinute]).labelsHidden()
+                TextField("Add Income", value: $inputIncome, formatter: Utils.numberFormatter)
                     .padding()
                     .keyboardType(.decimalPad)
                     .font(.largeTitle)
                     .textFieldStyle(.roundedBorder)
                     .labelsHidden()
+                    
                 Spacer()
                 Button(action: self.onSaveTapped, label: {
                     Text("Save")
@@ -38,7 +44,7 @@ struct addIncome: View {
                 .padding(.horizontal, 100)
                 .padding(.vertical)
                 .foregroundColor(.white)
-                .background(Color("MainColor"))
+                .background(Color("ActionColor"))
                 .cornerRadius(11)
                 
                 
@@ -47,7 +53,7 @@ struct addIncome: View {
                 leading: Button(action: self.onCancelTapped, label: {
                     Text("Cancel")
                 }))
-            .navigationTitle("Income")
+            .navigationTitle("Add Income")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -76,6 +82,7 @@ struct addIncome_Previews: PreviewProvider {
     static var previews: some View {
         let stack = PersistenceController()
         return addIncome(context: stack.container.viewContext)
+.previewInterfaceOrientation(.portrait)
     }
 }
 
