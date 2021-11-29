@@ -11,6 +11,7 @@
 		4D107B5A2742B4B4002E3A7E /* categoryBudgetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D107B592742B4B4002E3A7E /* categoryBudgetList.swift */; };
 		4D8AA8842753BAD50033A92F /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AA8832753BAD50033A92F /* CategoriesModel.swift */; };
 		4D8AA8882753DD2C0033A92F /* AddCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AA8872753DD2C0033A92F /* AddCategories.swift */; };
+		4D8AA88C2754F0EC0033A92F /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AA88B2754F0EC0033A92F /* EditBudget.swift */; };
 		4D8F48C22734D2AE00DDFF73 /* DataOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C12734D2AE00DDFF73 /* DataOnboarding.swift */; };
 		4D8F48C42734D7E100DDFF73 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C32734D7E100DDFF73 /* OnboardingView.swift */; };
 		4D8F48C62734DDD400DDFF73 /* TabDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F48C52734DDD400DDFF73 /* TabDetailView.swift */; };
@@ -40,7 +41,7 @@
 		51DD60AE273B778000054E9B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD60AD273B778000054E9B /* Chart.swift */; };
 		9B22677E2745EE6B00F56804 /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22677D2745EE6B00F56804 /* Keypad.swift */; };
 		9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1027425C5400F593E5 /* EditBudgetView.swift */; };
-		9B99CC1327425CA100F593E5 /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1227425CA100F593E5 /* EditBudget.swift */; };
+		9B99CC1327425CA100F593E5 /* ModelEditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1227425CA100F593E5 /* ModelEditBudget.swift */; };
 		9BAA695B273CC076004174B3 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA6956273CC074004174B3 /* Widget.intentdefinition */; };
 		E2464ADE2734DC8D007957CE /* bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2464ADD2734DC8D007957CE /* bar.swift */; };
 		E25FC7C3274B129D006DD256 /* modalTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25FC7C2274B129D006DD256 /* modalTry.swift */; };
@@ -69,6 +70,7 @@
 		4D107B592742B4B4002E3A7E /* categoryBudgetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryBudgetList.swift; sourceTree = "<group>"; };
 		4D8AA8832753BAD50033A92F /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		4D8AA8872753DD2C0033A92F /* AddCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategories.swift; sourceTree = "<group>"; };
+		4D8AA88B2754F0EC0033A92F /* EditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudget.swift; sourceTree = "<group>"; };
 		4D8F48C12734D2AE00DDFF73 /* DataOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOnboarding.swift; sourceTree = "<group>"; };
 		4D8F48C32734D7E100DDFF73 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4D8F48C52734DDD400DDFF73 /* TabDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailView.swift; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 		51DD60AD273B778000054E9B /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		9B22677D2745EE6B00F56804 /* Keypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
 		9B99CC1027425C5400F593E5 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
-		9B99CC1227425CA100F593E5 /* EditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudget.swift; sourceTree = "<group>"; };
+		9B99CC1227425CA100F593E5 /* ModelEditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEditBudget.swift; sourceTree = "<group>"; };
 		9BAA6938273CBD2B004174B3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9BAA693A273CBD2B004174B3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9BAA6954273CC074004174B3 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
@@ -249,8 +251,9 @@
 				4DEC26DC2740D19B00C10EEA /* topCardView.swift */,
 				4D107B572742A11F002E3A7E /* categoryBudgetRow.swift */,
 				4D107B592742B4B4002E3A7E /* categoryBudgetList.swift */,
+				4D8AA88B2754F0EC0033A92F /* EditBudget.swift */,
+				9B99CC1227425CA100F593E5 /* ModelEditBudget.swift */,
 				9B99CC1027425C5400F593E5 /* EditBudgetView.swift */,
-				9B99CC1227425CA100F593E5 /* EditBudget.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				51B144DC273F3DD5007078D3 /* FinLit.xcdatamodeld in Sources */,
 				51C597E0274F308F0074DD22 /* addIncome.swift in Sources */,
 				4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */,
+				4D8AA88C2754F0EC0033A92F /* EditBudget.swift in Sources */,
 				5113C980275441F9006C515C /* Sort.swift in Sources */,
 				4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */,
 				E294BCB4273AAEF8002D4010 /* dataModelKategori.swift in Sources */,
@@ -389,7 +393,7 @@
 				E25FC7C3274B129D006DD256 /* modalTry.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
 				51DB251A274C874300BC77CF /* inputCategory.swift in Sources */,
-				9B99CC1327425CA100F593E5 /* EditBudget.swift in Sources */,
+				9B99CC1327425CA100F593E5 /* ModelEditBudget.swift in Sources */,
 				517BF1D62740BAE900EF0B08 /* Persistence.swift in Sources */,
 				51BAE96C273394AD009AF25F /* Education.swift in Sources */,
 				9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditBudgetView: View {
-    var budgetToInvite: [EditBudget]
+    var budgetToInvite: [ModelEditBudget]
     var body: some View {
         NavigationView{
             List(budgetToInvite){
@@ -19,7 +19,7 @@ struct EditBudgetView: View {
 }
 
 struct ListRow: View{
-    var eachBudget: EditBudget
+    var eachBudget: ModelEditBudget
     var body: some View{
         HStack{
             
@@ -35,10 +35,10 @@ struct ListRow: View{
 }
 
 var myBudget = [
-    EditBudget(id: 1, kategori: "Travel" ),
-    EditBudget(id: 2, kategori: "Groceries" ),
-    EditBudget(id: 3, kategori: "Snacks" ),
-    EditBudget(id: 4, kategori: "Phone" )
+    ModelEditBudget(id: 1, kategori: "Travel" ),
+    ModelEditBudget(id: 2, kategori: "Groceries" ),
+    ModelEditBudget(id: 3, kategori: "Snacks" ),
+    ModelEditBudget(id: 4, kategori: "Phone" )
 ]
 
 struct EditBudgetView_Previews: PreviewProvider {

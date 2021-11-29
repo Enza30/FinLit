@@ -9,6 +9,35 @@ import SwiftUI
 
 struct categoryBudgetRow: View {
     
+    @State var category = [
+        CategoryBudgetList(image: "beauty", title: "Beauty", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "clothes", title: "Clothes", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "Drink", title: "Drink", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "food", title: "Food", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "groceries", title: "Groceries", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "health", title: "Health", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "phone", title: "Phone", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "rent", title: "Rent", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "snacks", title: "Snacks", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "social", title: "Social", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "stationery", title: "Stationary", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "transport", title: "Transport", amount: 0, expense: 0),
+        
+        CategoryBudgetList(image: "travel", title: "Travel", amount: 0, expense: 0),
+        
+    ]
+    
     var categories: [Categories] = KindOfCategory.fourTeen
     
     var body: some View {
@@ -38,6 +67,7 @@ struct categoryBudgetRow: View {
                             HStack{
                                 Text("Rp.500.000")
                                 .font(.system(size: 12))
+                                .frame(width: 92, height: 16, alignment: .topTrailing)
                                 
                                 
                             }
@@ -46,6 +76,7 @@ struct categoryBudgetRow: View {
                             HStack {
                                 Text("of Rp.700.000")
                                     .font(.system(size: 12))
+                                    .frame(width: 92, height: 16, alignment: .topTrailing)
                                     .foregroundStyle(.secondary)
                         
                             }

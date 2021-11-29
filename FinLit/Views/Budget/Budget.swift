@@ -14,8 +14,9 @@ struct BudgetView: View {
         VStack(alignment:.center , spacing: 0) {
                     
                     HStack {
-                        Spacer(minLength: 50)
+                        Spacer()
                         topCardView()
+                        Spacer()
                     }
                     HStack {
                         categoryBudgetList()
@@ -23,7 +24,7 @@ struct BudgetView: View {
         
                     }
                     
-                }
+        }
                 
             }
             .navigationTitle("Budget")
