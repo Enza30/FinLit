@@ -189,7 +189,7 @@ struct Dashboard: View {
                             Spacer()
                             
                             Button(action: {}, label:{
-                                NavigationLink(destination: AddCategories(context: self.context)) {
+                                NavigationLink(destination: inputCategory(context: self.context)) {
                                     Image(systemName: "plus.circle.fill")
                                         .resizable()
                                         .foregroundColor(Color("ActionColor"))

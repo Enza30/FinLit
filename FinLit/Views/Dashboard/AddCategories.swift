@@ -57,9 +57,6 @@ struct AddCategories: View {
                 }.frame(height: 64)
                     .contentShape(Rectangle())
                     .padding(.horizontal)
-//                    .onTapGesture (perform: {
-//                        $categories.isChecked.toggle
-//                    })
             }
             .listStyle(PlainListStyle())
             
