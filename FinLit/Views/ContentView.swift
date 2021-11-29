@@ -12,6 +12,7 @@ struct ContentView: View {
 //    init(){
 //        UITabBar.appearance().backgroundColor = UIColor("")
 //    }
+    let sortDescriptor = IncomeLogSort(sortType: .date, sortOrder: .descending).sortDescriptor
     
     var body: some View {
         TabView {
@@ -40,8 +41,8 @@ struct ContentView: View {
 
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

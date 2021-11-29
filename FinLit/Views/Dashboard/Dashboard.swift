@@ -12,30 +12,6 @@ struct Dashboard: View {
     
 @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     
-@FetchRequest(entity: Income.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: false)
-                                   ]
-    )
-    private var income: FetchedResults<Income>
-    init(predicate: NSPredicate?, sortDescriptor: NSSortDescriptor){
-        let fetchRequest = NSFetchRequest<Income>(entityName: Income.entity().name ?? "Income")
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        
-        if let predicate = predicate {
-            fetchRequest.predicate = predicate
-        }
-        _income = FetchRequest(fetchRequest: fetchRequest)
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-            
-        } catch {
-            print("Failed")
-        }
-        
-    }
-    
 @State var isAddIncomePresented : Bool = false
 //@State var isAddCategory : Bool = false
     
@@ -256,9 +232,6 @@ var body: some View {
 
 struct Dashboard_Previews: PreviewProvider {
     static var previews: some View {
-        let stack = PersistenceController()
-        let sortDescriptor = IncomeLogSort(sortType: .date, sortOrder: .descending).sortDescriptor
-        return Dashboard(predicate: nil, sortDescriptor: sortDescriptor)
-            .environment(\.managedObjectContext, stack.container.viewContext)
+        Dashboard()
     }
 }
