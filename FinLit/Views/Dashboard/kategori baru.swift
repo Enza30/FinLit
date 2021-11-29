@@ -74,7 +74,7 @@ struct option : View{
             Spacer()
             Image(systemName: self.data.image)
                 .resizable()
-                .frame(width: 45, height: 45, alignment: .center)
+                .frame(width: 32, height: 36, alignment: .center)
                 .foregroundColor(Color("ActionColor"))
                 
             Text(self.data.nama)

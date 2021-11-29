@@ -17,7 +17,7 @@ struct Dashboard: View {
     
 var body: some View {
         
-    NavigationView{
+//    NavigationView{
         ScrollView{
                 
             ZStack{
@@ -76,11 +76,9 @@ var body: some View {
                                             barLine()
                                             HStack(alignment: .bottom){
                                                 Rectangle()
-                                                    .frame(width: 5, height: 26)
-                                                Text("15 Aug")
-                                                    .font(.caption)
-                                                    .foregroundColor(.white)
-                                                    .background(.black)
+                                                    .frame(width: 5, height: 42)
+                                                Text("15 Aug").font(.caption)
+                                                    .foregroundColor(.black)
                                                     .cornerRadius(4)
                                             }
                                         }
@@ -96,66 +94,33 @@ var body: some View {
                                         .foregroundColor(.white)
                                         .border(Color("garis"), width: 1)
                                             
-                                        HStack {
-                                            Spacer()
-                                            VStack{
-                                                Text("Total Income")
-                                                    .font(.system(size: 12))
-                                                    .frame(width:100, alignment: .topLeading)
-                                                    .foregroundColor(.secondary)
-                                                Text("Rp.2.000.000")
-                                                    .font(.system(size: 14))
-                                                    .foregroundColor(.secondary)
-                                                
-                                                Spacer()
-                                            }
-                                            ZStack {
-                                                barLine()
-                                                HStack(alignment: .bottom){
-                                                    Rectangle()
-                                                        .frame(width: 5, height: 42)
-                                                    Text("15 Aug").font(.caption)
-                                                        .foregroundColor(.black)
-                                                        .cornerRadius(4)
-                                                }
-                                            }
-                                            
+                                    HStack {
+                                        Spacer()
+                                        VStack{
+                                            Text("Total Income")
+                                                .font(.system(size: 12))
+                                                .frame(width:100, alignment: .topLeading)
+                                                .foregroundColor(.secondary)
+                                            Text("Rp.2.000.000")
+                                                .font(.system(size: 14)).bold()
+                                            .bold()
+                                                .frame(width:100, alignment: .topLeading)
                                         }
-                                    }
-                                    .frame(width: 347, height: 77)
-                                    .background(.white)
+                                        Spacer()
+                                        Button(action: addIncomeTapped, label:{
+                                            Image(systemName: "plus.circle.fill")
+                                                .resizable()
+                                                .foregroundColor(Color("ActionColor"))
+                                                .frame(width: 24, height: 24)
+                                            
+                                        })
+                                        Spacer()
+                                    }                                    }
+//                                    .frame(width: 347, height: 77)
+//                                    .background(.white)
                                     
                                     HStack(spacing: 0) {
-                                        ZStack {
-                                            Rectangle()
-                                                .foregroundColor(.white)
-                                                .border(Color("garis"), width: 1)
-                                            
-                                            HStack {
-                                                Spacer()
-                                                VStack{
-                                                    Text("Total Income")
-                                                        .font(.system(size: 12))
-                                                        .frame(width:100, alignment: .topLeading)
-                                                        .foregroundColor(.secondary)
-                                                    Text("Rp.2.000.000")
-                                                        .font(.system(size: 14)).bold()
-                                                    .bold()
-                                                        .frame(width:100, alignment: .topLeading)
-                                                }
-                                                Spacer()
-                                                Button(action: addIncomeTapped, label:{
-                                                    Image(systemName: "plus.circle.fill")
-                                                        .resizable()
-                                                        .foregroundColor(Color("ActionColor"))
-                                                        .frame(width: 24, height: 24)
-                                                    
-                                                })
-                                                Spacer()
-                                            }
-                                            
-                                        }
-                                        
+
                                         ZStack {
                                             Rectangle()
                                                 .foregroundColor(.white)
@@ -174,10 +139,12 @@ var body: some View {
                                         
                                     }
                                 }
-                                .border(Color("garis"), width: 1)
+                                
                                 
                             }
-                            .frame(width: 347, height: 185)
+                            .border(Color("garis"), width: 1)
+                            
+                        }.frame(width: 347, height: 185)
                             .background(Color("MainColor"))
                             .cornerRadius(10)
                             .shadow(radius: 5, x: 2, y: 3)
@@ -185,8 +152,7 @@ var body: some View {
                             
                             
                             Spacer()
-                        }
-                        
+                    }
                         //                    .background(Color("MainColor"))
                         //                    .cornerRadius(15)
                         //                    .shadow( radius: 10, x: 6, y: 7)
@@ -216,7 +182,7 @@ var body: some View {
                                     Image(systemName: "plus.circle.fill")
                                         .resizable()
                                         .foregroundColor(Color("ActionColor"))
-                                        .frame(width: 32, height: 32)
+                                        .frame(width: 24, height: 24)
                                         .padding(.horizontal)
                                 }
                                 
@@ -236,36 +202,29 @@ var body: some View {
                         
                         
                         
-                    }.padding()
+                    
                     //        }.background(Color("BgColor"))
                     //            .edgesIgnoringSafeArea(.all)
                     //            .navigationViewStyle(StackNavigationViewStyle())
                     //            .frame(alignment: .topTrailing)
                     
-                }
+                }.padding()
             }
-            .navigationTitle("Your Money")
+            
+                }.navigationTitle("Your Money")
             .fullScreenCover(isPresented: $isAddIncomePresented) {
                     addIncome(context: self.context)
-                }
             
 //            .fullScreenCover(isPresented: $isAddCategory) {
 //                inputCategory(context: self.context)
 //            }
         }
-    }
-    
-    func addIncomeTapped(){
-        isAddIncomePresented = true
-        
-        func addCategoriesTapped(){
-            isAddCategoriesPresented = true
-        }
-    }
-    
-//    func addCategoryTapped(){
-//        isAddCategory = true
 //    }
+        
+    }
+    func addIncomeTapped() {
+        isAddIncomePresented = true
+}
     
 }
 

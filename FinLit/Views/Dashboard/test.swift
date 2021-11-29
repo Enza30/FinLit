@@ -9,8 +9,8 @@ import SwiftUI
 
 struct test: View {
     var body: some View {
-        NavigationView{
-            ScrollView{
+//        NavigationView{
+//            ScrollView{
         
                 ZStack{
 //            LinearGradient(colors: [Color("MainColor"), Color.white], startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -183,8 +183,8 @@ struct test: View {
 //            .navigationViewStyle(StackNavigationViewStyle())
 //            .frame(alignment: .topTrailing)
             
-        }
-            }.navigationTitle("Your Money")
+//        }
+//            }.navigationTitle("Your Money")
     }
     }
 }
