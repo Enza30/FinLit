@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct kategori_baru: View {
-    let data : [kategori] = [kategori(id: 1, nama: "Rumah", warna: "dasar", warna2: "warna4"),
-                             kategori(id: 2, nama: "Sekolah", warna: "dasar", warna2: "warna3"),
-                             kategori(id: 3, nama: "Transportasi", warna: "dasar", warna2: "warna2"),
-                             kategori(id: 4, nama: "Tagihan", warna: "dasar", warna2: "warna2"),
-                             kategori(id: 5, nama: "Makan", warna: "dasar", warna2: "warna2"),
-                             kategori(id: 6, nama: "Jajan", warna: "dasar", warna2: "warna2"),
-                             kategori(id: 7, nama: "Pakaian", warna: "dasar", warna2: "warna2"),
-                             kategori(id: 8, nama: "Skincare", warna: "dasar", warna2: "warna2")
+    let data : [kategori] = [kategori(id: 1, nama: Category.food.nameList, warna: "dasar", warna2: "warna4", image: Category.food.systemNameIcon),
+                             kategori(id: 2, nama: Category.drinks.nameList, warna: "dasar", warna2: "warna3", image: Category.drinks.systemNameIcon),
+                             kategori(id: 3, nama: Category.groceries.nameList, warna: "dasar", warna2: "warna2", image: Category.groceries.systemNameIcon),
+                             kategori(id: 4, nama: Category.transport.nameList, warna: "dasar", warna2: "warna2",image: Category.transport.systemNameIcon),
+                             kategori(id: 5, nama: Category.health.nameList, warna: "dasar", warna2: "warna2", image: Category.health.systemNameIcon),
+                             kategori(id: 6, nama: Category.rent.nameList, warna: "dasar", warna2: "warna2", image: Category.rent.systemNameIcon),
+                             kategori(id: 7, nama: Category.clothes.nameList, warna: "dasar", warna2: "warna2", image: Category.clothes.systemNameIcon),
+                             kategori(id: 8, nama: Category.travel.nameList, warna: "dasar", warna2: "warna2", image: Category.travel.systemNameIcon),
+                             kategori(id: 9, nama: Category.beauty.nameList, warna: "dasar", warna2: "warna2", image: Category.beauty.systemNameIcon),
+                             kategori(id: 10, nama: Category.others.nameList, warna: "dasar", warna2: "warna2", image: Category.others.systemNameIcon)
     ]
     
     
@@ -56,28 +58,25 @@ struct option : View{
     var body: some View{
         
         ZStack(alignment: .center){
-            
-            
-            VStack{
-                Spacer()
-                Image(systemName: "house.fill")
-                    .resizable()
-                    .frame(width: 38, height: 38, alignment: .center)
-                    .foregroundColor(Color("ActionColor"))
+     
+          
+        VStack{
+            Spacer()
+            Image(systemName: self.data.image)
+                .resizable()
+                .frame(width: 45, height: 45, alignment: .center)
+                .foregroundColor(Color("ActionColor"))
                 
-                Text(self.data.nama)
-                
-                    .font(.system(size: 12))
-                    .foregroundColor(.secondary)
-                    .padding(.vertical, 2)
-                Text("Rp. 30.000")
-                    .font(.system(size: 14))
-                    .bold()
-                    .padding(.vertical, 3)
+            Text(self.data.nama)
+            
+                .font(.system(size: 12))
+                .foregroundColor(.secondary)
+                .padding(.vertical, 2)
+            Text("Rp. 0").font(.system(size: 14)).bold()
+                .padding(.vertical, 3)
                 Spacer()
-            }
-            .frame(width: 110, height: 125)
-            //                .padding(.all, 7)
+        }.frame(width: 110, height: 125)
+        //                .padding(.all, 7)
             .background(Color.white)
             .cornerRadius(7)
             .shadow(radius: 3, x: 1, y: 1)
