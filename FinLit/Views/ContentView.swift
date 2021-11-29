@@ -18,7 +18,7 @@ struct ContentView: View {
             Dashboard()
                 .tabItem{
                     Image(systemName: "house.fill")
-                    Text("Dashboard")
+                    Text("Your Money")
                 }
 
             BudgetView()
@@ -30,9 +30,10 @@ struct ContentView: View {
             Evaluation()
                 .tabItem{
                     Image(systemName: "chart.bar.fill")
-                    Text("Evaluation")
+                    Text("History")
                 }
-        }.accentColor(Color("ActionColor"))
+        }
+        .accentColor(Color("ActionColor"))
     }
 }
 

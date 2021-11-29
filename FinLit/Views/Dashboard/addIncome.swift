@@ -42,11 +42,13 @@ struct addIncome: View {
                 .cornerRadius(11)
                 
                 
-            }.navigationBarItems(
+            }
+            .navigationBarItems(
                 leading: Button(action: self.onCancelTapped, label: {
                     Text("Cancel")
                 }))
-                .navigationTitle("Income")
+            .navigationTitle("Income")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     

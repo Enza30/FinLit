@@ -18,6 +18,8 @@
 		4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAB8732734EB620085EC91 /* SkipButtonView.swift */; };
 		4DD5657C274A30F4000F4374 /* segmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD5657B274A30F4000F4374 /* segmentedControlView.swift */; };
 		4DEC26DD2740D19B00C10EEA /* topCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC26DC2740D19B00C10EEA /* topCardView.swift */; };
+		5113C980275441F9006C515C /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113C97F275441F9006C515C /* Sort.swift */; };
+		5113C98227545D2B006C515C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113C98127545D2B006C515C /* Log.swift */; };
 		513746B7272F8C9100A56FB0 /* FinLitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B6272F8C9100A56FB0 /* FinLitApp.swift */; };
 		513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746B8272F8C9100A56FB0 /* ContentView.swift */; };
 		513746BB272F8C9200A56FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746BA272F8C9200A56FB0 /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		4DCAB8732734EB620085EC91 /* SkipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButtonView.swift; sourceTree = "<group>"; };
 		4DD5657B274A30F4000F4374 /* segmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentedControlView.swift; sourceTree = "<group>"; };
 		4DEC26DC2740D19B00C10EEA /* topCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topCardView.swift; sourceTree = "<group>"; };
+		5113C97F275441F9006C515C /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		5113C98127545D2B006C515C /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		513746B3272F8C9100A56FB0 /* FinLit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinLit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		513746B6272F8C9100A56FB0 /* FinLitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinLitApp.swift; sourceTree = "<group>"; };
 		513746B8272F8C9100A56FB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				5165D233274B298400D80EC6 /* CategoryImageView.swift */,
 				5165D235274B5CCB00D80EC6 /* Utils.swift */,
 				9B22677D2745EE6B00F56804 /* Keypad.swift */,
+				5113C97F275441F9006C515C /* Sort.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				E264E7C427344328003A9689 /* kategori baru.swift */,
 				51DB2519274C874300BC77CF /* inputCategory.swift */,
 				51C597DF274F308E0074DD22 /* addIncome.swift */,
+				5113C98127545D2B006C515C /* Log.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				51C597E0274F308F0074DD22 /* addIncome.swift in Sources */,
 				4DCAB8742734EB620085EC91 /* SkipButtonView.swift in Sources */,
 				4DC5A04227455B3100F46D29 /* test.swift in Sources */,
+				5113C980275441F9006C515C /* Sort.swift in Sources */,
 				4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */,
 				E294BCB4273AAEF8002D4010 /* dataModelKategori.swift in Sources */,
 				513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */,
@@ -364,6 +371,7 @@
 				5165D236274B5CCC00D80EC6 /* Utils.swift in Sources */,
 				4D8F48C22734D2AE00DDFF73 /* DataOnboarding.swift in Sources */,
 				51DD60AE273B778000054E9B /* Chart.swift in Sources */,
+				5113C98227545D2B006C515C /* Log.swift in Sources */,
 				4DEC26DD2740D19B00C10EEA /* topCardView.swift in Sources */,
 				E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */,
 				9B22677E2745EE6B00F56804 /* Keypad.swift in Sources */,
@@ -517,7 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FinLit/Preview Content\"";
-				DEVELOPMENT_TEAM = P94HWRYJL7;
+				DEVELOPMENT_TEAM = Z38TVJ88W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -546,7 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FinLit/Preview Content\"";
-				DEVELOPMENT_TEAM = P94HWRYJL7;
+				DEVELOPMENT_TEAM = Z38TVJ88W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

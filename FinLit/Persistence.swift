@@ -9,10 +9,13 @@ import Foundation
 import CoreData
 
 struct PersistenceController {
+    // A singleton for our entire app to use
     static let shared = PersistenceController()
     
+    // Storage for Core Data
     let container: NSPersistentContainer
     
+    // An initializer to load Core Data, optionally able to use an in-memory store.
     init(inMemory: Bool = false){
         container = NSPersistentContainer(name: "FinLit")
         

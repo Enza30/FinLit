@@ -56,29 +56,32 @@ struct option : View{
     var body: some View{
         
         ZStack(alignment: .center){
-     
-          
-        VStack{
-            Spacer()
-            Image(systemName: "house.fill")
-                .resizable()
-                .frame(width: 38, height: 38, alignment: .center)
-                .foregroundColor(Color("ActionColor"))
-                
-            Text(self.data.nama)
             
-                .font(.system(size: 12))
-                .foregroundColor(.secondary)
-                .padding(.vertical, 2)
-            Text("Rp. 30.000").font(.system(size: 14)).bold()
-                .padding(.vertical, 3)
+            
+            VStack{
                 Spacer()
-        }.frame(width: 110, height: 125)
-        //                .padding(.all, 7)
+                Image(systemName: "house.fill")
+                    .resizable()
+                    .frame(width: 38, height: 38, alignment: .center)
+                    .foregroundColor(Color("ActionColor"))
+                
+                Text(self.data.nama)
+                
+                    .font(.system(size: 12))
+                    .foregroundColor(.secondary)
+                    .padding(.vertical, 2)
+                Text("Rp. 30.000")
+                    .font(.system(size: 14))
+                    .bold()
+                    .padding(.vertical, 3)
+                Spacer()
+            }
+            .frame(width: 110, height: 125)
+            //                .padding(.all, 7)
             .background(Color.white)
-                        .cornerRadius(7)
-                        .shadow(radius: 3, x: 1, y: 1)
-         
+            .cornerRadius(7)
+            .shadow(radius: 3, x: 1, y: 1)
+            
             Button("                                                                                                                                         "){
                 inputExpense.toggle()
                 ()   }
@@ -87,34 +90,34 @@ struct option : View{
             }
             .padding(.all, 50)
         }
-//                .onTapGesture {
-//
-//                    if(!self.isTapped){
-//                        self.isTapped = true
-//                        print(isTapped)
-//                    }else {
-//                        self.isTapped = false
-//                        print(isTapped)
-//                    }
-//                }
-//        }else {
-//            Text(self.data.nama)
-//                .font(.headline)
-//                .foregroundColor(.white)
-//                .padding(.all, 7)
-//                .background(Color(self.data.warna2))
-//                .cornerRadius(7)
-//                .shadow(radius: 3)
-//                .onTapGesture {
-//                    if(!self.isTapped){
-//                        self.isTapped = true
-//                        print(isTapped)
-//                    }else {
-//                        self.isTapped = false
-//                        print(isTapped)
-//                    }
-//                }
-
+        //                .onTapGesture {
+        //
+        //                    if(!self.isTapped){
+        //                        self.isTapped = true
+        //                        print(isTapped)
+        //                    }else {
+        //                        self.isTapped = false
+        //                        print(isTapped)
+        //                    }
+        //                }
+        //        }else {
+        //            Text(self.data.nama)
+        //                .font(.headline)
+        //                .foregroundColor(.white)
+        //                .padding(.all, 7)
+        //                .background(Color(self.data.warna2))
+        //                .cornerRadius(7)
+        //                .shadow(radius: 3)
+        //                .onTapGesture {
+        //                    if(!self.isTapped){
+        //                        self.isTapped = true
+        //                        print(isTapped)
+        //                    }else {
+        //                        self.isTapped = false
+        //                        print(isTapped)
+        //                    }
+        //                }
+        
         
     }
     
