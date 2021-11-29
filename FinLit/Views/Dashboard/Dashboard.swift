@@ -10,111 +10,110 @@ import CoreData
 
 struct Dashboard: View {
     
-@Environment(\.managedObjectContext) var context: NSManagedObjectContext
-@FetchRequest(
-    entity: Income.entity(),
-    sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: true),
-                      NSSortDescriptor(keyPath: \Income.amount, ascending: true)
-                     ]
-)  var incomes: FetchedResults<Income>
-
+    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+    @FetchRequest(
+        entity: Income.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: true),
+                          NSSortDescriptor(keyPath: \Income.amount, ascending: true)
+                         ]
+    )  var incomes: FetchedResults<Income>
     
-@State var isAddIncomePresented : Bool = false
-//@State var isAddCategory : Bool = false
     
-var body: some View {
+    @State var isAddIncomePresented : Bool = false
+    //@State var isAddCategory : Bool = false
+    
+    var body: some View {
         
-//    NavigationView{
-        ScrollView{
+        NavigationView{
+            ScrollView{
                 
-            ZStack{
-                    //            LinearGradient(colors: [Color("MainColor"), Color.white], startPoint: .topLeading, endPoint: .bottomTrailing)
-            Color.white
-                .edgesIgnoringSafeArea(.all)
+                ZStack{
+                    Color.white
+                        .edgesIgnoringSafeArea(.all)
                     
-                VStack(alignment: .leading){
-                    HStack{
-                        Spacer()
-                        VStack{
+                    VStack(alignment: .leading){
+                        HStack{
+                            Spacer()
+                            VStack{
                                 
-                            Text("August 2022")
-                                .font(.system(size: 14)).bold()
-                                .foregroundColor(Color.secondary)
-                                
-                                
-                            Text("Rp. 1.000.000")
-                                .font(.largeTitle).bold()
-                                .foregroundColor(Color("MainColor"))
+                                Text("August 2022")
+                                    .font(.system(size: 14)).bold()
+                                    .foregroundColor(Color.secondary)
                                 
                                 
+                                Text("Rp. 1.000.000")
+                                    .font(.largeTitle).bold()
+                                    .foregroundColor(Color("MainColor"))
                                 
+                                
+                                
+                            }
+                            .padding(.all, 5)
+                            Spacer()
                         }
-                        .padding(.all, 5)
-                        Spacer()
-                    }
                         
-                    Spacer(minLength: 15)
-                    HStack{
-                        Spacer()
-                        ZStack{
-                            VStack(spacing: 0) {
-                                HStack {
-                                    Text("You young dumb and broke")
-                                        .foregroundColor(.white)
-                                }
-                                .frame(height: 52)
-                                    
-                                HStack{
-                                    VStack (spacing: 0) {
-                                        HStack {
-                                            Spacer()
-                                            Text("Expense Rate")
-                                                .font(.system(size: 14))
-                                                .bold()
-                                                
-                                            Spacer(minLength: 70)
-                                            Text("Your Expense to Date")
-                                                .font(.system(size: 14))
-                                                .foregroundColor(.secondary)
-                                                
-                                            Spacer()
-                                        }
-                                        ZStack {
-                                            barLine()
-                                            HStack(alignment: .bottom){
-                                                Rectangle()
-                                                    .frame(width: 5, height: 42)
-                                                Text("15 Aug").font(.caption)
-                                                    .foregroundColor(.black)
-                                                    .cornerRadius(4)
-                                            }
-                                        }
-                                            
+                        Spacer(minLength: 15)
+                        HStack{
+                            Spacer()
+                            ZStack{
+                                VStack(spacing: 0) {
+                                    HStack {
+                                        Text("You young dumb and broke")
+                                            .foregroundColor(.white)
                                     }
-                                }
-                                .frame(width: 347, height: 77)
-                                .background(.white)
+                                    .frame(height: 52)
                                     
-                            HStack(spacing: 0) {
-                                ZStack {
-                                    Rectangle()
-                                        .foregroundColor(.white)
-                                        .border(Color("garis"), width: 1)
-                                            
-                                        HStack {
-                                            Spacer()
-                                            VStack{
-                                                Text("Total Income")
-                                                    .font(.system(size: 12))
-                                                    .frame(width:100, alignment: .topLeading)
-                                                    .foregroundColor(.secondary)
-                                                ForEach(incomes) {income in
-                                                    Text("\(income.amountText)")
-                                                        .font(.system(size: 14))
-                                                        .bold()
-                                                            .frame(width:100, alignment: .topLeading)
-                                                }
+                                    HStack{
+                                        VStack (spacing: 0) {
+                                            HStack {
+                                                Spacer()
+                                                Text("Expense Rate")
+                                                    .font(.system(size: 14))
+                                                    .bold()
                                                 
+                                                Spacer(minLength: 70)
+                                                Text("Your Expense to Date")
+                                                    .font(.system(size: 14))
+                                                    .foregroundColor(.secondary)
+                                                
+                                                Spacer()
+                                            }
+                                            ZStack {
+                                                barLine()
+                                                HStack(alignment: .bottom){
+                                                    Rectangle()
+                                                        .frame(width: 5, height: 42)
+                                                    Text("15 Aug").font(.caption)
+                                                        .foregroundColor(.black)
+                                                        .cornerRadius(4)
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                    .frame(width: 347, height: 77)
+                                    .background(.white)
+                                    
+                                    HStack(spacing: 0) {
+                                        ZStack {
+                                            Rectangle()
+                                                .foregroundColor(.white)
+                                                .border(Color("garis"), width: 1)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                VStack{
+                                                    Text("Total Income")
+                                                        .font(.system(size: 12))
+                                                        .frame(width:100, alignment: .topLeading)
+                                                        .foregroundColor(.secondary)
+                                                    ForEach(incomes) {income in
+                                                        Text("\(income.amountText)")
+                                                            .font(.system(size: 14))
+                                                            .bold()
+                                                            .frame(width:100, alignment: .topLeading)
+                                                    }
+                                                    
                                                 }
                                                 Spacer()
                                                 Button(action: addIncomeTapped, label:{
@@ -128,21 +127,12 @@ var body: some View {
                                             }
                                             
                                         }
-                                        Spacer()
-                                        Button(action: addIncomeTapped, label:{
-                                            Image(systemName: "plus.circle.fill")
-                                                .resizable()
-                                                .foregroundColor(Color("ActionColor"))
-                                                .frame(width: 24, height: 24)
-                                            
-                                        })
-                                        Spacer()
-                                    }                                    }
-//                                    .frame(width: 347, height: 77)
-//                                    .background(.white)
-                                    
-                                    HStack(spacing: 0) {
-
+                                        
+                                        
+                                        //                                    .frame(width: 347, height: 77)
+                                        //                                    .background(.white)
+                                        
+                                        
                                         ZStack {
                                             Rectangle()
                                                 .foregroundColor(.white)
@@ -158,23 +148,22 @@ var body: some View {
                                                     .frame(width:130, alignment: .topTrailing)
                                             }
                                         }
-                                        
                                     }
-                                }
+                                    
+                                }.border(Color("garis"), width: 1)
                                 
-                                
-                            }
-                            .border(Color("garis"), width: 1)
+                            }.frame(width: 347, height: 185)
+                                .background(Color("MainColor"))
+                                .cornerRadius(10)
+                                .shadow(radius: 5, x: 2, y: 3)
+                                .shadow(color: Color.white, radius: 5, x: -2, y: -3)
                             
-                        }.frame(width: 347, height: 185)
-                            .background(Color("MainColor"))
-                            .cornerRadius(10)
-                            .shadow(radius: 5, x: 2, y: 3)
-                            .shadow(color: Color.white, radius: 5, x: -2, y: -3)
+                            
+                            //                        }
                             
                             
                             Spacer()
-                    }
+                        }
                         //                    .background(Color("MainColor"))
                         //                    .cornerRadius(15)
                         //                    .shadow( radius: 10, x: 6, y: 7)
@@ -186,8 +175,8 @@ var body: some View {
                             HStack {
                                 Text("Rp.50.000")
                                     .font(.system(size: 24)).bold()
-                                    
-                                .foregroundColor(Color("MainColor"))
+                                
+                                    .foregroundColor(Color("MainColor"))
                             }
                             .frame(width: 150,alignment: .topTrailing)
                             Spacer(minLength: 10)
@@ -224,34 +213,31 @@ var body: some View {
                         
                         
                         
-                    
-                    //        }.background(Color("BgColor"))
-                    //            .edgesIgnoringSafeArea(.all)
-                    //            .navigationViewStyle(StackNavigationViewStyle())
-                    //            .frame(alignment: .topTrailing)
-                    
-                }.padding()
-            }
-            
-                }.navigationTitle("Your Money")
-            .fullScreenCover(isPresented: $isAddIncomePresented) {
-                    addIncome(context: self.context)
-            
-//            .fullScreenCover(isPresented: $isAddCategory) {
-//                inputCategory(context: self.context)
-//            }
+                        
+                        //        }.background(Color("BgColor"))
+                        //            .edgesIgnoringSafeArea(.all)
+                        //            .navigationViewStyle(StackNavigationViewStyle())
+                        //            .frame(alignment: .topTrailing)
+                        
+                    }.padding()
+                }
+            } .navigationTitle("Your Money")
+                .fullScreenCover(isPresented: $isAddIncomePresented) {
+                        addIncome(context: self.context)
+                }
         }
-//    }
-        
     }
     func addIncomeTapped() {
         isAddIncomePresented = true
+    }
 }
-    
-}
+
 
 struct Dashboard_Previews: PreviewProvider {
     static var previews: some View {
         Dashboard()
     }
 }
+
+
+
