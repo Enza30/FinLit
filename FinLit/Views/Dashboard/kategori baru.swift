@@ -72,7 +72,7 @@ struct option : View{
           
         VStack{
             Spacer()
-            Image(systemName: self.data.image)
+            Image(self.data.image)
                 .resizable()
                 .frame(width: 32, height: 36, alignment: .center)
                 .foregroundColor(Color("ActionColor"))
