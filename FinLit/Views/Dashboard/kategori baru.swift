@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct kategori_baru: View {
+    
+   
+    
     let data : [kategori] = [kategori(id: 1, nama: Category.food.nameList, warna: "dasar", warna2: "warna4", image: Category.food.systemNameIcon),
                              kategori(id: 2, nama: Category.drinks.nameList, warna: "dasar", warna2: "warna3", image: Category.drinks.systemNameIcon),
                              kategori(id: 3, nama: Category.groceries.nameList, warna: "dasar", warna2: "warna2", image: Category.groceries.systemNameIcon),
@@ -37,6 +41,7 @@ struct kategori_baru: View {
     
     var body: some View {
         ScrollView(.vertical){
+            
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], alignment: .leading, spacing: 10){
                 
                 ForEach(data) {
@@ -64,6 +69,17 @@ struct kategori_baru_Previews: PreviewProvider {
     }
 }
 struct option : View{
+    
+    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+    @FetchRequest(
+        entity: Expense.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Expense.date, ascending: true),
+                          NSSortDescriptor(keyPath: \Expense.amount, ascending: true)
+                         ]
+    )
+    var expense: FetchedResults<Expense>
+    
+    
     @State private var inputExpense = false
     // @ObservedObject var kata : GlobalObject
     
@@ -88,6 +104,12 @@ struct option : View{
             Text("Rp. 0").font(.system(size: 14)).bold()
                 .padding(.vertical, 3)
                 Spacer()
+            ForEach(expense) {expense in
+                Text("\(expense.amountText)")
+                    .font(.system(size: 14))
+                    .bold()
+                    .frame(width:100, alignment: .topLeading)
+            }
         }.frame(width: 110, height: 125)
         //                .padding(.all, 7)
             .background(Color.white)
@@ -98,38 +120,12 @@ struct option : View{
                 inputExpense.toggle()
                 ()   }
             .sheet(isPresented: $inputExpense){
-                modalTry()
+                let stack = PersistenceController()
+                modalTry(context: stack.container.viewContext)
             }
             .padding(.all, 50)
         }
-        //                .onTapGesture {
-        //
-        //                    if(!self.isTapped){
-        //                        self.isTapped = true
-        //                        print(isTapped)
-        //                    }else {
-        //                        self.isTapped = false
-        //                        print(isTapped)
-        //                    }
-        //                }
-        //        }else {
-        //            Text(self.data.nama)
-        //                .font(.headline)
-        //                .foregroundColor(.white)
-        //                .padding(.all, 7)
-        //                .background(Color(self.data.warna2))
-        //                .cornerRadius(7)
-        //                .shadow(radius: 3)
-        //                .onTapGesture {
-        //                    if(!self.isTapped){
-        //                        self.isTapped = true
-        //                        print(isTapped)
-        //                    }else {
-        //                        self.isTapped = false
-        //                        print(isTapped)
-        //                    }
-        //                }
-        
+       
         
     }
     

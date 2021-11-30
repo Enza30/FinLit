@@ -44,7 +44,7 @@
 		9B99CC1327425CA100F593E5 /* ModelEditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1227425CA100F593E5 /* ModelEditBudget.swift */; };
 		9BAA695B273CC076004174B3 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA6956273CC074004174B3 /* Widget.intentdefinition */; };
 		E2464ADE2734DC8D007957CE /* bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2464ADD2734DC8D007957CE /* bar.swift */; };
-		E25FC7C3274B129D006DD256 /* modalTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25FC7C2274B129D006DD256 /* modalTry.swift */; };
+		E25FC7C3274B129D006DD256 /* inputExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25FC7C2274B129D006DD256 /* inputExpense.swift */; };
 		E264E7BD2733AB9D003A9689 /* lazygrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7BC2733AB9D003A9689 /* lazygrid.swift */; };
 		E264E7C527344328003A9689 /* kategori baru.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C427344328003A9689 /* kategori baru.swift */; };
 		E264E7C72734519B003A9689 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264E7C62734519B003A9689 /* GlobalData.swift */; };
@@ -108,7 +108,7 @@
 		9BAA6957273CC076004174B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BAA6959273CC076004174B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2464ADD2734DC8D007957CE /* bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bar.swift; sourceTree = "<group>"; };
-		E25FC7C2274B129D006DD256 /* modalTry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modalTry.swift; sourceTree = "<group>"; };
+		E25FC7C2274B129D006DD256 /* inputExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputExpense.swift; sourceTree = "<group>"; };
 		E264E7BC2733AB9D003A9689 /* lazygrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazygrid.swift; sourceTree = "<group>"; };
 		E264E7C427344328003A9689 /* kategori baru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "kategori baru.swift"; sourceTree = "<group>"; };
 		E264E7C62734519B003A9689 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				4D8F48C02734D24300DDFF73 /* Onboarding */,
 				51BAE971273395FD009AF25F /* Budget */,
 				51BAE9722733960C009AF25F /* Education */,
-				E25FC7C2274B129D006DD256 /* modalTry.swift */,
+				E25FC7C2274B129D006DD256 /* inputExpense.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 				4D107B582742A11F002E3A7E /* categoryBudgetRow.swift in Sources */,
 				4D8AA8882753DD2C0033A92F /* AddCategories.swift in Sources */,
 				4D8AA8842753BAD50033A92F /* CategoriesModel.swift in Sources */,
-				E25FC7C3274B129D006DD256 /* modalTry.swift in Sources */,
+				E25FC7C3274B129D006DD256 /* inputExpense.swift in Sources */,
 				51BAE96A2733949F009AF25F /* Budget.swift in Sources */,
 				51DB251A274C874300BC77CF /* inputCategory.swift in Sources */,
 				9B99CC1327425CA100F593E5 /* ModelEditBudget.swift in Sources */,
