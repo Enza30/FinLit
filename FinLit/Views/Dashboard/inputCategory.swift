@@ -89,10 +89,10 @@ struct inputCategory: View {
     
     private func onSaveTapped(){
         
-        var selectedCategory = category.filter({$0.isChecked == true})
+        //var selectedCategory = category.filter({$0.isChecked == true})
         //let logCategory = CategoriesDB (context: viewContext)
         //logCategory.title 
-        print(selectedCategory)
+        //print(selectedCategory)
       //  let dataSelectedCategory = NSKeyedArchiver.archivedData(withRootObject: selectedCategory)
         
         
