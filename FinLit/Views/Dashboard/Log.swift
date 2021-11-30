@@ -18,3 +18,9 @@ extension Income{
     }
     
 }
+extension Expense{
+    
+    var amountText: String {
+        Utils.numberFormatter.string(from: NSNumber(value: amount?.doubleValue ?? 0)) ?? ""
+    }
+}
