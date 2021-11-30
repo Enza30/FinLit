@@ -13,9 +13,7 @@ struct Dashboard: View {
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     @FetchRequest(
         entity: Income.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: true),
-                          NSSortDescriptor(keyPath: \Income.amount, ascending: true)
-                         ]
+        sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: true)]
     )  var incomes: FetchedResults<Income>
     
     

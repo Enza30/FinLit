@@ -10,6 +10,7 @@ import CoreData
 
 struct inputCategory: View {
     
+    
     var context : NSManagedObjectContext
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext
@@ -43,6 +44,8 @@ struct inputCategory: View {
         CategoryItem(title: .Travel, isChecked: false)
     ]
     
+   //@Binding var selectedCategory
+    
     //    func shownCategory() -> ()  {
     //        Category.allCases.forEach{ catList in
     //            category.append(CategoryItem(
@@ -54,9 +57,11 @@ struct inputCategory: View {
     //        }
     //    }
     
+
+    
     var body: some View {
         ScrollView{
-            ForEach(category) { category in
+            ForEach($category) { category in
                 
                 CategoriesView(isCategories: category)
                 
@@ -72,7 +77,7 @@ struct inputCategory: View {
                     Text("Back")
                 }
             }), trailing:
-                        Button(action: {}, label: {
+                        Button(action: {onSaveTapped()}, label: {
                     Text("Save")
             })
             )
@@ -83,15 +88,21 @@ struct inputCategory: View {
     }
     
     private func onSaveTapped(){
-        let logCategory = CategoriesDB (context: viewContext)
+        
+        var selectedCategory = category.filter({$0.isChecked == true})
+        //let logCategory = CategoriesDB (context: viewContext)
+        //logCategory.title 
+        print(selectedCategory)
+      //  let dataSelectedCategory = NSKeyedArchiver.archivedData(withRootObject: selectedCategory)
         
         
-        do {
-            try viewContext.save()
-            print("Category save to Expense")
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
+//        do {
+//            try viewContext.save()
+//            print("Category save to Expense")
+//        } catch let error as NSError {
+//            print(error.localizedDescription)
+//        }
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 
@@ -105,7 +116,9 @@ struct inputCategory_Previews: PreviewProvider {
 
 struct CategoriesView: View {
     
-    @State var isCategories: CategoryItem
+    @Binding var isCategories: CategoryItem
+    
+    
     
     var body: some View{
         HStack{
@@ -145,30 +158,33 @@ struct CategoriesView: View {
             .contentShape(Rectangle())
             .onTapGesture (perform: {
                 isCategories.isChecked.toggle()
+                print(isCategories.isChecked)
             })
         }
         
     }
 }
 
-struct CategoryItem {
+struct CategoryItem : Identifiable {
+    var id = UUID().uuidString
+    
     var title: TitleCategory
     var isChecked: Bool
     
     enum TitleCategory : String {
-        case Beauty = "beauty"
-        case Food = "food"
-        case Drink = "drink"
-        case Groceries = "groceries"
-        case Health = "health"
-        case Clothes = "clothes"
-        case Phone = "phones"
-        case Rent = "rent"
-        case Snacks = "snacks"
-        case Social = "social"
-        case Stationary = "stationary"
-        case Transport = "transport"
-        case Travel = "travel"
+        case Beauty = "Beauty"
+        case Food = "Food"
+        case Drink = "Drink"
+        case Groceries = "Groceries"
+        case Health = "Health"
+        case Clothes = "Clothes"
+        case Phone = "Phone"
+        case Rent = "Rent"
+        case Snacks = "Snacks"
+        case Social = "Social"
+        case Stationary = "Stationery"
+        case Transport = "Transport"
+        case Travel = "Travel"
     }
     
     

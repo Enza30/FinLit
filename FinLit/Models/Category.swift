@@ -47,19 +47,19 @@ enum Category: String, CaseIterable {
     
     var systemNameIcon: String {
         switch self {
-        case .travel: return "travel"
-        case .groceries: return "groceries"
-        case .snack: return "snacks"
-        case .stationary: return "stationery"
-        case .phone: return "phone"
-        case .social: return "social"
-        case .rent: return "rent"
-        case .food: return "food"
-        case .beauty: return "beauty"
-        case .health: return "health"
-        case .drinks: return "drink"
-        case .transport: return "transport"
-        case .clothes: return "clothes"
+        case .travel: return "Travel"
+        case .groceries: return "Groceries"
+        case .snack: return "Snacks"
+        case .stationary: return "Stationery"
+        case .phone: return "Phone"
+        case .social: return "Social"
+        case .rent: return "Rent"
+        case .food: return "Food"
+        case .beauty: return "Beauty"
+        case .health: return "Health"
+        case .drinks: return "Drink"
+        case .transport: return "Transport"
+        case .clothes: return "Clothes"
         case .others: return "tag.fill"
         }
     }
