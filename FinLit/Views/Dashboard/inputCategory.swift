@@ -83,22 +83,12 @@ struct inputCategory: View {
     }
     
     private func onSaveTapped(){
-        let logExpense = Expense (context: viewContext)
-        //logExpense.category = self.category
+        let logCategory = CategoriesDB (context: viewContext)
+        
         
         do {
             try viewContext.save()
             print("Category save to Expense")
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        
-        let logBudget = Budget (context: viewContext)
-        //logBudget.category = self.category
-        
-        do {
-            try viewContext.save()
-            print("Category save to Budget")
         } catch let error as NSError {
             print(error.localizedDescription)
         }
