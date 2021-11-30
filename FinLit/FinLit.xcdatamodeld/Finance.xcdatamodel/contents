@@ -2,14 +2,20 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Budget" representedClassName="Budget" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="category" optional="YES" attributeType="String"/>
         <relationship name="budget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Income" inverseName="budget" inverseEntity="Income"/>
+        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categories" inverseName="category" inverseEntity="Categories"/>
         <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="expense" inverseEntity="Expense"/>
+    </entity>
+    <entity name="Categories" representedClassName="Categories" syncable="YES" codeGenerationType="class">
+        <attribute name="isChecked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="categories" inverseEntity="Expense"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Budget" inverseName="category" inverseEntity="Budget"/>
     </entity>
     <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categories" inverseName="categories" inverseEntity="Categories"/>
         <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Budget" inverseName="expense" inverseEntity="Budget"/>
     </entity>
     <entity name="Income" representedClassName="Income" syncable="YES" codeGenerationType="class">
@@ -21,5 +27,6 @@
         <element name="Budget" positionX="0" positionY="63" width="128" height="89"/>
         <element name="Expense" positionX="27" positionY="99" width="128" height="89"/>
         <element name="Income" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="Categories" positionX="9" positionY="90" width="128" height="89"/>
     </elements>
 </model>

@@ -12,34 +12,35 @@ struct inputCategory: View {
     
     var context : NSManagedObjectContext
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) private var viewContext
     
     //let category: Category
     @State var category = [
-        CategoryItem(image: "beauty", color: Color("ActionColor"), title: "Beauty", isChecked: false),
+        CategoryItem(title: .Beauty, isChecked: false),
         
-        CategoryItem(image: "clothes", color: Color("ActionColor"), title: "Clothes", isChecked: false),
+        CategoryItem(title: .Clothes, isChecked: false),
         
-        CategoryItem(image: "drink",color: Color("ActionColor"),  title: "Drink", isChecked: false),
+        CategoryItem(title: .Drink, isChecked: false),
         
-        CategoryItem(image: "food",color: Color("ActionColor"),  title: "Food", isChecked: false),
+        CategoryItem(title: .Food, isChecked: false),
         
-        CategoryItem(image: "groceries",color: Color("ActionColor") , title: "Groceries", isChecked: false),
+        CategoryItem(title: .Groceries, isChecked: false),
         
-        CategoryItem(image: "health", color: Color("ActionColor"),  title: "Health", isChecked: false),
+        CategoryItem(title: .Health, isChecked: false),
         
-        CategoryItem(image: "phone", color: Color("ActionColor"), title: "Phone", isChecked: false),
+        CategoryItem(title: .Phone, isChecked: false),
         
-        CategoryItem(image: "rent",color: Color("ActionColor"),  title: "Rent", isChecked: false),
+        CategoryItem(title: .Rent, isChecked: false),
         
-        CategoryItem(image: "snacks", color: Color("ActionColor"), title: "Snacks", isChecked: false),
+        CategoryItem(title: .Snacks, isChecked: false),
         
-        CategoryItem(image: "social",color: Color("ActionColor"), title: "Social", isChecked: false),
+        CategoryItem(title: .Social, isChecked: false),
         
-        CategoryItem(image: "stationery",color: Color("ActionColor"), title: "Stationary", isChecked: false),
+        CategoryItem(title: .Stationary, isChecked: false),
         
-        CategoryItem(image: "transport", color: Color("ActionColor"), title: "Transport", isChecked: false),
+        CategoryItem(title: .Transport, isChecked: false),
         
-        CategoryItem(image: "travel", color: Color("ActionColor"), title: "Travel", isChecked: false)
+        CategoryItem(title: .Travel, isChecked: false)
     ]
     
     //    func shownCategory() -> ()  {
@@ -60,23 +61,47 @@ struct inputCategory: View {
                 CategoriesView(isCategories: category)
                 
             }
-        }.navigationBarTitle("Add Category")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading:
-                                    Button(action: {self.presentationMode.wrappedValue.dismiss()}, label: {
+        }
+        .navigationBarTitle("Add Category")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+                                Button(action: self.onCancelTapped, label: {
                 HStack{
                     Image(systemName: "chevron.backward")
                     Text("Back")
                 }
             }), trailing:
-                                    Button(action: {}, label: {
-                Text("Save")
+                        Button(action: {}, label: {
+                    Text("Save")
             })
             )
     }
+    
     private func onCancelTapped(){
         self.presentationMode.wrappedValue.dismiss()
+    }
+    
+    private func onSaveTapped(){
+        let logExpense = Expense (context: viewContext)
+        //logExpense.category = self.category
+        
+        do {
+            try viewContext.save()
+            print("Category save to Expense")
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+        let logBudget = Budget (context: viewContext)
+        //logBudget.category = self.category
+        
+        do {
+            try viewContext.save()
+            print("Category save to Budget")
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 }
 
@@ -96,7 +121,7 @@ struct CategoriesView: View {
         HStack{
             HStack(spacing:10) {
                 
-                Image(isCategories.image)
+                Image(isCategories.title.rawValue)
                     .resizable()
                     .scaledToFit()
                     .foregroundColor(.orange)
@@ -104,7 +129,7 @@ struct CategoriesView: View {
                     .padding(.horizontal, 5)
                     .padding(.leading,5)
                 
-                Text(isCategories.title)
+                Text(isCategories.title.rawValue)
                     .font(.system(size: 14)).bold()
                     .padding()
                 
@@ -136,11 +161,28 @@ struct CategoriesView: View {
     }
 }
 
-struct CategoryItem: Identifiable{
-    var id = UUID().uuidString
-    var image: String
-    var color: Color
-    var title: String
+struct CategoryItem {
+    var title: TitleCategory
     var isChecked: Bool
     
+    enum TitleCategory : String {
+        case Beauty = "beauty"
+        case Food = "food"
+        case Drink = "drink"
+        case Groceries = "groceries"
+        case Health = "health"
+        case Clothes = "clothes"
+        case Phone = "phones"
+        case Rent = "rent"
+        case Snacks = "snacks"
+        case Social = "social"
+        case Stationary = "stationary"
+        case Transport = "transport"
+        case Travel = "travel"
+    }
+    
+    
+    
 }
+
+
