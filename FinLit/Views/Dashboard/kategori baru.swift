@@ -10,21 +10,40 @@ import CoreData
 
 struct kategori_baru: View {
     
+    
+    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+    @FetchRequest(
+        entity: CategoriesDB.entity(),
+        sortDescriptors: [])
+    var selectedCategory : FetchedResults<CategoriesDB>
    
     
-    let data : [kategori] = [kategori(id: 1, nama: Category.food.nameList, warna: "dasar", warna2: "warna4", image: Category.food.systemNameIcon),
-                             kategori(id: 2, nama: Category.drinks.nameList, warna: "dasar", warna2: "warna3", image: Category.drinks.systemNameIcon),
-                             kategori(id: 3, nama: Category.groceries.nameList, warna: "dasar", warna2: "warna2", image: Category.groceries.systemNameIcon),
-                             kategori(id: 4, nama: Category.transport.nameList, warna: "dasar", warna2: "warna2",image: Category.transport.systemNameIcon),
-                             kategori(id: 5, nama: Category.health.nameList, warna: "dasar", warna2: "warna2", image: Category.health.systemNameIcon),
-                             kategori(id: 6, nama: Category.rent.nameList, warna: "dasar", warna2: "warna2", image: Category.rent.systemNameIcon),
-                             kategori(id: 7, nama: Category.clothes.nameList, warna: "dasar", warna2: "warna2", image: Category.clothes.systemNameIcon),
-                             kategori(id: 8, nama: Category.travel.nameList, warna: "dasar", warna2: "warna2", image: Category.travel.systemNameIcon),
-                             kategori(id: 9, nama: Category.beauty.nameList, warna: "dasar", warna2: "warna2", image: Category.beauty.systemNameIcon),
-                             kategori(id: 10, nama: Category.phone.nameList, warna: "dasar", warna2: "warna2", image: Category.phone.systemNameIcon),
-                             kategori(id: 11, nama: Category.stationary.nameList, warna: "dasar", warna2: "warna2", image: Category.stationary.systemNameIcon),
-                             kategori(id: 12, nama: Category.snack.nameList, warna: "dasar", warna2: "warna2", image: Category.snack.systemNameIcon),
-                             kategori(id: 13, nama: Category.social.nameList, warna: "dasar", warna2: "warna2", image: Category.social.systemNameIcon)
+    let data : [kategori] = [
+        kategori(id: 1, nama: Category.food.nameList, warna: "dasar", warna2: "warna4", image: Category.food.systemNameIcon),
+        
+        kategori(id: 2, nama: Category.drinks.nameList, warna: "dasar", warna2: "warna3", image: Category.drinks.systemNameIcon),
+        
+        kategori(id: 3, nama: Category.groceries.nameList, warna: "dasar", warna2: "warna2", image: Category.groceries.systemNameIcon),
+        
+        kategori(id: 4, nama: Category.transport.nameList, warna: "dasar", warna2: "warna2",image: Category.transport.systemNameIcon),
+        
+        kategori(id: 5, nama: Category.health.nameList, warna: "dasar", warna2: "warna2", image: Category.health.systemNameIcon),
+        
+        kategori(id: 6, nama: Category.rent.nameList, warna: "dasar", warna2: "warna2", image: Category.rent.systemNameIcon),
+        
+        kategori(id: 7, nama: Category.clothes.nameList, warna: "dasar", warna2: "warna2", image: Category.clothes.systemNameIcon),
+        
+        kategori(id: 8, nama: Category.travel.nameList, warna: "dasar", warna2: "warna2", image: Category.travel.systemNameIcon),
+        
+        kategori(id: 9, nama: Category.beauty.nameList, warna: "dasar", warna2: "warna2", image: Category.beauty.systemNameIcon),
+        
+        kategori(id: 10, nama: Category.phone.nameList, warna: "dasar", warna2: "warna2", image: Category.phone.systemNameIcon),
+        
+        kategori(id: 11, nama: Category.stationary.nameList, warna: "dasar", warna2: "warna2", image: Category.stationary.systemNameIcon),
+        
+        kategori(id: 12, nama: Category.snack.nameList, warna: "dasar", warna2: "warna2", image: Category.snack.systemNameIcon),
+        
+        kategori(id: 13, nama: Category.social.nameList, warna: "dasar", warna2: "warna2", image: Category.social.systemNameIcon)
     ]
 //    let data : [kategori] = [kategori(id: 1, nama: "Rumah", warna: "dasar", warna2: "warna4"),
 //                             kategori(id: 2, nama: "Sekolah", warna: "dasar", warna2: "warna3"),
@@ -44,22 +63,12 @@ struct kategori_baru: View {
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], alignment: .leading, spacing: 10){
                 
-                ForEach(data) {
+                ForEach(selectedCategory) {
                     item in
                     option(data: item)
                 }
             }
         }
-        //        VStack{
-        //            HStack(spacing : 20){
-        //            ForEach(data) {
-        //           item in
-        //                option(data: item)
-        //            }
-        //
-        //        }.padding()
-        //            Spacer()
-        //        }
     }
 }
 
@@ -83,6 +92,11 @@ struct option : View{
     @State private var inputExpense = false
     // @ObservedObject var kata : GlobalObject
     
+    @FetchRequest(
+        entity: CategoriesDB.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \CategoriesDB.title, ascending: false)])
+    var selectedCategory : FetchedResults<CategoriesDB>
+    
     let data : kategori
     var body: some View{
         
@@ -97,7 +111,6 @@ struct option : View{
                 .foregroundColor(Color("ActionColor"))
                 
             Text(self.data.nama)
-            
                 .font(.system(size: 12))
                 .foregroundColor(.secondary)
                 .padding(.vertical, 2)
