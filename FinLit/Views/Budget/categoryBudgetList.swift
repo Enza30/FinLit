@@ -105,15 +105,15 @@ struct RowOfBudgetList : View {
                     Spacer()
                     Text(isCategoryBudgetList.title.rawValue)
                         .font(.system(size: 14)).bold()
-                        .frame(width: 57, height: 14, alignment: .topLeading)
+                        .frame(width: 70, height: 14, alignment: .topLeading)
                     
                     Spacer()
                     HStack {
                         Spacer()
-                        Spacer()
                         HStack{
-                            Text("Rp.500.000")
+                            Text("Rp.12.000.000")
                                 .font(.system(size: 12))
+                                .frame(width: 88, height: 14, alignment: .topTrailing)
                             
                             
                         }
@@ -122,6 +122,7 @@ struct RowOfBudgetList : View {
                         HStack {
                             Text("of Rp.700.000")
                                 .font(.system(size: 12))
+                                .frame(width: 96, height: 14, alignment: .topTrailing)
                                 .foregroundStyle(.secondary)
                             
                         }
@@ -133,7 +134,7 @@ struct RowOfBudgetList : View {
                 }
                 HStack {
                     barBudget()
-                    Spacer()
+                    Spacer(minLength: 23)
                 }
                 .frame(width: 280, height: 13)
             }

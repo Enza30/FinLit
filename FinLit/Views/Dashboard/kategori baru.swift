@@ -97,7 +97,6 @@ struct option : View{
         sortDescriptors: [NSSortDescriptor(keyPath: \CategoriesDB.title, ascending: false)])
     var selectedCategory : FetchedResults<CategoriesDB>
     
-    let data : kategori
     var body: some View{
         
         ZStack(alignment: .center){
