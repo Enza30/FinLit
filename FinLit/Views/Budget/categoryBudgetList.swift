@@ -10,37 +10,64 @@ import CoreData
 
 struct categoryBudgetList: View {
     @State var category = [
-        CategoryBudgetList(image: "beauty", title: "Beauty", amount: 0, expense: 0),
+        CategoryItem(title: .Beauty, isChecked: false),
         
-        CategoryBudgetList(image: "clothes", title: "Clothes", amount: 0, expense: 0),
+        CategoryItem(title: .Clothes, isChecked: false),
         
-        CategoryBudgetList(image: "drink", title: "Drink", amount: 0, expense: 0),
+        CategoryItem(title: .Drink, isChecked: false),
         
-        CategoryBudgetList(image: "food", title: "Food", amount: 0, expense: 0),
+        CategoryItem(title: .Food, isChecked: false),
         
-        CategoryBudgetList(image: "groceries", title: "Groceries", amount: 0, expense: 0),
+        CategoryItem(title: .Groceries, isChecked: false),
         
-        CategoryBudgetList(image: "health", title: "Health", amount: 0, expense: 0),
+        CategoryItem(title: .Health, isChecked: false),
         
-        CategoryBudgetList(image: "phone", title: "Phone", amount: 0, expense: 0),
+        CategoryItem(title: .Phone, isChecked: false),
         
-        CategoryBudgetList(image: "rent", title: "Rent", amount: 0, expense: 0),
+        CategoryItem(title: .Rent, isChecked: false),
         
-        CategoryBudgetList(image: "snacks", title: "Snacks", amount: 0, expense: 0),
+        CategoryItem(title: .Snacks, isChecked: false),
         
-        CategoryBudgetList(image: "social", title: "Social", amount: 0, expense: 0),
+        CategoryItem(title: .Social, isChecked: false),
         
-        CategoryBudgetList(image: "stationery", title: "Stationary", amount: 0, expense: 0),
+        CategoryItem(title: .Stationary, isChecked: false),
         
-        CategoryBudgetList(image: "transport", title: "Transport", amount: 0, expense: 0),
+        CategoryItem(title: .Transport, isChecked: false),
         
-        CategoryBudgetList(image: "travel", title: "Travel", amount: 0, expense: 0),
-        
+        CategoryItem(title: .Travel, isChecked: false)
     ]
+//    @State var category = [
+//        CategoryBudgetList(image: "beauty", title: "Beauty", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "clothes", title: "Clothes", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "drink", title: "Drink", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "food", title: "Food", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "groceries", title: "Groceries", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "health", title: "Health", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "phone", title: "Phone", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "rent", title: "Rent", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "snacks", title: "Snacks", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "social", title: "Social", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "stationery", title: "Stationary", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "transport", title: "Transport", amount: 0, expense: 0),
+//
+//        CategoryBudgetList(image: "travel", title: "Travel", amount: 0, expense: 0),
+//
+//    ]
     
     var body: some View {
         List {
-            ScrollView{ ForEach(category) { ctgBudgetList in
+            ScrollView{ ForEach($category) { ctgBudgetList in
                 RowOfBudgetList(isCategoryBudgetList: ctgBudgetList)
             }
                 
@@ -59,12 +86,12 @@ struct categoryBudgetList_Previews: PreviewProvider {
 
 struct RowOfBudgetList : View {
     
-    @State var isCategoryBudgetList : CategoryBudgetList
+    @Binding var isCategoryBudgetList : CategoryItem
     
     var body: some View {
         HStack {
             ZStack {
-                Image(isCategoryBudgetList.image)
+                Image(isCategoryBudgetList.title.rawValue)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 32, height: 32)
@@ -76,7 +103,7 @@ struct RowOfBudgetList : View {
                 HStack(alignment:.bottom) {
                     Spacer()
                     Spacer()
-                    Text(isCategoryBudgetList.title)
+                    Text(isCategoryBudgetList.title.rawValue)
                         .font(.system(size: 14)).bold()
                         .frame(width: 57, height: 14, alignment: .topLeading)
                     
