@@ -10,7 +10,7 @@ import CoreData
 
 struct Dashboard: View {
     
-    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+    @Environment(\.managedObjectContext) var context
     @FetchRequest(
         entity: Income.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: true)]

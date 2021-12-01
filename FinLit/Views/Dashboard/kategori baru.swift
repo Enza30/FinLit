@@ -67,16 +67,6 @@ struct kategori_baru: View {
                 }
             }
         }
-        //        VStack{
-        //            HStack(spacing : 20){
-        //            ForEach(data) {
-        //           item in
-        //                option(data: item)
-        //            }
-        //
-        //        }.padding()
-        //            Spacer()
-        //        }
     }
 }
 
@@ -102,7 +92,12 @@ struct option : View{
     @State private var inputExpense = false
     // @ObservedObject var kata : GlobalObject
     
-//    let data : kategori
+    @FetchRequest(
+        entity: CategoriesDB.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \CategoriesDB.title, ascending: false)])
+    var selectedCategory : FetchedResults<CategoriesDB>
+    
+    let data : kategori
     var body: some View{
         
         ZStack(alignment: .center){

@@ -57,13 +57,16 @@ struct inputCategory: View {
     //        }
     //    }
     
-
+    @FetchRequest(
+        entity: CategoriesDB.entity(),
+        sortDescriptors: [])
+    var selectedCategory : FetchedResults<CategoriesDB>
     
     var body: some View {
         ScrollView{
             ForEach($category) { category in
                 
-                CategoriesView(isCategories: category)
+                CategoriesView(isCategories: category, context: context)
                 
             }
         }
@@ -95,7 +98,6 @@ struct inputCategory: View {
         //print(selectedCategory)
       //  let dataSelectedCategory = NSKeyedArchiver.archivedData(withRootObject: selectedCategory)
         
-        
 //        do {
 //            try viewContext.save()
 //            print("Category save to Expense")
@@ -118,7 +120,16 @@ struct CategoriesView: View {
     
     @Binding var isCategories: CategoryItem
     
+    var context : NSManagedObjectContext
     
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    let titleCategories = CategoryItem.TitleCategory.RawValue()
+    @FetchRequest(
+        entity: CategoriesDB.entity(),
+        sortDescriptors: [])
+        //predicate: NSPredicate(format: "name == %@", titleCategories ))
+    var selectedCategory : FetchedResults<CategoriesDB>
     
     var body: some View{
         HStack{
@@ -158,7 +169,14 @@ struct CategoriesView: View {
             .contentShape(Rectangle())
             .onTapGesture (perform: {
                 isCategories.isChecked.toggle()
-                print(isCategories.isChecked)
+                
+                
+                let category = CategoriesDB(context: context)
+                category.isChecked = isCategories.isChecked
+                category.title = isCategories.title.rawValue
+                PersistenceController.shared.save()
+                print(category)
+                
             })
         }
         
