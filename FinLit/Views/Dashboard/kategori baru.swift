@@ -106,6 +106,7 @@ struct option : View{
             Spacer()
             Image(self.expenseCategories.title.rawValue)
                 .resizable()
+                .scaledToFit()
                 .frame(width: 32, height: 36, alignment: .center)
                 .foregroundColor(Color("ActionColor"))
                 
