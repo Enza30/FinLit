@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct topCardView: View {
+    @Environment(\.managedObjectContext) var context
     
     let month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "NOV", "DES"]
     

@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct EditBudget: View {
+    
+    var context : NSManagedObjectContext
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) private var viewContext
     
     @State var category = [
         CategoryItem(title: .Beauty, isChecked: false),
@@ -72,6 +77,9 @@ struct EditBudget: View {
             }
                 
             }
+            .navigationBarTitle("Add Category")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(false)
         }
         .listStyle(PlainListStyle())
     }
@@ -79,7 +87,8 @@ struct EditBudget: View {
 
 struct EditBudget_Previews: PreviewProvider {
     static var previews: some View {
-        EditBudget()
+        let stack = PersistenceController()
+        return EditBudget(context: stack.container.viewContext)
     }
 }
 
