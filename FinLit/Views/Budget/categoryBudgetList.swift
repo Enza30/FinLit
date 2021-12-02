@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct categoryBudgetList: View {
-    @State var category = [
+     var category = [
         CategoryItem(title: .Beauty, isChecked: false),
         
         CategoryItem(title: .Clothes, isChecked: false),
@@ -67,7 +67,7 @@ struct categoryBudgetList: View {
     
     var body: some View {
         List {
-            ScrollView{ ForEach($category) { ctgBudgetList in
+            ScrollView{ ForEach(category) { ctgBudgetList in
                 RowOfBudgetList(isCategoryBudgetList: ctgBudgetList)
             }
                 
@@ -86,7 +86,7 @@ struct categoryBudgetList_Previews: PreviewProvider {
 
 struct RowOfBudgetList : View {
     
-    @Binding var isCategoryBudgetList : CategoryItem
+     var isCategoryBudgetList : CategoryItem
     
     var body: some View {
         HStack {

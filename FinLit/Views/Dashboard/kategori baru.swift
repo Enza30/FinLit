@@ -97,3 +97,59 @@ struct kategori_baru_Previews: PreviewProvider {
     }
 }
 
+    
+    @State private var inputExpense = false
+    // @ObservedObject var kata : GlobalObject
+    
+    @FetchRequest(
+        entity: CategoriesDB.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \CategoriesDB.title, ascending: false)])
+    var selectedCategory : FetchedResults<CategoriesDB>
+    
+    var body: some View{
+        
+        ZStack(alignment: .center){
+     
+          
+        VStack{
+            Spacer()
+            Image(self.expenseCategories.title.rawValue)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 32, height: 36, alignment: .center)
+                .foregroundColor(Color("ActionColor"))
+                
+            Text(self.expenseCategories.title.rawValue)
+            
+                .font(.system(size: 12))
+                .foregroundColor(.secondary)
+                .padding(.vertical, 2)
+            Text("Rp. 0").font(.system(size: 14)).bold()
+                .padding(.vertical, 3)
+                Spacer()
+            ForEach(expense) {expense in
+                Text("\(expense.amountText)")
+                    .font(.system(size: 14))
+                    .bold()
+                    .frame(width:100, alignment: .topLeading)
+            }
+        }.frame(width: 110, height: 125)
+        //                .padding(.all, 7)
+            .background(Color.white)
+            .cornerRadius(7)
+            .shadow(radius: 3, x: 1, y: 1)
+            
+            Button("                                                                                                                                         "){
+                inputExpense.toggle()
+                ()   }
+            .sheet(isPresented: $inputExpense){
+                let stack = PersistenceController()
+                modalTry(context: stack.container.viewContext)
+            }
+            .padding(.all, 50)
+        }
+       
+        
+    }
+    
+}

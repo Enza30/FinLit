@@ -14,7 +14,7 @@ struct EditBudget: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext
     
-    @State var category = [
+     var category = [
         CategoryItem(title: .Beauty, isChecked: false),
         
         CategoryItem(title: .Clothes, isChecked: false),
@@ -72,12 +72,12 @@ struct EditBudget: View {
     
     var body: some View {
         List {
-            ScrollView{ ForEach($category){ editcategory in
+            ScrollView{ ForEach(category){ editcategory in
                 EditBudgetview(isEditBudget: editcategory)
             }
                 
             }
-            .navigationBarTitle("Add Category")
+            .navigationBarTitle("Edit Budget")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(false)
         }
@@ -95,7 +95,7 @@ struct EditBudget_Previews: PreviewProvider {
 
 struct EditBudgetview : View {
     
-    @Binding var isEditBudget: CategoryItem
+    var isEditBudget: CategoryItem
     
     var body: some View {
         HStack(spacing:10) {
