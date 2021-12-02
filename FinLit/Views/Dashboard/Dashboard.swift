@@ -16,6 +16,11 @@ struct Dashboard: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Income.date, ascending: true)]
     )  var incomes: FetchedResults<Income>
     
+    @FetchRequest(
+        entity: Expense.entity(),
+        sortDescriptors: []
+    )
+    var expense : FetchedResults<Expense>
     
     @State var isAddIncomePresented : Bool = false
     //@State var isAddCategory : Bool = false
@@ -141,9 +146,11 @@ struct Dashboard: View {
                                                     .font(.system(size: 12))
                                                     .frame(width:130, alignment: .topTrailing)
                                                     .foregroundColor(.secondary)
-                                                Text("Rp.1.110.000")
-                                                    .font(.system(size: 14)).bold()
-                                                    .frame(width:130, alignment: .topTrailing)
+                                                ForEach(expense) {expense in
+                                                    Text("\(expense.amountText)")
+                                                        .font(.system(size: 14)).bold()
+                                                        .frame(width:130, alignment: .topTrailing)
+                                                }
                                             }
                                         }
                                     }
