@@ -44,6 +44,7 @@ struct kategori_baru: View {
                                 Spacer()
                                 Image(logCategory.title ?? "")
                                     .resizable()
+                                    .scaledToFit()
                                     .frame(width: 32, height: 36, alignment: .center)
                                     .foregroundColor(Color("ActionColor"))
                                 
