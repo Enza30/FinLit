@@ -26,6 +26,7 @@ struct addIncome: View {
                 Spacer()
                 Image(systemName: "banknote.fill")
                     .resizable()
+                    .scaledToFit()
                     .foregroundColor(Color("MainColor"))
                     .frame(width: 80, height: 80)
                     .padding(10)

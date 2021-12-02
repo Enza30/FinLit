@@ -56,7 +56,7 @@ struct Dashboard: View {
                             ZStack{
                                 VStack(spacing: 0) {
                                     HStack {
-                                        Text("You young dumb and broke")
+                                        Text("Watch Out, You're overspending")
                                             .foregroundColor(.white)
                                     }
                                     .frame(height: 52)
