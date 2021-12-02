@@ -39,6 +39,7 @@
 		51C597E0274F308F0074DD22 /* addIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C597DF274F308E0074DD22 /* addIncome.swift */; };
 		51DB251A274C874300BC77CF /* inputCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB2519274C874300BC77CF /* inputCategory.swift */; };
 		51DD60AE273B778000054E9B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD60AD273B778000054E9B /* Chart.swift */; };
+		51F1C7A32758641000BF6373 /* addExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1C7A22758641000BF6373 /* addExpense.swift */; };
 		9B22677E2745EE6B00F56804 /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22677D2745EE6B00F56804 /* Keypad.swift */; };
 		9B99CC1127425C5400F593E5 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1027425C5400F593E5 /* EditBudgetView.swift */; };
 		9B99CC1327425CA100F593E5 /* ModelEditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CC1227425CA100F593E5 /* ModelEditBudget.swift */; };
@@ -98,6 +99,7 @@
 		51C597DF274F308E0074DD22 /* addIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIncome.swift; sourceTree = "<group>"; };
 		51DB2519274C874300BC77CF /* inputCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputCategory.swift; sourceTree = "<group>"; };
 		51DD60AD273B778000054E9B /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		51F1C7A22758641000BF6373 /* addExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addExpense.swift; sourceTree = "<group>"; };
 		9B22677D2745EE6B00F56804 /* Keypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
 		9B99CC1027425C5400F593E5 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
 		9B99CC1227425CA100F593E5 /* ModelEditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEditBudget.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				51C597DF274F308E0074DD22 /* addIncome.swift */,
 				4D8AA8872753DD2C0033A92F /* AddCategories.swift */,
 				5113C98127545D2B006C515C /* Log.swift */,
+				51F1C7A22758641000BF6373 /* addExpense.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				4D8AA88C2754F0EC0033A92F /* EditBudget.swift in Sources */,
 				5113C980275441F9006C515C /* Sort.swift in Sources */,
 				4D8F48CC2734E79600DDFF73 /* PageTabView.swift in Sources */,
+				51F1C7A32758641000BF6373 /* addExpense.swift in Sources */,
 				E294BCB4273AAEF8002D4010 /* dataModelKategori.swift in Sources */,
 				513746B9272F8C9100A56FB0 /* ContentView.swift in Sources */,
 				E2464ADE2734DC8D007957CE /* bar.swift in Sources */,

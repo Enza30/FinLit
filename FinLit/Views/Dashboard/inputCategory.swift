@@ -57,6 +57,8 @@ struct inputCategory: View {
     //        }
     //    }
     
+   
+    
     @FetchRequest(
         entity: CategoriesDB.entity(),
         sortDescriptors: [])
@@ -64,11 +66,21 @@ struct inputCategory: View {
     
     var body: some View {
         ScrollView{
-            ForEach($category) { category in
-                
-                CategoriesView(isCategories: category, context: context)
-                
+            
+            if selectedCategory != nil {
+                ForEach($category) { category in
+                    
+                    CategoriesView(isCategories: category, context: context)
+                    
+                }
             }
+//                else {
+//                ForEach(selectedCategory) { (logCategory : CategoriesDB) in
+//
+//                    CategoriesView(isCategories: $category, context: context)
+//                }
+//            }
+            
         }
         .navigationBarTitle("Add Category")
         .navigationBarTitleDisplayMode(.inline)
@@ -94,16 +106,11 @@ struct inputCategory: View {
         
         //var selectedCategory = category.filter({$0.isChecked == true})
         //let logCategory = CategoriesDB (context: viewContext)
-        //logCategory.title 
+        //logCategory.title
         //print(selectedCategory)
       //  let dataSelectedCategory = NSKeyedArchiver.archivedData(withRootObject: selectedCategory)
-        
-//        do {
-//            try viewContext.save()
-//            print("Category save to Expense")
-//        } catch let error as NSError {
-//            print(error.localizedDescription)
-//        }
+      //  PersistenceController.shared.save()
+
         self.presentationMode.wrappedValue.dismiss()
     }
 }
@@ -127,8 +134,10 @@ struct CategoriesView: View {
     let titleCategories = CategoryItem.TitleCategory.RawValue()
     @FetchRequest(
         entity: CategoriesDB.entity(),
-        sortDescriptors: [])
-        //predicate: NSPredicate(format: "name == %@", titleCategories ))
+        sortDescriptors: []
+   //     predicate: NSPredicate(format: "name == %@", titleCategories as CVarArg )
+    )
+    
     var selectedCategory : FetchedResults<CategoriesDB>
     
     var body: some View{
@@ -176,6 +185,8 @@ struct CategoriesView: View {
                 category.title = isCategories.title.rawValue
                 PersistenceController.shared.save()
                 print(category)
+                
+                
                 
             })
         }
