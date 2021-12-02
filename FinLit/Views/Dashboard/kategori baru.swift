@@ -38,6 +38,8 @@ struct kategori_baru: View {
                         choosenTitle = logCategory.title!
                         addExpenseTapped()
                         
+                        
+                        
                     }) {
                         ZStack(alignment: .center){
                             VStack{
@@ -74,7 +76,7 @@ struct kategori_baru: View {
                 
             }
             .sheet(isPresented: $isAddExpensePresented) {
-                addExpense(context: self.context, choosenTitle: choosenTitle ?? "nil")
+                addExpense(context: self.context, choosenTitle: self.$choosenTitle)
                 
             }
         }

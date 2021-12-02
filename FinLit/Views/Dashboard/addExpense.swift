@@ -18,13 +18,13 @@ struct addExpense: View {
     @State var expenseDate: Date = Date()
     
     
-    @State var choosenTitle : String
+    @Binding var choosenTitle : String?
     
     var body: some View {
         NavigationView {
             VStack(alignment: .center){
                 Spacer()
-                Image(choosenTitle)
+                Image(choosenTitle ?? "nil")
                     .resizable()
                     .foregroundColor(Color("MainColor"))
                     .frame(width: 80, height: 80)
@@ -49,7 +49,7 @@ struct addExpense: View {
                 
                 
             }.onAppear{
-                print("sent to addexpense view: \($choosenTitle)")
+                print("sent to addexpense view: \(choosenTitle)")
             }
             .navigationBarItems(
                 leading: Button(action: self.onCancelTapped, label: {
