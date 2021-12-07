@@ -235,6 +235,14 @@ struct Dashboard: View {
     func addIncomeTapped() {
         isAddIncomePresented = true
     }
+    
+    private func getTotalIncome() -> String {
+        
+        var value = Double(0)
+        for i in incomes { value += i.amount as! Double
+        }
+        return "\(String(format: "%.2f", value))"
+    }
 }
 
 

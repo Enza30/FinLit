@@ -37,6 +37,7 @@ struct addIncome: View {
                     .font(.largeTitle)
                     .textFieldStyle(.roundedBorder)
                     .labelsHidden()
+                
                     
                 Spacer()
                 Button(action: self.onSaveTapped, label: {
