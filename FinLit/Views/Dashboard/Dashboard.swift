@@ -46,7 +46,7 @@ struct Dashboard: View {
                                     .foregroundColor(Color.secondary)
                                 
                                 
-                                Text("Rp. 1.000.000")
+                                Text("\(getCurrentMoney())")
                                     .font(.largeTitle).bold()
                                     .foregroundColor(Color("MainColor"))
                                 
@@ -276,10 +276,21 @@ struct Dashboard: View {
         return "\(convertDoubletoCurrency(amount: totalExpense))"
     }
     
-//    func currentMoney() -> String {
-//
-//
-//    }
+    func currentMoney() -> Double {
+        let totalIncome = getTotalIncome()
+        let totalExpense = getTotalExpense()
+        var yourMoney : Double {
+            totalIncome - totalExpense
+        }
+        
+        return yourMoney
+    }
+    
+    func getCurrentMoney() -> String{
+        let totalMoney = currentMoney()
+        convertDoubletoCurrency(amount: totalMoney)
+        return "\(convertDoubletoCurrency(amount: totalMoney))"
+    }
     
     
     
