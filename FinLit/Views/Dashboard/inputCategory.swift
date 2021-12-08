@@ -72,6 +72,7 @@ struct inputCategory: View {
                     
                     CategoriesView(isCategories: category, context: context)
                     
+                    Divider()
                 }
             }
 //                else {

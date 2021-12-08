@@ -42,37 +42,10 @@ struct EditBudget: View {
         CategoryItem(title: .Travel, isChecked: false)
     ]
     
-//    @State var category  = [
-//        CategoryEditBudget(image: "beauty", title: "Beauty", amount: "Rp. 1.000.000"),
-//
-//        CategoryEditBudget(image: "clothes", title: "Clothes", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "drink", title: "Drink", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "food", title: "Food", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "groceries", title: "Groceries", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "health", title: "Health", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "phone", title: "Phone", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "rent", title: "Rent", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "snacks", title: "Snacks", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "social", title: "Social", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "stationery", title: "Stationary", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "transport", title: "Transport", amount: "Rp. 0"),
-//
-//        CategoryEditBudget(image: "travel", title: "Travel", amount: "Rp. 0")
-//    ]
-    
     var body: some View {
         List {
-            ScrollView{ ForEach(category){ editcategory in
+            ScrollView{
+                ForEach(category){ editcategory in
                 EditBudgetview(isEditBudget: editcategory)
             }
                 

@@ -25,6 +25,8 @@ struct Dashboard: View {
     @State var isAddIncomePresented : Bool = false
     //@State var isAddCategory : Bool = false
     
+    
+    
     var body: some View {
         
         NavigationView{
@@ -110,12 +112,12 @@ struct Dashboard: View {
                                                         .font(.system(size: 12))
                                                         .frame(width:100, alignment: .topLeading)
                                                         .foregroundColor(.secondary)
-                                                    ForEach(incomes) {income in
-                                                        Text("\(income.amountText)")
+                                                    
+                                                    Text("\(calculateIncomeValue())")
                                                             .font(.system(size: 14))
                                                             .bold()
                                                             .frame(width:100, alignment: .topLeading)
-                                                    }
+                                                    
                                                     
                                                 }
                                                 Spacer()
@@ -146,11 +148,11 @@ struct Dashboard: View {
                                                     .font(.system(size: 12))
                                                     .frame(width:130, alignment: .topTrailing)
                                                     .foregroundColor(.secondary)
-                                                ForEach(expense) {expense in
-                                                    Text("\(expense.amountText)")
+                                                
+                                                    Text("\(calculateTotalExpense())")
                                                         .font(.system(size: 14)).bold()
                                                         .frame(width:130, alignment: .topTrailing)
-                                                }
+                                                
                                             }
                                         }
                                     }
@@ -236,14 +238,65 @@ struct Dashboard: View {
         isAddIncomePresented = true
     }
     
-    private func getTotalIncome() -> String {
+    
+    
+    private func getTotalIncome() -> Double {
         
         var value = Double(0)
-        for i in incomes { value += i.amount as! Double
+        for i in incomes {
+            
+            value += i.amount as! Double
+            
         }
-        return "\(String(format: "%.2f", value))"
+        return value
     }
+    func calculateIncomeValue() -> String {
+        
+        let totalIncome = getTotalIncome()
+        
+        convertDoubletoCurrency(amount: totalIncome)
+        
+        return "\(convertDoubletoCurrency(amount: totalIncome))"
+    
+    }
+    
+    
+    
+    private func getTotalExpense() -> Double {
+        
+        var value = Double(0)
+        for i in expense{
+            value += i.amount as! Double
+        }
+        return value
+    }
+    func calculateTotalExpense() -> String {
+        let totalExpense = getTotalExpense()
+        convertDoubletoCurrency(amount: totalExpense)
+        return "\(convertDoubletoCurrency(amount: totalExpense))"
+    }
+    
+//    func currentMoney() -> String {
+//
+//
+//    }
+    
+    
+    
+    private func convertDoubletoCurrency(amount: Double) -> String {
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale.current
+        numberFormatter.isLenient = true
+        
+        
+        return numberFormatter.string(from: NSNumber(value:amount))!
+    }
+    
+
 }
+
 
 
 struct Dashboard_Previews: PreviewProvider {

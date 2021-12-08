@@ -36,39 +36,15 @@ struct categoryBudgetList: View {
         
         CategoryItem(title: .Travel, isChecked: false)
     ]
-//    @State var category = [
-//        CategoryBudgetList(image: "beauty", title: "Beauty", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "clothes", title: "Clothes", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "drink", title: "Drink", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "food", title: "Food", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "groceries", title: "Groceries", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "health", title: "Health", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "phone", title: "Phone", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "rent", title: "Rent", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "snacks", title: "Snacks", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "social", title: "Social", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "stationery", title: "Stationary", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "transport", title: "Transport", amount: 0, expense: 0),
-//
-//        CategoryBudgetList(image: "travel", title: "Travel", amount: 0, expense: 0),
-//
-//    ]
+
     
     var body: some View {
         List {
-            ScrollView{ ForEach(category) { ctgBudgetList in
+            ScrollView {
+                ForEach(category) { ctgBudgetList in
                 RowOfBudgetList(isCategoryBudgetList: ctgBudgetList)
+                    
+                    Divider()
             }
                 
             }
@@ -145,6 +121,20 @@ struct RowOfBudgetList : View {
         .padding()
         .edgesIgnoringSafeArea(.all)
         .background(Color.white)
+    }
+}
+struct barBudget: View{
+    @State var currentProgress: CGFloat = 155.0
+    var body: some View {
+        ZStack(alignment: .leading){
+            Rectangle()
+                .foregroundColor(Color("passiveBar"))
+                .frame(width: 280, height: 14)
+            
+            Rectangle()
+                .foregroundColor(Color("MainColor"))
+                .frame(width: currentProgress, height: 14)
+        }
     }
 }
 

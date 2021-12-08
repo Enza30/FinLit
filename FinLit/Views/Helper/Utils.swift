@@ -29,6 +29,13 @@ func getDateFormatter(date: Date?, format: String = "yyyy-MM-dd") -> String {
     return dateFormatter.string(from: date)
 }
 
+//func getNumberFormatter(from num : NSNumber, number nstyle: NumberFormatter.Style) -> String {
+//    let formatter = NumberFormatter()
+//    formatter.isLenient = true
+//    formatter.numberStyle = .currency
+//    return formatter
+//}
+
 extension Float {
     var formattedCurrencyText: String {
         return Utils.numberFormatter.string(from: NSNumber(value: self)) ?? "0"

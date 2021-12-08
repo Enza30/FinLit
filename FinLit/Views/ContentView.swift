@@ -22,17 +22,19 @@ struct ContentView: View {
                     Text("Your Money")
                 }
 
+            Evaluation()
+                .tabItem{
+                    Image(systemName: "chart.bar.fill")
+                    Text("History")
+                }
+            
             BudgetView()
                 .tabItem{
                     Image(systemName: "banknote.fill")
                     Text("Budget")
                 }
 
-            Evaluation()
-                .tabItem{
-                    Image(systemName: "chart.bar.fill")
-                    Text("History")
-                }
+            
         }
         .accentColor(Color("MainColor"))
     }
