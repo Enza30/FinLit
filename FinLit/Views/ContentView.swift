@@ -18,7 +18,7 @@ struct ContentView: View {
         TabView {
             Dashboard()
                 .tabItem{
-                    Image(systemName: "house.fill")
+                    Image(systemName: "dollarsign.circle.fill")
                     Text("Your Money")
                 }
 

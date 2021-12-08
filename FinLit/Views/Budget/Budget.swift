@@ -83,7 +83,7 @@ struct BudgetView: View {
                                             
                                             HStack {
                                                 Spacer()
-                                                Button(action: {}, label: { NavigationLink(destination: EditBudget(context: self.context)) {
+                                                Button(action: {}, label: { NavigationLink(destination: EditBudget()) {
                                                     Text("Edit budget")
                                                         .font(.system(size: 14))
                                                         .frame(width: 150, height: 29)
