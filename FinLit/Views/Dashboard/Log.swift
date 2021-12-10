@@ -10,7 +10,7 @@ import CoreData
 
 extension Income{
     var dateText: String {
-        Utils.dateFormatter.string(from: Date())
+        Utils.dateFormatter.string(for: Date())!
     }
     
     var amountText: String {
@@ -25,7 +25,7 @@ extension Expense{
     }
     
     var dateText: String {
-        Utils.dateFormatter.string(from: Date())
+        Utils.dateFormatter.string(for: Date())!
     }
     
     var nameText: String {

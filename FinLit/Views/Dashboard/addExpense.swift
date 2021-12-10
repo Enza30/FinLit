@@ -67,7 +67,7 @@ struct addExpense: View {
     
     private func onSaveTapped(){
         let logExpense = Expense(context: context)
-//        logExpense.categoryExpense = self.choosenTitle
+        logExpense.categoryExpense = self.choosenTitle
         logExpense.date = self.expenseDate
         logExpense.amount = NSDecimalNumber(value: self.inputExpense)
         PersistenceController.shared.save()
