@@ -13,12 +13,6 @@ struct kategori_baru: View {
     @Environment(\.managedObjectContext) var context
     
     @FetchRequest(
-        entity: Expense.entity(),
-        sortDescriptors: []
-    )
-    var expense : FetchedResults<Expense>
-    
-    @FetchRequest(
         entity: CategoriesDB.entity(),
         sortDescriptors: [])
     //predicate: NSPredicate(format: "name == %@", titleCategories ))
@@ -27,6 +21,12 @@ struct kategori_baru: View {
     @State var isAddExpensePresented : Bool = false
     
     @State var choosenTitle : String?
+    
+    @FetchRequest(
+        entity: Expense.entity(),
+        sortDescriptors: []
+    )
+    var expense : FetchedResults<Expense>
     
     var body: some View {
         ScrollView(.vertical){
