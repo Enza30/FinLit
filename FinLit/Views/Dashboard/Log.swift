@@ -10,7 +10,7 @@ import CoreData
 
 extension Income{
     var dateText: String {
-        Utils.dateFormatter.localizedString(for: date ?? Date(), relativeTo: Date())
+        Utils.dateFormatter.string(from: Date())
     }
     
     var amountText: String {
@@ -23,4 +23,13 @@ extension Expense{
     var amountText: String {
         Utils.numberFormatter.string(from: NSNumber(value: amount?.doubleValue ?? 0)) ?? ""
     }
+    
+    var dateText: String {
+        Utils.dateFormatter.string(from: Date())
+    }
+    
+    var nameText: String {
+        categoryExpense ?? ""
+    }
+    
 }

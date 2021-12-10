@@ -39,21 +39,21 @@ struct segmentedControlView: View {
                     }
                     .padding(5)
                     
-                    ForEach(expense) {expense in
+                    ForEach(expense) { (logExpense : Expense) in
                         HStack {
                             Spacer()
                             VStack {
-                                Text("Food")
+                                Text(logExpense.nameText)
                                     .font(.system(size: 14)).bold()
 
-                                Text("22|08 15:32")
+                                Text(logExpense.dateText)
                                     .font(.system(size: 14))
                                     .foregroundColor(.secondary)
                             }
                             
                             Spacer(minLength: 180)
                             
-                            Text("- Rp.20.000")
+                            Text(logExpense.amountText)
                                 .font(.system(size: 14))
                                 .foregroundColor(.red)
                             Spacer()

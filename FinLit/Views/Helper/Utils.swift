@@ -15,26 +15,14 @@ struct Utils {
         return formatter
     }()
     
-    static let dateFormatter: RelativeDateTimeFormatter = {
-        let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .full
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d | HH:mm"
         return formatter
     }()
 }
 
-func getDateFormatter(date: Date?, format: String = "yyyy-MM-dd") -> String {
-    guard let date = date else { return ""}
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = format
-    return dateFormatter.string(from: date)
-}
 
-//func getNumberFormatter(from num : NSNumber, number nstyle: NumberFormatter.Style) -> String {
-//    let formatter = NumberFormatter()
-//    formatter.isLenient = true
-//    formatter.numberStyle = .currency
-//    return formatter
-//}
 
 extension Float {
     var formattedCurrencyText: String {
