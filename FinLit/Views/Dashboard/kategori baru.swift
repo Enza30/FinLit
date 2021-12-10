@@ -56,11 +56,11 @@ struct kategori_baru: View {
                                     .foregroundColor(.secondary)
                                     .padding(.vertical, 2)
                                 
-                                ForEach(expense){ expense in
-                                    Text("\(expense.amountText)")
+                                
+                                    Text("\(calculateTotalExpense())")
                                         .font(.system(size: 14)).bold()
                                         .padding(.vertical, 3)
-                                }
+                                
                                 
                                 Spacer()
                                 
@@ -90,6 +90,29 @@ struct kategori_baru: View {
         }
         isAddExpensePresented = true
         print("Send \(choosenTitle)")
+    }
+    private func getTotalExpense() -> Double {
+        
+        var value = Double(0)
+        for i in expense{
+            value += i.amount as! Double
+        }
+        return value
+    }
+    func calculateTotalExpense() -> String {
+        let totalExpense = getTotalExpense()
+        convertDoubletoCurrency(amount: totalExpense)
+        return "\(convertDoubletoCurrency(amount: totalExpense))"
+    }
+    private func convertDoubletoCurrency(amount: Double) -> String {
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale.current
+        numberFormatter.isLenient = true
+        
+        
+        return numberFormatter.string(from: NSNumber(value:amount))!
     }
     
 }

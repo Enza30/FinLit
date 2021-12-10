@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct segmentedControlView: View {
     
     @State private var selectedSegment: typeOfTheSelection = .weekly
+    
+    @FetchRequest(
+        entity: Expense.entity(),
+        sortDescriptors: []
+    )
+    var expense : FetchedResults<Expense>
     
     var body: some View {
         NavigationView {
@@ -32,25 +39,29 @@ struct segmentedControlView: View {
                     }
                     .padding(5)
                     
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Food")
-                                .font(.system(size: 14)).bold()
+                    ForEach(expense) {expense in
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Text("Food")
+                                    .font(.system(size: 14)).bold()
 
-                            Text("22|08 15:32")
+                                Text("22|08 15:32")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(.secondary)
+                            }
+                            
+                            Spacer(minLength: 180)
+                            
+                            Text("- Rp.20.000")
                                 .font(.system(size: 14))
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.red)
+                            Spacer()
                         }
-                        
-                        Spacer(minLength: 180)
-                        
-                        Text("- Rp.20.000")
-                            .font(.system(size: 14))
-                            .foregroundColor(.red)
-                        Spacer()
+                        Spacer(minLength: 50)
                     }
-                    Spacer(minLength: 50)
+                    
+
                     
                     HStack {
                         Button(action: {}, label: {
